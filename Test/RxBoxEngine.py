@@ -4,8 +4,8 @@ RxBox is
 
 More documentation
 """
-import wx
 import traceback
+import wx
 
 from multiprocessing import Process
 
@@ -32,6 +32,7 @@ import States
 from Modules import rxboxdb
 from Modules.Util import *
 
+## @brief RxBox Main Class
 class RxboxEngine:
     """
 	Engine/Controller class for Rxbox
