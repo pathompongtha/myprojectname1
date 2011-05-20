@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="class_rx_box_engine_1_1_rxbox_engine" kind="class" prot="public">
+    <compoundname>RxBoxEngine::RxboxEngine</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rx_box_engine_1_1_rxbox_engine_1ac3b6c5c9e3062d98839152bba85dcc14" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>RxBoxEngine.RxboxEngine._app</definition>
+        <argsstring></argsstring>
+        <name>_app</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="42" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rx_box_engine_1_1_rxbox_engine_1a8554405292239dd7a32fefc2579e01f2" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>RxBoxEngine.RxboxEngine._config</definition>
+        <argsstring></argsstring>
+        <name>_config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="42" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rx_box_engine_1_1_rxbox_engine_1a22ee8d408da58f049a929099db2059a0" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>RxBoxEngine.RxboxEngine._frame</definition>
+        <argsstring></argsstring>
+        <name>_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="42" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rx_box_engine_1_1_rxbox_engine_1a268f9595f91e04450b896253ca9e8fc3" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>RxBoxEngine.RxboxEngine._myedf</definition>
+        <argsstring></argsstring>
+        <name>_myedf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="42" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rx_box_engine_1_1_rxbox_engine_1abeb8130b896bfb752c37640ae757100b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>RxBoxEngine.RxboxEngine.dbuuid</definition>
+        <argsstring></argsstring>
+        <name>dbuuid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="42" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rx_box_engine_1_1_rxbox_engine_1ac46747cdf03cc9cbfa315647a55ffbc9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>RxBoxEngine.RxboxEngine.rxboxDB</definition>
+        <argsstring></argsstring>
+        <name>rxboxDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="42" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rx_box_engine_1_1_rxbox_engine_1afc441ee0efbabc9e96cef01013226408" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>RxBoxEngine.RxboxEngine.state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="42" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rx_box_engine_1_1_rxbox_engine_1adc0fa963405ce2c724c519eb8d7a2ef0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def RxBoxEngine.RxboxEngine.run</definition>
+        <argsstring></argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>
+Run engine and start up GUI
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="40" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="40" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rx_box_engine_1_1_rxbox_engine_1a4422088b356df39a943926fb799b4cf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def RxBoxEngine.RxboxEngine.change_state</definition>
+        <argsstring></argsstring>
+        <name>change_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Change state to state</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="67" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="67" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RxBox Main Class. </para>    </briefdescription>
+    <detaileddescription>
+<para><verbatim>
+    Engine/Controller class for Rxbox
+    </verbatim> </para>    </detaileddescription>
+    <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="39" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="36" bodyend="83"/>
+    <listofallmembers>
+      <member refid="class_rx_box_engine_1_1_rxbox_engine_1ac3b6c5c9e3062d98839152bba85dcc14" prot="private" virt="non-virtual"><scope>RxBoxEngine::RxboxEngine</scope><name>_app</name></member>
+      <member refid="class_rx_box_engine_1_1_rxbox_engine_1a8554405292239dd7a32fefc2579e01f2" prot="private" virt="non-virtual"><scope>RxBoxEngine::RxboxEngine</scope><name>_config</name></member>
+      <member refid="class_rx_box_engine_1_1_rxbox_engine_1a22ee8d408da58f049a929099db2059a0" prot="private" virt="non-virtual"><scope>RxBoxEngine::RxboxEngine</scope><name>_frame</name></member>
+      <member refid="class_rx_box_engine_1_1_rxbox_engine_1a268f9595f91e04450b896253ca9e8fc3" prot="private" virt="non-virtual"><scope>RxBoxEngine::RxboxEngine</scope><name>_myedf</name></member>
+      <member refid="class_rx_box_engine_1_1_rxbox_engine_1a4422088b356df39a943926fb799b4cf9" prot="public" virt="non-virtual"><scope>RxBoxEngine::RxboxEngine</scope><name>change_state</name></member>
+      <member refid="class_rx_box_engine_1_1_rxbox_engine_1abeb8130b896bfb752c37640ae757100b" prot="public" virt="non-virtual"><scope>RxBoxEngine::RxboxEngine</scope><name>dbuuid</name></member>
+      <member refid="class_rx_box_engine_1_1_rxbox_engine_1adc0fa963405ce2c724c519eb8d7a2ef0" prot="public" virt="non-virtual"><scope>RxBoxEngine::RxboxEngine</scope><name>run</name></member>
+      <member refid="class_rx_box_engine_1_1_rxbox_engine_1ac46747cdf03cc9cbfa315647a55ffbc9" prot="public" virt="non-virtual"><scope>RxBoxEngine::RxboxEngine</scope><name>rxboxDB</name></member>
+      <member refid="class_rx_box_engine_1_1_rxbox_engine_1afc441ee0efbabc9e96cef01013226408" prot="public" virt="non-virtual"><scope>RxBoxEngine::RxboxEngine</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
