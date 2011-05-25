@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/614/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code
+END
+compiler.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code/compiler.h
+END
+setting.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code/setting.h
+END
+mdfir1.c
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code/mdfir1.c
+END
+Filterdesign.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code/Filterdesign.h
+END
+mwindow.c
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code/mwindow.c
+END
+BPfilter.c
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code/BPfilter.c
+END
+data
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code/data
+END
+plotter
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/614/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code/plotter
+END
+plotter.c
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/614/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code/plotter.c
+END
+BPfilter.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code/BPfilter.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/c-sdl-plotter%20source%20code/Makefile
+END
