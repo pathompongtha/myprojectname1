@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/563/lifelink/rxbox/trunk/rxbox-rc1/States/State
+END
+TemplateState.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/563/lifelink/rxbox/trunk/rxbox-rc1/States/State/TemplateState.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/563/lifelink/rxbox/trunk/rxbox-rc1/States/State/__init__.py
+END
+TemplateFrame.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/563/lifelink/rxbox/trunk/rxbox-rc1/States/State/TemplateFrame.py
+END

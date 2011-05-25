@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade
+END
+CommPanel.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/CommPanel.wxg
+END
+VoIPPanel.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/VoIPPanel.wxg
+END
+ECGPanel.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/ECGPanel.wxg
+END
+SnapshotPanel.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/SnapshotPanel.wxg
+END
+PatientInfoPanel.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/PatientInfoPanel.wxg
+END
+BPPanel.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/BPPanel.wxg
+END
+LogFilePanel.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/LogFilePanel.wxg
+END
+SnapshotPanel2.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/SnapshotPanel2.wxg
+END
+Lead12Frame.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/Lead12Frame.wxg
+END
+SPO2Panel.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/SPO2Panel.wxg
+END
+IMPanel.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/IMPanel.wxg
+END
+StethPanel.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/StethPanel.wxg
+END
+CreatePatientRecord.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/GUI%20wxglade/CreatePatientRecord.wxg
+END

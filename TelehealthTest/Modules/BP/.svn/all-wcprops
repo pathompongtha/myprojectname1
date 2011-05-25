@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/622/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP
+END
+bp.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP/bp.cfg
+END
+bp_cgui.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP/bp_cgui.py
+END
+gui_bpconfig.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP/gui_bpconfig.wxg
+END
+bp_backup.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP/bp_backup.cfg
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/622/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP/__init__.py
+END
+BPPanel.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP/BPPanel.py
+END
+bp_portcheck.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/622/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP/bp_portcheck.py
+END
+ecg_cgui.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP/ecg_cgui.py
+END
+bp_config.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/613/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP/bp_config.py
+END
+bp_cgui_mod.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP/bp_cgui_mod.py
+END
+BPDAQLive.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/601/lifelink/rxbox/trunk/rxbox-rc1/Modules/BP/BPDAQLive.py
+END

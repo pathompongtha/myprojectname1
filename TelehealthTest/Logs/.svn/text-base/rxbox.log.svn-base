@@ -1,0 +1,65 @@
+2011-03-21 02:11:19,289 root         INFO     RxboxEngine Start
+2011-03-21 02:11:19,290 InitState    INFO     State Machine: InitState Start
+2011-03-21 02:11:19,420 SnapshotControl INFO     SnapshotControl Module Initialized
+2011-03-21 02:11:19,480 BP           INFO     BP Module Initialized
+2011-03-21 02:11:19,482 SPO2         INFO     SPO2 Module Initialized
+2011-03-21 02:11:19,495 ECG          INFO     ECG Module Initialized
+2011-03-21 02:11:19,536 VoIP         INFO     VoIP Module Initialized
+2011-03-21 02:11:19,537 IM           INFO     IM Module Initialized
+2011-03-21 02:11:19,543 Snapshot     INFO     Snapshot Module Initialized
+2011-03-21 02:11:19,596 InitState    ERROR    Load Perspective
+2011-03-21 02:11:19,648 InitState    INFO     State Machine: InitState Stop
+2011-03-21 02:11:20,116 BP           INFO     BP Port is None
+2011-03-21 02:11:21,174 ECG          INFO     ECG Port set to /dev/ttyUSB
+2011-03-21 02:11:21,257 root         ERROR    Change State Error
+Traceback (most recent call last):
+  File "RxboxEngine.py", line 79, in change_state
+    self.state = getattr(States, state)(self, *args)
+  File "/home/luke/workspace/Rxbox1.0Beta/States/TestState/__init__.py", line 11, in __init__
+    self._frame2 = ShowMain(self._engine, None, -1, "")
+  File "/home/luke/workspace/Rxbox1.0Beta/States/TestState/startup.py", line 46, in __init__
+    self.start_system_check()
+  File "/home/luke/workspace/Rxbox1.0Beta/States/TestState/startup.py", line 88, in start_system_check
+    test()
+  File "/home/luke/workspace/Rxbox1.0Beta/States/TestState/startup.py", line 143, in test_spo2
+    spo2_port=self._panel['spo2'].find_port(port2check)
+  File "/home/luke/workspace/Rxbox1.0Beta/Modules/SPO2/__init__.py", line 59, in find_port
+    port=c.check()
+  File "/home/luke/workspace/Rxbox1.0Beta/Modules/SPO2/spo2_portcheck.py", line 12, in check
+    self.spo2 = SPO2DAQ(self,port =x,timeout=1)
+  File "/home/luke/workspace/Rxbox1.0Beta/Modules/SPO2/SPO2DAQLive.py", line 36, in __init__
+    self.send_request()
+  File "/home/luke/workspace/Rxbox1.0Beta/Modules/SPO2/SPO2DAQLive.py", line 58, in send_request
+    self.reset()
+  File "/home/luke/workspace/Rxbox1.0Beta/Modules/SPO2/SPO2DAQLive.py", line 64, in reset
+    self.SerPort.flushInput()
+AttributeError: SPO2DAQ instance has no attribute 'SerPort'
+
+2011-03-21 02:11:21,257 StandbyState INFO     State Machine: StandbyState Start
+2011-03-21 02:11:27,616 StandbyState INFO     State Machine: StandbyState Stop
+2011-03-21 02:11:27,617 StandbyState INFO     State Machine: StandbyState Start
+2011-03-21 02:11:29,599 StandbyState INFO     State Machine: StandbyState Stop
+2011-03-21 02:11:29,600 SendVoIPState INFO     State Machine: SendVoIPState Start
+2011-03-21 02:11:29,601 SendVoIPState INFO     Create Record Mode
+2011-03-21 02:11:35,851 SendVoIPState INFO     Sending VoIP Ticket
+2011-03-21 02:11:43,196 SendVoIPState INFO     Send VoIP Ticket Successful!!!
+2011-03-21 02:11:43,197 SendVoIPState INFO     Send Email Successful!!!
+2011-03-21 02:11:49,390 SendVoIPState INFO     State Machine: SendVoIPState Stop
+2011-03-21 02:11:49,390 ReferState   INFO     State Machine: ReferState Start
+2011-03-21 02:11:49,662 VoIP         INFO     Start
+2011-03-21 02:12:01,638 IM           INFO     Start
+2011-03-21 02:12:10,440 VoIP         INFO     Stop
+2011-03-21 02:12:11,324 IM           INFO     Stop
+2011-03-21 02:12:11,342 ReferState   INFO     State Machine: ReferState Stop
+2011-03-21 02:12:11,343 SendLogState INFO     State Machine: SendLogState Start
+2011-03-21 02:12:11,344 SendLogState INFO     LogFile Mode
+2011-03-21 02:12:15,619 SendLogState INFO     Sending Log
+2011-03-21 02:12:29,378 SendLogState INFO     Send Log Successful!!!
+2011-03-21 02:12:29,379 SendLogState INFO     Send Email Successful!!!
+2011-03-21 02:12:34,780 SendLogState INFO     State Machine: SendLogState Stop
+2011-03-21 02:12:34,780 StandbyState INFO     State Machine: StandbyState Start
+2011-03-21 02:12:36,563 StandbyState INFO     State Machine: StandbyState Stop
+2011-03-21 02:12:36,563 ExitState    INFO     State Machine: ExitState Start
+2011-03-21 02:12:36,565 ExitState    INFO     Configurations Saved
+2011-03-21 02:12:36,566 ExitState    INFO     State Machine: ExitState Stop
+2011-03-21 02:12:36,566 root         INFO     RxboxEngine Exit
