@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/614/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/614/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/__init__.py
+END
+plotter
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/614/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/plotter
+END
+extendgrid.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/extendgrid.bmp
+END
+smallgrid.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/smallgrid.bmp
+END
+normalgrid.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/CPlotter/normalgrid.bmp
+END

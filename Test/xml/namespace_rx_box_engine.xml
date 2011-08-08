@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="namespace_rx_box_engine" kind="namespace">
+    <compoundname>RxBoxEngine</compoundname>
+    <innerclass refid="class_rx_box_engine_1_1_rxbox_engine" prot="public">RxBoxEngine::RxboxEngine</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_rx_box_engine_1ab0945a1065c774e9d60e985557378e8f" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>RxBoxEngine::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <initializer>Process(target=splash)</initializer>
+        <briefdescription>
+<para>some variable </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="27" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_rx_box_engine_1ab8a9ae1ed61d7eb38ff46dee8f4b3e30" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple RxBoxEngine.engine</definition>
+        <argsstring></argsstring>
+        <name>engine</name>
+        <initializer><ref refid="class_rx_box_engine_1_1_rxbox_engine" kindref="compound">RxboxEngine</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="85" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_rx_box_engine_1a6a12973ebbd9ccf2f7f979d9e8b0705d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def RxBoxEngine.splash</definition>
+        <argsstring></argsstring>
+        <name>splash</name>
+        <briefdescription>
+<para>This is brief. </para>        </briefdescription>
+        <detaileddescription>
+<para>splash does this and that </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="14" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" bodystart="14" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>
+@package RxBox
+RxBox is 
+
+More documentation
+</verbatim> </para>    </detaileddescription>
+    <location file="C:/Users/emcy/Desktop/je/testrepo/Test/RxBoxEngine.py" line="1"/>
+  </compounddef>
+</doxygen>

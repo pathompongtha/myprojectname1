@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/620/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/FIRfilter
+END
+compiler.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/616/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/FIRfilter/compiler.h
+END
+setting.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/616/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/FIRfilter/setting.h
+END
+mdfir1.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/616/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/FIRfilter/mdfir1.c
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/620/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/FIRfilter/main.c
+END
+Filterdesign.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/616/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/FIRfilter/Filterdesign.h
+END
+mwindow.c
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/616/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/FIRfilter/mwindow.c
+END
+filter
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/620/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/FIRfilter/filter
+END
+BPfilter.c
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/616/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/FIRfilter/BPfilter.c
+END
+BPfilter.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/616/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/FIRfilter/BPfilter.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/616/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/FIRfilter/Makefile
+END

@@ -1,0 +1,9 @@
+in DefaultConfigGenerator.py, comment out lines 84-85
+	config.set('version','1.0')
+	config.set('rxboxid','1002')
+	
+in ECGDAQSim.py added in parameters(line 23)
+	logger = ''
+	
+in ECGDAQSim.py added line 
+	self.logger = logger (line 31)

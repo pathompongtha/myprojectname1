@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/EDF
+END
+filters.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/EDF/filters.py
+END
+_edf.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/EDF/_edf.py
+END
+edf.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/EDF/edf.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/EDF/__init__.py
+END
+edfviewer.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/EDF/edfviewer.py
+END

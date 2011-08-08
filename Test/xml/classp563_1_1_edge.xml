@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classp563_1_1_edge" kind="class" prot="package">
+    <compoundname>p563::Edge</compoundname>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classp563_1_1_edge_1a3d651a167efa92010e86a90d6c0981d1" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int p563.Edge.u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="158" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classp563_1_1_edge_1adfb7ceb3a669cb92590389f10eb09ccc" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int p563.Edge.v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="158" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classp563_1_1_edge_1a45406436496536c11457bb0ce8064d07" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int p563.Edge.cap</definition>
+        <argsstring></argsstring>
+        <name>cap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="158" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classp563_1_1_edge_1a6129ec4e26d8721ee89e7c26dd5e66c9" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int p563.Edge.flow</definition>
+        <argsstring></argsstring>
+        <name>flow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="158" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="classp563_1_1_edge_1a5c8ecfe755f47f8cb5d515818c08404e" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>p563.Edge.Edge</definition>
+        <argsstring>(int a, int b, int c)</argsstring>
+        <name>Edge</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="160" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="160" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classp563_1_1_edge_1a3c180adf8c1ef682f71eb3c74ae65e2a" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int p563.Edge.other</definition>
+        <argsstring>(int a)</argsstring>
+        <name>other</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="167" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="167" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classp563_1_1_edge_1a9bd702cef0ec73f8c252079508aecaca" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int p563.Edge.res</definition>
+        <argsstring>(int a)</argsstring>
+        <name>res</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="171" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classp563_1_1_edge_1ac81ae59cc68c01a4c4ab8eac096bf6aa" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void p563.Edge.add</definition>
+        <argsstring>(int a, int x)</argsstring>
+        <name>add</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="175" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="175" bodyend="177"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classp563_1_1_edge_1abf15c4152ca3e1f0ec587e574b165900" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String p563.Edge.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="179" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="179" bodyend="181"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="157" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="157" bodyend="182"/>
+    <listofallmembers>
+      <member refid="classp563_1_1_edge_1ac81ae59cc68c01a4c4ab8eac096bf6aa" prot="package" virt="non-virtual"><scope>p563::Edge</scope><name>add</name></member>
+      <member refid="classp563_1_1_edge_1a45406436496536c11457bb0ce8064d07" prot="package" virt="non-virtual"><scope>p563::Edge</scope><name>cap</name></member>
+      <member refid="classp563_1_1_edge_1a5c8ecfe755f47f8cb5d515818c08404e" prot="package" virt="non-virtual"><scope>p563::Edge</scope><name>Edge</name></member>
+      <member refid="classp563_1_1_edge_1a6129ec4e26d8721ee89e7c26dd5e66c9" prot="package" virt="non-virtual"><scope>p563::Edge</scope><name>flow</name></member>
+      <member refid="classp563_1_1_edge_1a3c180adf8c1ef682f71eb3c74ae65e2a" prot="package" virt="non-virtual"><scope>p563::Edge</scope><name>other</name></member>
+      <member refid="classp563_1_1_edge_1a9bd702cef0ec73f8c252079508aecaca" prot="package" virt="non-virtual"><scope>p563::Edge</scope><name>res</name></member>
+      <member refid="classp563_1_1_edge_1abf15c4152ca3e1f0ec587e574b165900" prot="public" virt="non-virtual"><scope>p563::Edge</scope><name>toString</name></member>
+      <member refid="classp563_1_1_edge_1a3d651a167efa92010e86a90d6c0981d1" prot="package" virt="non-virtual"><scope>p563::Edge</scope><name>u</name></member>
+      <member refid="classp563_1_1_edge_1adfb7ceb3a669cb92590389f10eb09ccc" prot="package" virt="non-virtual"><scope>p563::Edge</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

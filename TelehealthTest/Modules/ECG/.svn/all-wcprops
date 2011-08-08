@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/621/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG
+END
+Lead12Panel.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/Lead12Panel.py
+END
+ecg_backup.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/ecg_backup.cfg
+END
+ECGDAQSim.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/ECGDAQSim.py
+END
+ECGPanel.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/ECGPanel.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/621/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/__init__.py
+END
+data
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/data
+END
+ecg_config.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/613/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/ecg_config.py
+END
+ECGDAQLive.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/615/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/ECGDAQLive.py
+END
+ecg.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/ecg.cfg
+END
+gui_ecgconfig.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/gui_ecgconfig.wxg
+END
+ecg_cgui.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/ECG/ecg_cgui.py
+END

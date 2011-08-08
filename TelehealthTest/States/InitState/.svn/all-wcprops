@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/619/lifelink/rxbox/trunk/rxbox-rc1/States/InitState
+END
+CommPanel.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/States/InitState/CommPanel.py
+END
+RxboxFrame.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/608/lifelink/rxbox/trunk/rxbox-rc1/States/InitState/RxboxFrame.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/619/lifelink/rxbox/trunk/rxbox-rc1/States/InitState/__init__.py
+END
+PatientInfoPanel.py
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/States/InitState/PatientInfoPanel.py
+END
+Panels.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/608/lifelink/rxbox/trunk/rxbox-rc1/States/InitState/Panels.py
+END

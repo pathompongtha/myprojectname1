@@ -1,0 +1,209 @@
+2011-06-30 18:43:57,154 root         INFO     RxboxEngine Start
+2011-06-30 18:43:57,155 InitState    INFO     State Machine: InitState Start
+2011-06-30 18:43:58,456 SnapshotControl INFO     SnapshotControl Module Initialized
+2011-06-30 18:43:58,696 BP           INFO     BP Module Initialized
+2011-06-30 18:43:58,709 SPO2         INFO     SPO2 Module Initialized
+2011-06-30 18:43:58,723 ECG          INFO     ECG Module Initialized
+2011-06-30 18:43:59,809 VoIP         INFO     VoIP Module Initialized
+2011-06-30 18:43:59,813 IM           INFO     IM Module Initialized
+2011-06-30 18:43:59,871 InitState    ERROR    Load Perspective
+2011-06-30 18:44:00,002 root         ERROR    Change State Error
+Traceback (most recent call last):
+  File "RxboxEngine.py", line 82, in change_state
+    self.state.start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/States/InitState/__init__.py", line 86, in start
+    stat= config.get('GENINFO', 'testscreen')
+  File "/usr/lib/python2.7/ConfigParser.py", line 610, in get
+    raise NoOptionError(option, section)
+NoOptionError: No option 'testscreen' in section: 'GENINFO'
+
+2011-06-30 18:44:00,005 StandbyState INFO     State Machine: StandbyState Start
+2011-06-30 18:44:02,559 StandbyState INFO     State Machine: StandbyState Stop
+2011-06-30 18:44:02,560 DAQState     INFO     State Machine: DAQState Start
+2011-06-30 18:44:02,647 DAQState     INFO     Session uuid = dea0ac4e-a305-11e0-952c-001de07757a5
+2011-06-30 18:44:03,933 ECG          INFO     DAQ Start
+2011-06-30 18:44:03,934 ECG          INFO     ECM Start
+2011-06-30 18:44:03,966 ECG          INFO     ECM Success!!!
+2011-06-30 18:44:04,158 root         ERROR    Change State Error
+Traceback (most recent call last):
+  File "RxboxEngine.py", line 82, in change_state
+    self.state.start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/States/DAQState/__init__.py", line 35, in start
+    self._panel['spo2'].Start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/__init__.py", line 28, in Start
+    port=c.check()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/spo2_portcheck.py", line 12, in check
+    self.spo2 = SPO2DAQ(self,port =x,timeout=1)
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 36, in __init__
+    self.send_request()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 58, in send_request
+    self.reset()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 64, in reset
+    self.SerPort.flushInput()
+AttributeError: SPO2DAQ instance has no attribute 'SerPort'
+
+2011-06-30 18:44:04,159 StandbyState INFO     State Machine: StandbyState Start
+2011-06-30 18:44:05,161 ECG          ERROR    DAQ Error
+Traceback (most recent call last):
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/ECG/__init__.py", line 132, in get_ecg_thread
+    ind = self.plotter.Plot(leadII[s1-len(leadII):], xs=ind)
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/ECG/CPlotter/__init__.py", line 51, in Plot
+    int(i)))
+IOError: [Errno 32] Broken pipe
+
+2011-06-30 18:44:17,067 StandbyState INFO     State Machine: StandbyState Stop
+2011-06-30 18:44:17,068 DAQState     INFO     State Machine: DAQState Start
+2011-06-30 18:44:17,082 DAQState     INFO     Session uuid = e73d1bc6-a305-11e0-952c-001de07757a5
+2011-06-30 18:44:18,109 ECG          INFO     ECM Start
+2011-06-30 18:44:18,109 ECG          INFO     DAQ Start
+2011-06-30 18:44:18,114 root         ERROR    Change State Error
+Traceback (most recent call last):
+  File "RxboxEngine.py", line 82, in change_state
+    self.state.start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/States/DAQState/__init__.py", line 35, in start
+    self._panel['spo2'].Start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/__init__.py", line 28, in Start
+    port=c.check()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/spo2_portcheck.py", line 12, in check
+    self.spo2 = SPO2DAQ(self,port =x,timeout=1)
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 36, in __init__
+    self.send_request()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 58, in send_request
+    self.reset()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 64, in reset
+    self.SerPort.flushInput()
+AttributeError: SPO2DAQ instance has no attribute 'SerPort'
+
+2011-06-30 18:44:18,115 StandbyState INFO     State Machine: StandbyState Start
+2011-06-30 18:44:25,418 StandbyState INFO     State Machine: StandbyState Stop
+2011-06-30 18:44:25,419 DAQState     INFO     State Machine: DAQState Start
+2011-06-30 18:44:25,436 DAQState     INFO     Session uuid = ec37bdd4-a305-11e0-952c-001de07757a5
+2011-06-30 18:44:26,468 ECG          INFO     ECM Start
+2011-06-30 18:44:26,469 ECG          INFO     DAQ Start
+2011-06-30 18:44:26,471 ECG          INFO     ECM Success!!!
+2011-06-30 18:44:26,482 root         ERROR    Change State Error
+Traceback (most recent call last):
+  File "RxboxEngine.py", line 82, in change_state
+    self.state.start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/States/DAQState/__init__.py", line 35, in start
+    self._panel['spo2'].Start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/__init__.py", line 28, in Start
+    port=c.check()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/spo2_portcheck.py", line 12, in check
+    self.spo2 = SPO2DAQ(self,port =x,timeout=1)
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 36, in __init__
+    self.send_request()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 58, in send_request
+    self.reset()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 64, in reset
+    self.SerPort.flushInput()
+AttributeError: SPO2DAQ instance has no attribute 'SerPort'
+
+2011-06-30 18:44:26,484 StandbyState INFO     State Machine: StandbyState Start
+2011-06-30 18:44:27,517 ECG          ERROR    DAQ Error
+Traceback (most recent call last):
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/ECG/__init__.py", line 132, in get_ecg_thread
+    ind = self.plotter.Plot(leadII[s1-len(leadII):], xs=ind)
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/ECG/CPlotter/__init__.py", line 51, in Plot
+    int(i)))
+IOError: [Errno 32] Broken pipe
+
+2011-06-30 18:46:16,051 StandbyState INFO     State Machine: StandbyState Stop
+2011-06-30 18:46:16,051 DAQState     INFO     State Machine: DAQState Start
+2011-06-30 18:46:16,063 DAQState     INFO     Session uuid = 2e2826fc-a306-11e0-952c-001de07757a5
+2011-06-30 18:46:17,085 ECG          INFO     ECM Start
+2011-06-30 18:46:17,086 ECG          INFO     DAQ Start
+2011-06-30 18:46:17,088 ECG          INFO     ECM Success!!!
+2011-06-30 18:46:17,088 root         ERROR    Change State Error
+Traceback (most recent call last):
+  File "RxboxEngine.py", line 82, in change_state
+    self.state.start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/States/DAQState/__init__.py", line 35, in start
+    self._panel['spo2'].Start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/__init__.py", line 28, in Start
+    port=c.check()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/spo2_portcheck.py", line 12, in check
+    self.spo2 = SPO2DAQ(self,port =x,timeout=1)
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 36, in __init__
+    self.send_request()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 58, in send_request
+    self.reset()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 64, in reset
+    self.SerPort.flushInput()
+AttributeError: SPO2DAQ instance has no attribute 'SerPort'
+
+2011-06-30 18:46:17,095 StandbyState INFO     State Machine: StandbyState Start
+2011-06-30 18:46:18,120 ECG          ERROR    DAQ Error
+Traceback (most recent call last):
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/ECG/__init__.py", line 132, in get_ecg_thread
+    ind = self.plotter.Plot(leadII[s1-len(leadII):], xs=ind)
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/ECG/CPlotter/__init__.py", line 51, in Plot
+    int(i)))
+IOError: [Errno 32] Broken pipe
+
+2011-06-30 18:46:19,301 StandbyState INFO     State Machine: StandbyState Stop
+2011-06-30 18:46:19,302 DAQState     INFO     State Machine: DAQState Start
+2011-06-30 18:46:19,317 DAQState     INFO     Session uuid = 3018bf62-a306-11e0-952c-001de07757a5
+2011-06-30 18:46:20,346 ECG          INFO     ECM Start
+2011-06-30 18:46:20,347 ECG          INFO     DAQ Start
+2011-06-30 18:46:20,349 ECG          INFO     ECM Success!!!
+2011-06-30 18:46:20,352 root         ERROR    Change State Error
+Traceback (most recent call last):
+  File "RxboxEngine.py", line 82, in change_state
+    self.state.start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/States/DAQState/__init__.py", line 35, in start
+    self._panel['spo2'].Start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/__init__.py", line 28, in Start
+    port=c.check()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/spo2_portcheck.py", line 12, in check
+    self.spo2 = SPO2DAQ(self,port =x,timeout=1)
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 36, in __init__
+    self.send_request()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 58, in send_request
+    self.reset()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 64, in reset
+    self.SerPort.flushInput()
+AttributeError: SPO2DAQ instance has no attribute 'SerPort'
+
+2011-06-30 18:46:20,353 StandbyState INFO     State Machine: StandbyState Start
+2011-06-30 18:46:21,398 ECG          ERROR    DAQ Error
+Traceback (most recent call last):
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/ECG/__init__.py", line 132, in get_ecg_thread
+    ind = self.plotter.Plot(leadII[s1-len(leadII):], xs=ind)
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/ECG/CPlotter/__init__.py", line 51, in Plot
+    int(i)))
+IOError: [Errno 32] Broken pipe
+
+2011-06-30 18:46:25,896 StandbyState INFO     State Machine: StandbyState Stop
+2011-06-30 18:46:25,897 DAQState     INFO     State Machine: DAQState Start
+2011-06-30 18:46:25,897 DAQState     INFO     Session uuid = 3404d638-a306-11e0-952c-001de07757a5
+2011-06-30 18:46:26,927 ECG          INFO     ECM Start
+2011-06-30 18:46:26,928 ECG          INFO     DAQ Start
+2011-06-30 18:46:26,930 ECG          INFO     ECM Success!!!
+2011-06-30 18:46:26,934 root         ERROR    Change State Error
+Traceback (most recent call last):
+  File "RxboxEngine.py", line 82, in change_state
+    self.state.start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/States/DAQState/__init__.py", line 35, in start
+    self._panel['spo2'].Start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/__init__.py", line 28, in Start
+    port=c.check()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/spo2_portcheck.py", line 12, in check
+    self.spo2 = SPO2DAQ(self,port =x,timeout=1)
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 36, in __init__
+    self.send_request()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 58, in send_request
+    self.reset()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/SPO2/SPO2DAQLive.py", line 64, in reset
+    self.SerPort.flushInput()
+AttributeError: SPO2DAQ instance has no attribute 'SerPort'
+
+2011-06-30 18:46:26,934 StandbyState INFO     State Machine: StandbyState Start
+2011-06-30 18:46:27,975 ECG          ERROR    DAQ Error
+Traceback (most recent call last):
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/ECG/__init__.py", line 132, in get_ecg_thread
+    ind = self.plotter.Plot(leadII[s1-len(leadII):], xs=ind)
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/ECG/CPlotter/__init__.py", line 51, in Plot
+    int(i)))
+IOError: [Errno 32] Broken pipe
+
