@@ -48,6 +48,7 @@ class ECG(Module, ECGPanel):
     def __init__(self, *args, **kwds):
         Module.__init__(self, *args, **kwds)
         ECGPanel.__init__(self, *args, **kwds)
+		
         self.load_config()
             
         self.plotter = False
@@ -72,7 +73,7 @@ class ECG(Module, ECGPanel):
         self.freq = self._config.getint('ECG', 'freq')
         self.daqdur = self._config.getfloat('ECG', 'daqdur')
         self.debug = self._config.getboolean('ECG', 'debug')
-        self.scale = [self._config.getint('ECG',i) for i in ['scaleNum','scaleDen','scaleAmp','scaleLen']]
+        #self.scale = [self._config.getint('ECG',i) for i in ['scaleNum','scaleDen','scaleAmp','scaleLen']]
 
         self.ECGData = ECGDAQ(port=self.port, baud=self.baud, mode=self.mode, freq=self.freq, timeout=self.timeout, daqdur=self.daqdur, debug=self.debug, logger=self._logger)
         
@@ -176,7 +177,8 @@ class ECG(Module, ECGPanel):
     def Start(self):
         try:
             self.ECGData.Open()
-            self.plotter = CPlotter(panel=self.plot_panel, mode='normal', sample_time=self.daqdur, plot_timelength=75.0/self.scale[3], cont=True, filterOn=self.filter, data=False, scale=self.scale)
+#            self.plotter = CPlotter(panel=self.plot_panel, mode='normal', sample_time=self.daqdur, plot_timelength=75.0/self.scale[3], cont=True, filterOn=self.filter, data=False, scale=self.scale)
+            self.plotter = CPlotter(panel=self.plot_panel, mode='normal', sample_time=self.daqdur, plot_timelength=75.0, cont=True, filterOn=self.filter, data=False, scale=[1,1,1,1])
             if self.ECGData.status:
                 self.alive = True
                 self.getecmthread = threading.Thread(target=self.get_ecm_thread)

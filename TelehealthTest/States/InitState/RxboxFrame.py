@@ -96,7 +96,7 @@ class RxboxFrame(wx.Frame):
         self._panel['ecg'] = ECG(self, -1)
         self._panel['voip'] = VoIP(self, -1)
         self._panel['im'] = IM(self, -1)
-        self._panel['snapshot2'] = SnapshotWindow(self, -1)
+        #self._panel['snapshot2'] = SnapshotWindow(self, -1)
         
         self._mgr.AddPane(self._panel['patientinfo'], wx.aui.AuiPaneInfo().
                           Name("patientinfo").Caption("Patient Info").MinSize(wx.Size(50, 50)).
@@ -125,10 +125,10 @@ class RxboxFrame(wx.Frame):
         self._mgr.AddPane(self._panel['im'], wx.aui.AuiPaneInfo().
                           Name("im").Caption("Instant Messenger").MinSize(wx.Size(50, 50)).
                           Bottom().Layer(1).Position(0).CloseButton(False).MaximizeButton(False))
-        self._mgr.AddPane(self._panel['snapshot2'], wx.aui.AuiPaneInfo().
-                          Caption("Snapshot").Dockable(False).Name("snapshot2").
-                          Float().FloatingPosition(wx.Point(25, 25)).DestroyOnClose(False).
-                          FloatingSize(wx.Size(370, 440)).CloseButton(True).MaximizeButton(True))
+#        self._mgr.AddPane(self._panel['snapshot2'], wx.aui.AuiPaneInfo().
+ #                         Caption("Snapshot").Dockable(False).Name("snapshot2").
+  #                        Float().FloatingPosition(wx.Point(25, 25)).DestroyOnClose(False).
+   #                       FloatingSize(wx.Size(370, 440)).CloseButton(True).MaximizeButton(True))
 
         self._mgr.GetPane("patientinfo").Show().Left().Layer(1).Row(1).Position(0)
         self._mgr.GetPane("comm").Show().Left().Layer(2).Row(1).Position(4)
