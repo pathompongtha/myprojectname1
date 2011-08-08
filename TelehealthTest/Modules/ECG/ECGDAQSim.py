@@ -20,7 +20,7 @@ ECM_KEYS2 = ['N','F','L','R','C6','C5','C4','C3','C2','C1']
 
 
 class ECGDAQ:
-    def __init__(self, port='/dev/ttyUSB0', baud=230400, mode='12lead', freq=500, timeout=3, daqdur=1, debug=True):
+    def __init__(self, port='/dev/ttyUSB0', baud=230400, mode='12lead', freq=500, timeout=3, daqdur=1, debug=True, logger = ''):
         self.port = port
         self.baud = baud
         self.mode = mode
@@ -28,6 +28,7 @@ class ECGDAQ:
         self.timeout = timeout
         self.daqdur = daqdur
         self.debug = debug
+        self.logger = logger
         
         self.dataset_counter = 0
         self.packet_num = 0

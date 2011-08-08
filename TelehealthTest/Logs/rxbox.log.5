@@ -1,0 +1,29 @@
+2011-06-30 18:36:38,943 root         INFO     RxboxEngine Start
+2011-06-30 18:36:38,944 InitState    INFO     State Machine: InitState Start
+2011-06-30 18:36:40,789 SnapshotControl INFO     SnapshotControl Module Initialized
+2011-06-30 18:36:40,985 BP           INFO     BP Module Initialized
+2011-06-30 18:36:40,998 SPO2         INFO     SPO2 Module Initialized
+2011-06-30 18:36:41,021 ECG          INFO     ECG Module Initialized
+2011-06-30 18:36:42,142 VoIP         INFO     VoIP Module Initialized
+2011-06-30 18:36:42,146 IM           INFO     IM Module Initialized
+2011-06-30 18:36:42,197 InitState    ERROR    Load Perspective
+2011-06-30 18:36:42,357 root         ERROR    Change State Error
+Traceback (most recent call last):
+  File "RxboxEngine.py", line 82, in change_state
+    self.state.start()
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/States/InitState/__init__.py", line 86, in start
+    stat= config.get('GENINFO', 'testscreen')
+  File "/usr/lib/python2.7/ConfigParser.py", line 610, in get
+    raise NoOptionError(option, section)
+NoOptionError: No option 'testscreen' in section: 'GENINFO'
+
+2011-06-30 18:36:42,360 StandbyState INFO     State Machine: StandbyState Start
+2011-06-30 18:36:48,708 StandbyState INFO     State Machine: StandbyState Stop
+2011-06-30 18:36:48,709 DAQState     INFO     State Machine: DAQState Start
+2011-06-30 18:36:48,858 DAQState     INFO     Session uuid = dc137c3c-a304-11e0-905b-001de07757a5
+2011-06-30 18:36:50,217 ECG          ERROR    DAQ Start Failed
+Traceback (most recent call last):
+  File "/host/Users/JE/Desktop/je/testrepo/TelehealthTest/Modules/ECG/__init__.py", line 180, in Start
+    self.plotter = CPlotter(panel=self.plot_panel, mode='normal', sample_time=self.daqdur, plot_timelength=75.0/self.scale[3], cont=True, filterOn=self.filter, data=False, scale=self.scale)
+AttributeError: 'ECG' object has no attribute 'scale'
+
