@@ -54,7 +54,6 @@ void setup()
  
   // Open an ADB stream to the phone's shell. Auto-reconnect. Use any unused port number eg:4568
   connection = ADB::addConnection("tcp:4568", true, adbEventHandler);  
- 
 }
  
 void loop()
