@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ApiTest!</string>
+    <string name="app_name">ApiTest</string>
+    <string name="hbutton_text">Click <b>me</b>!</string>
+</resources>
