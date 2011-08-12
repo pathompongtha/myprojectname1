@@ -48,12 +48,17 @@ void setup()
 
   // Set Digital pin 12 (LED is connected) as output
   pinMode(12,OUTPUT);
+  pinMode(13,OUTPUT);
 
   // Initialise the ADB subsystem.  
+  digitalWrite(12,HIGH);
   ADB::init();
+  digitalWrite(12,LOW);
 
   // Open an ADB stream to the phone's shell. Auto-reconnect. Use any unused port number eg:4568
+  digitalWrite(13,HIGH);
   connection = ADB::addConnection("tcp:4568", true, adbEventHandler);  
+  digitalWrite(13,LOW);
 
 }
 
