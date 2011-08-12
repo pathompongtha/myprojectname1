@@ -3,6 +3,7 @@
 
 // Adb connection.
 Connection * shell;
+int once = 0;
 
 void setup()
 {
@@ -21,9 +22,11 @@ void loop()
 {
   
   // DFRobot romeo buttons are connected to analog input pin 0.
-  if (analogRead(A7) == 0 && shell->isOpen())
+  if (once == 0 && shell->isOpen()) {
     shell->writeString("reboot\n");
-
+    once = 1;
+  }
+  
   // Poll the ADB subsystem.
   ADB::poll();
 }

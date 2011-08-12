@@ -35,19 +35,19 @@ import android.util.Log;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Button;
-
+import android.widget.Toast;
 
 public class SeeeduinoADKDemo extends Activity implements OnClickListener {
-	private int adcSensorValue=10;
+	private int adcSensorValue = 10;
 
-	//UI Widgets
+	// UI Widgets
 	TextView tvAdcvalue;
 	SeekBar sbAdcValue;
 	Button bOutPutLED;
 
-	boolean LEDState = false ; //initially OFF
+	boolean LEDState = false; // initially OFF
 
-	// Create TCP server (based on  MicroBridge LightWeight Server). 
+	// Create TCP server (based on MicroBridge LightWeight Server).
 	// Note: This Server runs in a separate thread.
 	Server server = null;
 
@@ -59,16 +59,14 @@ public class SeeeduinoADKDemo extends Activity implements OnClickListener {
 		setContentView(R.layout.main);
 
 		bOutPutLED = (Button) findViewById(R.id.buttonOuputLED);
-		bOutPutLED.setOnClickListener(this); 
+		bOutPutLED.setOnClickListener(this);
 
-
-		// Create TCP server (based on  MicroBridge LightWeight Server)
-		try
-		{
-			server = new Server(4568); //Use the same port number used in ADK Main Board firmware
-			server.start();			
-		} catch (IOException e)
-		{
+		// Create TCP server (based on MicroBridge LightWeight Server)
+		try {
+			server = new Server(4568); // Use the same port number used in
+										// ADK Main Board firmware
+			server.start();
+		} catch (IOException e) {
 			Log.e("Seeeduino ADK", "Unable to start TCP server", e);
 			System.exit(-1);
 		}
@@ -76,14 +74,16 @@ public class SeeeduinoADKDemo extends Activity implements OnClickListener {
 		server.addListener(new AbstractServerListener() {
 
 			@Override
-			public void onReceive(org.microbridge.server.Client client, byte[] data)
-			{
+			public void onReceive(org.microbridge.server.Client client,
+					byte[] data) {
 
-				if (data.length<2) return;
+				if (data.length < 2)
+					return;
 				adcSensorValue = (data[0] & 0xff) | ((data[1] & 0xff) << 8);
 
-				//Any update to UI can not be carried out in a non UI thread like the one used
-				//for Server. Hence runOnUIThread is used.
+				// Any update to UI can not be carried out in a non UI thread
+				// like the one used
+				// for Server. Hence runOnUIThread is used.
 				runOnUiThread(new Runnable() {
 					@Override
 					public void run() {
@@ -94,22 +94,22 @@ public class SeeeduinoADKDemo extends Activity implements OnClickListener {
 
 			}
 
-		});	 
+		});
 
-	}	//End of TCP Server code 
+	} // End of TCP Server code
 
-	// UpdateData Asynchronously sends the value received from ADK Main Board. 
+	// UpdateData Asynchronously sends the value received from ADK Main Board.
 	// This is triggered by onReceive()
 	class UpdateData extends AsyncTask<Integer, Integer, String> {
 		// Called to initiate the background activity
 		@Override
 		protected String doInBackground(Integer... sensorValue) {
 
-			//Init SeeekBar Widget to display ADC sensor value in SeekBar
-			//Max value of SeekBar is set to 1024
-			SeekBar sbAdcValue = (SeekBar) findViewById(R.id.sbADCValue);	    	
-			sbAdcValue.setProgress(sensorValue[0]);    
-			return (String.valueOf(sensorValue[0]));  //This goes to result
+			// Init SeeekBar Widget to display ADC sensor value in SeekBar
+			// Max value of SeekBar is set to 1024
+			SeekBar sbAdcValue = (SeekBar) findViewById(R.id.sbADCValue);
+			sbAdcValue.setProgress(sensorValue[0]);
+			return (String.valueOf(sensorValue[0])); // This goes to result
 
 		}
 
@@ -123,41 +123,35 @@ public class SeeeduinoADKDemo extends Activity implements OnClickListener {
 		// Called once the background activity has completed
 		@Override
 		protected void onPostExecute(String result) {
-			//Init TextView Widget to display ADC sensor value in numeric. 
+			// Init TextView Widget to display ADC sensor value in numeric.
 			TextView tvAdcvalue = (TextView) findViewById(R.id.tvADCValue);
 			tvAdcvalue.setText(String.valueOf(result));
 
 		}
 	}
 
-	//Called when the LED button is clicked
+	// Called when the LED button is clicked
 	@Override
 	public void onClick(View v) {
-		byte data; 
-
+		byte data;
 
 		// Toggle the state of LED
-		if(LEDState == true)
-		{
+		if (LEDState == true) {
 			LEDState = false;
 			data = 0;
 			bOutPutLED.setText("LED Off");
-		}
-		else
-		{
+		} else {
 			LEDState = true;
 			data = 1;
 			bOutPutLED.setText("LED On");
 		}
 
-		try
-		{
-			//Send the state of LED to ADK Main Board as a byte
-			server.send(new byte[] {(byte) data});
-		} catch (IOException e)
-		{
+		try {
+			// Send the state of LED to ADK Main Board as a byte
+			server.send(new byte[] { (byte) data });
+		} catch (IOException e) {
 			Log.e("Seeeduino ADK", "problem sending TCP message", e);
-		}	
+		}
 
 	}
 
