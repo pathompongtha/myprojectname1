@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="27" version="2.0">
+<workbench progressCount="16" version="2.0">
 <workbenchAdvisor/>
 <window height="760" maximized="true" width="1024" x="15" y="-12">
 <fastViewData fastViewLocation="1024"/>
@@ -21,7 +21,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.android.ide.eclipse.editors.layout.LayoutEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.layout.LayoutEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -34,22 +34,30 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DxDroidActivity.java" partName="DxDroidActivity.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/DxDroid/src/com/android/dxdroid/DxDroidActivity.java" title="DxDroidActivity.java" tooltip="DxDroid/src/com/android/dxdroid/DxDroidActivity.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DxDroid/src/com/android/dxdroid/DxDroidActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="619" selectionTopPixel="314"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DxDroid.java" partName="DxDroid.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/DxDroid/src/com/android/dxdroid/DxDroid.java" title="DxDroid.java" tooltip="DxDroid/src/com/android/dxdroid/DxDroid.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DxDroid/src/com/android/dxdroid/DxDroid.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3598" selectionTopPixel="1849"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SeeeduinoADKDemo.java" partName="SeeeduinoADKDemo.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/ADC Demo/src/com/seeedstudio/SeeeduinoADKDemo/SeeeduinoADKDemo.java" title="SeeeduinoADKDemo.java" tooltip="ADC Demo/src/com/seeedstudio/SeeeduinoADKDemo/SeeeduinoADKDemo.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ADC Demo/src/com/seeedstudio/SeeeduinoADKDemo/SeeeduinoADKDemo.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4226" selectionTopPixel="1934"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DrawView.java" partName="DrawView.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/DxDroid/src/com/android/dxdroid/DrawView.java" title="DrawView.java" tooltip="DxDroid/src/com/android/dxdroid/DrawView.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DxDroid/src/com/android/dxdroid/DrawView.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2198" selectionTopPixel="1288"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" partName="main.xml" path="C:/Users/JE/Desktop/je/Thesis/workspace/DxDroid/res/layout/main.xml" title="main.xml" tooltip="DxDroid/res/layout/main.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DxDroid/res/layout/main.xml"/>
 </editor>
 </editors>
 <views>
-<view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat"/>
-<view id="org.eclipse.debug.ui.DebugView" partName="Debug"/>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
@@ -95,10 +103,16 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints"/>
-<view id="org.eclipse.debug.ui.VariableView" partName="Variables"/>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
@@ -278,47 +292,66 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74959874" ratioLeft="467" ratioRight="156" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74959874" ratioLeft="467" ratioRight="156" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@11357ad" ratio="0.5" ratioLeft="636" ratioRight="636" relationship="2" relative="org.eclipse.debug.internal.ui.ConsoleFolderView">&#x0A;<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">&#x0A;<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@11357ad" ratio="0.5" ratioLeft="636" ratioRight="636" relationship="2" relative="org.eclipse.debug.internal.ui.ConsoleFolderView">
+<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.45336226" ratioLeft="209" ratioRight="252" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="636" ratioRight="636" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="636" ratioRight="636" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -330,143 +363,154 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DxDroid/src/com/android/dxdroid/DxDroidActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ADC Demo/src/com/seeedstudio/SeeeduinoADKDemo/SeeeduinoADKDemo.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/ADC Demo/res/layout/main.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DxDroid/src/com/android/dxdroid/DxDroid.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/RxPlotter/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DxDroid/src/com/android/dxdroid/DrawView.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/DxDroid/res/layout/main.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/DxDroid/res/layout/spo2_layout.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DxDroid/src/org/microbridge/server/Server.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DxDroid/src/org/microbridge/server/Client.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DxDroid/src/org/microbridge/server/AbstractServerListener.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DxDroid/src/org/microbridge/server/ServerListener.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ADC Demo/gen/com/seeedstudio/SeeeduinoADKDemo/R.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DxDroid/gen/com/android/dxdroid/R.java"/>
 </editors>
-<item historyLabel="SeeeduinoADKDemo.java" index="1">
-<position info="not_deleted" x="4315" y="0"/>
-</item>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="789" y="0"/>
-</item>
-<item historyLabel="main.xml" index="2"/>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="789" y="0"/>
-</item>
-<item historyLabel="main.xml" index="3"/>
-<item historyLabel="SeeeduinoADKDemo.java" index="1">
-<position info="not_deleted" x="4315" y="0"/>
-</item>
-<item historyLabel="spo2_layout.xml" index="4"/>
-<item historyLabel="main.xml" index="3"/>
-<item historyLabel="spo2_layout.xml" index="4"/>
-<item historyLabel="main.xml" index="3"/>
-<item historyLabel="spo2_layout.xml" index="4"/>
-<item historyLabel="main.xml" index="3"/>
-<item historyLabel="spo2_layout.xml" index="4"/>
-<item historyLabel="main.xml" index="3"/>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="509" y="0"/>
-</item>
-<item historyLabel="main.xml" index="3"/>
-<item historyLabel="spo2_layout.xml" index="4"/>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="789" y="0"/>
-</item>
-<item historyLabel="SeeeduinoADKDemo.java" index="1">
-<position info="not_deleted" x="4315" y="0"/>
-</item>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="1292" y="0"/>
-</item>
-<item historyLabel="SeeeduinoADKDemo.java" index="1">
-<position info="not_deleted" x="4268" y="0"/>
-</item>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="1292" y="0"/>
-</item>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="845" y="0"/>
-</item>
-<item historyLabel="Server.java" index="5">
+<item historyLabel="DxDroid.java" index="0">
 <position/>
 </item>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="1090" y="0"/>
-</item>
-<item historyLabel="Server.java" index="5">
+<item historyLabel="DxDroid.java" index="0">
 <position/>
 </item>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="1090" y="0"/>
+<item historyLabel="DrawView.java" index="2">
+<position info="not_deleted" x="1937" y="0"/>
 </item>
-<item historyLabel="Server.java" index="5">
+<item historyLabel="DxDroid.java" index="0">
 <position/>
 </item>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="1090" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="2168" y="0"/>
 </item>
-<item historyLabel="SeeeduinoADKDemo.java" index="1">
-<position info="not_deleted" x="4360" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="2086" y="0"/>
 </item>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="1090" y="0"/>
+<item historyLabel="DrawView.java" index="2">
+<position info="not_deleted" x="1937" y="0"/>
 </item>
-<item historyLabel="SeeeduinoADKDemo.java" index="1">
-<position info="not_deleted" x="4226" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="2077" y="0"/>
 </item>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="783" y="0"/>
+<item historyLabel="DrawView.java" index="2">
+<position info="not_deleted" x="1403" y="0"/>
 </item>
-<item historyLabel="Client.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position/>
 </item>
-<item historyLabel="Server.java" index="5">
-<position info="not_deleted" x="33" y="0"/>
+<item historyLabel="DrawView.java" index="2">
+<position info="not_deleted" x="1403" y="0"/>
 </item>
-<item historyLabel="Client.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="353" y="0"/>
 </item>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="783" y="0"/>
+<item historyLabel="RxPlotter Manifest" index="1"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="353" y="0"/>
 </item>
-<item historyLabel="AbstractServerListener.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="RxPlotter Manifest" index="1"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="768" y="0"/>
 </item>
-<item historyLabel="ServerListener.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DrawView.java" index="2">
+<position info="not_deleted" x="1403" y="530"/>
 </item>
-<item historyLabel="AbstractServerListener.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="746" y="0"/>
 </item>
-<item historyLabel="ServerListener.java" index="8">
-<position info="not_deleted" x="3" y="0"/>
+<item historyLabel="DrawView.java" index="2">
+<position info="not_deleted" x="1426" y="507"/>
 </item>
-<item historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="783" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="746" y="0"/>
 </item>
-<item historyLabel="R.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3980" y="0"/>
 </item>
-<item historyLabel="R.java" index="10">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3988" y="0"/>
 </item>
-<item historyLabel="R.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="4003" y="0"/>
 </item>
-<item historyLabel="R.java" index="10">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3527" y="0"/>
 </item>
-<item historyLabel="R.java" index="9">
-<position info="not_deleted" x="1139" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position/>
 </item>
-<item historyLabel="R.java" index="10">
-<position info="not_deleted" x="288" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3525" y="0"/>
 </item>
-<item historyLabel="R.java" index="9">
-<position info="not_deleted" x="1139" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3811" y="0"/>
 </item>
-<item active="true" historyLabel="DxDroidActivity.java" index="0">
-<position info="not_deleted" x="783" y="0"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3832" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position/>
+</item>
+<item historyLabel="main.xml" index="3"/>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3539" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3583" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3617" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3592" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3130" y="0"/>
+</item>
+<item historyLabel="DrawView.java" index="2">
+<position info="not_deleted" x="2935" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3130" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3617" y="0"/>
+</item>
+<item historyLabel="DrawView.java" index="2">
+<position info="not_deleted" x="2056" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3617" y="0"/>
+</item>
+<item historyLabel="DrawView.java" index="2">
+<position info="not_deleted" x="2056" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="4037" y="0"/>
+</item>
+<item historyLabel="DrawView.java" index="2">
+<position info="not_deleted" x="2056" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="4037" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3668" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3717" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3691" y="0"/>
+</item>
+<item historyLabel="DxDroid.java" index="0">
+<position info="not_deleted" x="3598" y="0"/>
+</item>
+<item active="true" historyLabel="DrawView.java" index="2">
+<position info="not_deleted" x="2056" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -485,6 +529,30 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="ecg.in" tooltip="DxDroid/res/raw/ecg.in">
+<persistable path="/DxDroid/res/raw/ecg.in"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" tooltip="DxDroid/res/layout/main.xml">
+<persistable path="/DxDroid/res/layout/main.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="RxPlotter/AndroidManifest.xml">
+<persistable path="/RxPlotter/AndroidManifest.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DrawView.java" tooltip="DxDroid/src/com/android/dxdroid/DrawView.java">
+<persistable path="/DxDroid/src/com/android/dxdroid/DrawView.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DxDroid.java" tooltip="DxDroid/src/com/android/dxdroid/DxDroid.java">
+<persistable path="/DxDroid/src/com/android/dxdroid/DxDroid.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="spo2_layout.xml" tooltip="DxDroid/res/layout/spo2_layout.xml">
+<persistable path="/DxDroid/res/layout/spo2_layout.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="DxDroid/AndroidManifest.xml">
+<persistable path="/DxDroid/AndroidManifest.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="ApiTest/AndroidManifest.xml">
+<persistable path="/ApiTest/AndroidManifest.xml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" tooltip="DxDroid/gen/com/android/dxdroid/R.java">
 <persistable path="/DxDroid/gen/com/android/dxdroid/R.java"/>
 </file>
@@ -502,33 +570,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" tooltip="DxDroid/src/org/microbridge/server/Client.java">
 <persistable path="/DxDroid/src/org/microbridge/server/Client.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" tooltip="DxDroid/res/layout/main.xml">
-<persistable path="/DxDroid/res/layout/main.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" tooltip="ADC Demo/res/layout/main.xml">
-<persistable path="/ADC Demo/res/layout/main.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="strings.xml" tooltip="ADC Demo/res/values/strings.xml">
-<persistable path="/ADC Demo/res/values/strings.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="strings.xml" tooltip="DxDroid/res/values/strings.xml">
-<persistable path="/DxDroid/res/values/strings.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="spo2_layout.xml" tooltip="ADC Demo/res/layout/spo2_layout.xml">
-<persistable path="/ADC Demo/res/layout/spo2_layout.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" tooltip="ADC Demo/src/org/microbridge/server/Server.java">
-<persistable path="/ADC Demo/src/org/microbridge/server/Server.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" tooltip="ADC Demo/src/org/microbridge/server/Client.java">
-<persistable path="/ADC Demo/src/org/microbridge/server/Client.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AbstractServerListener.java" tooltip="ADC Demo/src/org/microbridge/server/AbstractServerListener.java">
-<persistable path="/ADC Demo/src/org/microbridge/server/AbstractServerListener.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SeeeduinoADKDemo.java" tooltip="ADC Demo/src/com/seeedstudio/SeeeduinoADKDemo/SeeeduinoADKDemo.java">
-<persistable path="/ADC Demo/src/com/seeedstudio/SeeeduinoADKDemo/SeeeduinoADKDemo.java"/>
 </file>
 </mruList>
 </workbench>

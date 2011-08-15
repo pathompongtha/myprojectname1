@@ -1,10 +1,15 @@
 package com.android.dxdroid;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 
 import org.microbridge.server.AbstractServerListener;
 import org.microbridge.server.Server;
 
+import android.view.Display;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
@@ -12,10 +17,14 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DxDroid extends Activity implements OnClickListener {
+	static int ctr = 0;
 	private int adcSensorValue = 10;
+	DrawView drawview;
 
 	// Create TCP server (based on MicroBridge LightWeight Server).
 	// Note: This Server runs in a separate thread.
@@ -26,20 +35,20 @@ public class DxDroid extends Activity implements OnClickListener {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.spo2_layout);
+//		setContentView(R.layout.spo2_layout);
 
-//		Display display = getWindowManager().getDefaultDisplay();
-//		int width = display.getWidth();
-//		int height = display.getHeight();
-//
-//		setContentView(R.layout.main);
-//		
-//		RelativeLayout screen = (RelativeLayout)findViewById(R.id.screen);
-//		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(width-20,height-20);
-//		
-//		final DrawView drawview = new DrawView(this, height, width);
-//		params.setMargins(10, 10, 10, 10);
-//		screen.addView(drawview,params);
+		Display display = getWindowManager().getDefaultDisplay();
+		int width = display.getWidth();
+		int height = display.getHeight();
+
+		setContentView(R.layout.main);
+		
+		RelativeLayout screen = (RelativeLayout)findViewById(R.id.screen);
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(width-20,height-20);
+		
+		drawview = new DrawView(this, height, width);
+		params.setMargins(10, 10, 10, 10);
+		screen.addView(drawview,params);
 		
 		// Create TCP server (based on MicroBridge LightWeight Server)
 		try {
@@ -60,7 +69,6 @@ public class DxDroid extends Activity implements OnClickListener {
 				if (data.length < 2)
 					return;
 				adcSensorValue = (data[0] & 0xff) | ((data[1] & 0xff) << 8);
-//				drawview.getData(new String[]{"","0",""+adcSensorValue});
 				
 				// Any update to UI can not be carried out in a non UI thread
 				// like the one used
@@ -68,7 +76,7 @@ public class DxDroid extends Activity implements OnClickListener {
 				runOnUiThread(new Runnable() {
 					@Override
 					public void run() {
-						new UpdateData().execute(adcSensorValue);						
+						new UpdateData().execute(adcSensorValue);
 					}
 				});
 
@@ -102,9 +110,19 @@ public class DxDroid extends Activity implements OnClickListener {
 		@Override
 		protected void onPostExecute(String result) {
 			// Init TextView Widget to display ADC sensor value in numeric.
-			TextView tvAdcvalue = (TextView) findViewById(R.id.SPO2HeartRateValue);
-			tvAdcvalue.setText(String.valueOf(result));
-
+//			TextView tvAdcvalue = (TextView) findViewById(R.id.SPO2HeartRateValue);
+//			tvAdcvalue.setText(String.valueOf(result));
+			TextView tvAdcvalue = (TextView) findViewById(R.id.textView1);
+			try {
+//				String[] ss = drawview.br.readLine().split("\\s+");
+				String[] ss = {""+0.02*(ctr++),"0",result};
+				tvAdcvalue.setText(String.format("%.3f: %.3f",Float.parseFloat(ss[0]),Float.parseFloat(ss[2])));
+				drawview.getData(ss);
+//				Toast.makeText(getApplicationContext(), Arrays.toString(ss), Toast.LENGTH_SHORT).show();
+			} catch(Exception e) {
+				tvAdcvalue.setText("ERROR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+//				Toast.makeText(getApplicationContext(), "here "+Math.random(), Toast.LENGTH_SHORT).show();
+			}
 		}
 	}
 
