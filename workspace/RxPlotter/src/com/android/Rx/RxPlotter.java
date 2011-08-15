@@ -35,14 +35,14 @@ public class RxPlotter extends Activity {
 		width = display.getWidth();
 		height = display.getHeight();
 
-//		setContentView(R.layout.main);
-//		
-//		RelativeLayout screen = (RelativeLayout)findViewById(R.id.screen);
-//		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(width-20,height-20);
-//		
-//		DrawView drawview = new DrawView(this, height, width);
-//		params.setMargins(10, 10, 10, 10);
-//		screen.addView(drawview,params);
+		setContentView(R.layout.main);
+		
+		RelativeLayout screen = (RelativeLayout)findViewById(R.id.screen);
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(width-20,height-20);
+		
+		DrawView drawview = new DrawView(this, height, width);
+		params.setMargins(10, 10, 10, 10);
+		screen.addView(drawview,params);
 //		
 //		TextView tv = new TextView(this);
 //		tv.setText("Plot below");
@@ -50,8 +50,8 @@ public class RxPlotter extends Activity {
 //		params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
 //		screen.addView(tv,params);
 
-		DrawView drawview = new DrawView(this, height, width);
-		setContentView(drawview);
+//		DrawView drawview = new DrawView(this, height, width);
+//		setContentView(drawview);
 	}
 
 	public class Panel extends SurfaceView implements SurfaceHolder.Callback {
