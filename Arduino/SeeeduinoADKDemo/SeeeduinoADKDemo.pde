@@ -59,6 +59,8 @@ void setup()
   connection = ADB::addConnection("tcp:4568", true, adbEventHandler);  
   digitalWrite(13,LOW);
 }
+
+int prev = 0;
  
 void loop()
 {
@@ -66,8 +68,12 @@ void loop()
   if ((millis() - lastTime) > 20)
   {
     //Read ADC value
-    uint16_t data = analogRead(A0);
- 
+//    uint16_t data = analogRead(A0);
+//    uint16_t data = abs(millis()-0)%1024;
+    uint16_t data = (uint16_t)abs((sin(millis()/500.0)+1)*1024);
+//    uint16_t data = random(1,1024);
+//    uint16_t data = (prev += (random(-100,100)));
+
     //Send the ADC value to Android device as two bytes of data.
     connection->write(2,(uint8_t*)&data);
     lastTime = millis();

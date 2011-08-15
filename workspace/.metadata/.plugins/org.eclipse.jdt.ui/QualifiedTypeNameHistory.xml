@@ -2,6 +2,13 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="com.android.dxdroid.R.id"/>
-<fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="android.widget.SlidingDrawer"/>
+<fullyQualifiedTypeName name="android.view.Display"/>
+<fullyQualifiedTypeName name="android.widget.RelativeLayout"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
