@@ -7260,3 +7260,33 @@ java.lang.IllegalArgumentException: Path must include project and resource name:
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:242)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:16:41.608
+!MESSAGE AndroidManifest: Ignoring unknown 'ac' XML element
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:16:41.654
+!MESSAGE AndroidManifest: Ignoring unknown 'acti' XML element
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:16:41.709
+!MESSAGE AndroidManifest: Ignoring unknown 'activi' XML element
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:47:52.348
+!MESSAGE AndroidManifest: Ignoring unknown 'L' XML element
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:47:52.705
+!MESSAGE AndroidManifest: Ignoring unknown 'Lin' XML element
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:47:53.262
+!MESSAGE AndroidManifest: Ignoring unknown 'Linea' XML element
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:47:53.771
+!MESSAGE AndroidManifest: Ignoring unknown 'LinearL' XML element
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:47:54.135
+!MESSAGE AndroidManifest: Ignoring unknown 'LinearLay' XML element
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:47:54.386
+!MESSAGE AndroidManifest: Ignoring unknown 'LinearLayou' XML element
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:48:14.601
+!MESSAGE AndroidManifest: Ignoring unknown 'LinearLayo' XML element

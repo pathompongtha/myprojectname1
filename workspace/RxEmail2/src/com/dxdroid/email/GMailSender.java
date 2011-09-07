@@ -2,13 +2,21 @@ package com.dxdroid.email;
 
 import javax.activation.DataHandler;   
 import javax.activation.DataSource;   
+import javax.activation.FileDataSource;
 import javax.mail.Message;   
+import javax.mail.Multipart;
 import javax.mail.PasswordAuthentication;   
 import javax.mail.Session;   
 import javax.mail.Transport;   
 import javax.mail.internet.InternetAddress;   
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;   
+import javax.mail.internet.MimeMultipart;
+
+import android.widget.Toast;
+
 import java.io.ByteArrayInputStream;   
+import java.io.File;
 import java.io.IOException;   
 import java.io.InputStream;   
 import java.io.OutputStream;   
@@ -60,9 +68,39 @@ public class GMailSender extends javax.mail.Authenticator {
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipients));   
         Transport.send(message);   
         }catch(Exception e){
+        	
+        }
+    }
+    
+    public synchronized void sendMail(String subject, String body, String sender, String recipients, File attachment) throws Exception {
+        try{
+        MimeMessage message = new MimeMessage(session);
+        message.setSender(new InternetAddress(sender));
+        message.setSubject(subject);
+
+        MimeBodyPart mbp1 = new MimeBodyPart();
+        mbp1.setText(body);
+
+        MimeBodyPart mbp2 = new MimeBodyPart();
+        FileDataSource fds = new FileDataSource(attachment);
+        mbp2.setDataHandler(new DataHandler(fds));
+        mbp2.setFileName(fds.getName());
+
+        Multipart mp = new MimeMultipart();
+        mp.addBodyPart(mbp1);
+        mp.addBodyPart(mbp2);
+
+        message.setContent(mp);
+
+        if (recipients.indexOf(',') > 0)
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipients));
+        else
+            message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipients));
+        Transport.send(message);
+        }catch(Exception e){
 
         }
-    }   
+    }
 
     public class ByteArrayDataSource implements DataSource {   
         private byte[] data;   
