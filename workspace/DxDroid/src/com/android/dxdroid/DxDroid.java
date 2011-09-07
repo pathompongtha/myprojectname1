@@ -17,6 +17,7 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,6 +50,27 @@ public class DxDroid extends Activity implements OnClickListener {
 		drawview = new DrawView(this, height, width);
 		params.setMargins(10, 10, 10, 10);
 		screen.addView(drawview,params);
+	
+		Button plus = (Button)findViewById(R.id.buttonPlus);
+		Button minus = (Button)findViewById(R.id.buttonMinus);
+		
+		plus.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				drawview.zoom *= 1.5;
+			}
+		});
+
+		minus.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				drawview.zoom /= 1.5;
+			}
+		});
 		
 		// Create TCP server (based on MicroBridge LightWeight Server)
 		try {
@@ -114,14 +136,11 @@ public class DxDroid extends Activity implements OnClickListener {
 //			tvAdcvalue.setText(String.valueOf(result));
 			TextView tvAdcvalue = (TextView) findViewById(R.id.textView1);
 			try {
-//				String[] ss = drawview.br.readLine().split("\\s+");
 				String[] ss = {""+0.02*(ctr++),"0",result};
 				tvAdcvalue.setText(String.format("%.3f: %.3f",Float.parseFloat(ss[0]),Float.parseFloat(ss[2])));
 				drawview.getData(ss);
-//				Toast.makeText(getApplicationContext(), Arrays.toString(ss), Toast.LENGTH_SHORT).show();
 			} catch(Exception e) {
 				tvAdcvalue.setText("ERROR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-//				Toast.makeText(getApplicationContext(), "here "+Math.random(), Toast.LENGTH_SHORT).show();
 			}
 		}
 	}
