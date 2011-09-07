@@ -15,7 +15,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginRight="15dp"
-			android:layout_marginLeft = "10dp"></TextView>
+			android:layout_marginLeft="10dp"></TextView>
 		<EditText
 			android:id="@+id/emailSender"
 			android:layout_width="match_parent"
@@ -34,8 +34,8 @@
 			android:text="Password"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_marginRight = "10dp"
-			android:layout_marginLeft = "10dp"></TextView>
+			android:layout_marginRight="10dp"
+			android:layout_marginLeft="10dp"></TextView>
 		<EditText
 			android:id="@+id/emailPassword"
 			android:layout_width="wrap_content"
@@ -48,21 +48,21 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal"
-		android:layout_marginTop = "15dp">
+		android:layout_marginTop="15dp">
 		<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="To"
-			android:layout_marginRight = "15dp"
-			android:layout_marginLeft = "10dp"
-			android:gravity = "center"></TextView>
+			android:layout_marginRight="15dp"
+			android:layout_marginLeft="10dp"
+			android:gravity="center"></TextView>
 		<EditText
 			android:id="@+id/emailaddress"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
 			android:inputType="textEmailAddress">
-			</EditText>
+		</EditText>
 	</LinearLayout>
 
 	<LinearLayout
@@ -74,8 +74,8 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="Subject"
-			android:layout_marginLeft = "10dp"
-			android:layout_marginRight = "15dp"></TextView>
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="15dp"></TextView>
 		<EditText
 			android:id="@+id/emailsubject"
 			android:layout_width="match_parent"
@@ -88,14 +88,27 @@
 		android:layout_height="wrap_content"
 		android:lines="5"
 		android:width="300dip"
-		android:layout_margin = "10dp"></EditText>
-	<Button
-		android:layout_width="wrap_content"
+		android:layout_margin="10dp"></EditText>
+	<LinearLayout
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/attach"
-		android:text="Attach file"
-		android:width="150dip"
-		android:layout_marginLeft="10dp"></Button>
+		android:orientation="horizontal">
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/attach"
+			android:text="Attach file"
+			android:width="100dip"
+			android:layout_marginLeft="10dp"></Button>
+		<TextView
+			android:id="@+id/filename"
+			android:text = "No attachment"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="15dp"></TextView>
+	</LinearLayout>
+
 	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -103,6 +116,6 @@
 		android:layout_gravity="right"
 		android:id="@+id/send"
 		android:text="Send"
-		android:layout_marginRight = "10dp"
+		android:layout_marginRight="10dp"
 		android:width="150dip"></Button>
 </LinearLayout>
