@@ -1,0 +1,56 @@
+package com.dxdroid.email;
+
+import java.io.File;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class RxEmail2Activity extends Activity {
+	/** Called when the activity is first created. */
+	@Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        
+        
+        final EditText senderAddress = (EditText)findViewById(R.id.emailSender);
+        final EditText pass = (EditText)findViewById(R.id.emailPassword);
+        final EditText address = (EditText)findViewById(R.id.emailaddress);
+        final EditText subject = (EditText)findViewById(R.id.emailsubject);
+        final EditText body = (EditText)findViewById(R.id.emailtext);
+
+        File f = new File("/");
+        File[] files = f.listFiles();
+        System.out.println(files.length);
+        for(File file : files) {
+        	System.out.println(file.getName());
+        }
+        
+        final Button send = (Button) this.findViewById(R.id.send);
+        send.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                try {   
+                    GMailSender sender = new GMailSender(senderAddress.getText().toString(), pass.getText().toString());
+                    sender.sendMail(subject.getText().toString(),
+                    		body.getText().toString(),
+                    		senderAddress.getText().toString(),
+                    		address.getText().toString());
+                    Toast.makeText(getApplicationContext(), "done",Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {   
+                    Log.e("SendMail", e.getMessage(), e);   
+                } 
+
+            }
+        });
+
+    }
+}
