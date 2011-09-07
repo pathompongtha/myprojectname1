@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="hello">Hello World, DxDroidActivity!</string>
-    <string name="app_name">DxDroid</string>
-    
-    <string name="pulseOxLabel">Pulse Oximeter</string>
-    <string name="SPO2HeartRate">Pulse Oximeter</string>
-    <string name="SPO2OxygenSaturation">Pulse Oximeter</string>
-</resources>

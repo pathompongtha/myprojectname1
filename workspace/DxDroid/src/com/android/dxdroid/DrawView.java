@@ -29,6 +29,7 @@ public class DrawView extends View {
 	private static int height, width, off;
 	private static float px = 0, py = 0;
 	private static int ctr = 0;
+	public static float zoom = 30;
 	InputStream inputStream = getResources().openRawResource(R.raw.ecg);
 	final BufferedReader br = new BufferedReader(new InputStreamReader(
 			inputStream));
@@ -72,7 +73,7 @@ public class DrawView extends View {
 
 	public void getData(String[] ss) {
 		points.add(conv(parseFloat(ss[0]), parseFloat(ss[1]),
-				parseFloat(ss[2])/1000, points.size()));
+				parseFloat(ss[2])/100, points.size()));
 		invalidate();
 		if (ctr == width)
 			while (width - points.size() < 10)
@@ -90,14 +91,12 @@ public class DrawView extends View {
 				canvas.drawLine(prev.x, prev.y, point.x, point.y, paint);
 			else
 				canvas.drawPoint(point.x, point.y, paint);
-			// canvas.drawPoint(point.x, point.y, paint)
 			prev = point;
 		}
 	}
 
 	public static Point conv(double a, double b, double c, int i) {
-		return new Point((ctr++) % width + off / 2, height / 2 + 30
-				* (float) (c - b));
+		return new Point((ctr++) % width + off / 2, height / 2 + zoom *(float) (b - c));
 		// return new Point((float) a * 150, height/2 + 30 * (float) (c - b));
 	}
 }

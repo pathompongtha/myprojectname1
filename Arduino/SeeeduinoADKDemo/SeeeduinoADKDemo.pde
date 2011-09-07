@@ -48,16 +48,11 @@ void setup()
  
   // Set Digital pin 12 (LED is connected) as output
   pinMode(12,OUTPUT);
-  pinMode(13,OUTPUT);
   
   // Initialise the ADB subsystem.
-  digitalWrite(12,HIGH);
   ADB::init();
-  digitalWrite(12,LOW);
-  digitalWrite(13,HIGH);
   // Open an ADB stream to the phone's shell. Auto-reconnect. Use any unused port number eg:4568
   connection = ADB::addConnection("tcp:4568", true, adbEventHandler);  
-  digitalWrite(13,LOW);
 }
 
 int prev = 0;
@@ -68,9 +63,9 @@ void loop()
   if ((millis() - lastTime) > 20)
   {
     //Read ADC value
-//    uint16_t data = analogRead(A0);
+    uint16_t data = analogRead(A0);
 //    uint16_t data = abs(millis()-0)%1024;
-    uint16_t data = (uint16_t)abs((sin(millis()/500.0)+1)*1024);
+//    uint16_t data = (uint16_t)abs((sin(millis()/500.0)+1)*1024);
 //    uint16_t data = random(1,1024);
 //    uint16_t data = (prev += (random(-100,100)));
 

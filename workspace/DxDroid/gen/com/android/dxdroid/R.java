@@ -14,9 +14,11 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int SPO2HeartRateValue=0x7f060003;
-        public static final int SPO2OxygenSaturationValue=0x7f060004;
-        public static final int linearLayout1=0x7f060002;
+        public static final int SPO2HeartRateValue=0x7f060005;
+        public static final int SPO2OxygenSaturationValue=0x7f060006;
+        public static final int buttonMinus=0x7f060002;
+        public static final int buttonPlus=0x7f060003;
+        public static final int linearLayout1=0x7f060004;
         public static final int screen=0x7f060000;
         public static final int textView1=0x7f060001;
     }
