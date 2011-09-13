@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/LinearLayout01"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/linearLayout1">
+		<TextView
+			android:id="@+id/textView1"
+			android:text="From"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight = "15dp"
+			></TextView>
+		<EditText
+			android:layout_width="match_parent"
+			android:id="@+id/emailSender"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:inputType="textEmailAddress">
+			<requestFocus></requestFocus>
+		</EditText>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/linearLayout2">
+		<EditText
+			android:layout_width="wrap_content"
+			android:id="@+id/emailPassword"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:inputType="textPassword"></EditText>
+		<TextView
+			android:id="@+id/textView2"
+			android:text="Password"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"></TextView>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/LinearLayout02"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<EditText
+			android:id="@+id/emailaddress"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:width="170dip"></EditText>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Email address"></TextView>
+	</LinearLayout>
+
+
+
+	<LinearLayout
+		android:id="@+id/LinearLayout03"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<EditText
+			android:id="@+id/emailsubject"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:width="170dip"></EditText>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Subject"></TextView>
+	</LinearLayout>
+	<EditText
+		android:id="@+id/emailtext"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:lines="5"
+		android:width="300dip"></EditText>
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/attach"
+		android:text="Attach file"
+		android:width="150dip"></Button>
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop = "15dp"
+		android:layout_gravity="right"
+		android:id="@+id/send"
+		android:text="Send"
+		android:width="150dip"></Button>
+</LinearLayout>

@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box
+END
+bp_fail.png
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/bp_fail.png
+END
+dcm_fail.png
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/dcm_fail.png
+END
+none.png
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/none.png
+END
+rxboxstartlogo.png
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/rxboxstartlogo.png
+END
+spo2_standby.png
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/spo2_standby.png
+END
+spo2_ready.png
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/spo2_ready.png
+END
+bp_bnw.png
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/bp_bnw.png
+END
+net_standby.png
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/net_standby.png
+END
+net_ready.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/net_ready.png
+END
+spo2_fail.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/spo2_fail.png
+END
+net_fail.png
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/net_fail.png
+END
+edf_standby.png
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/edf_standby.png
+END
+ecg_standby.png
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/ecg_standby.png
+END
+edf_ready.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/edf_ready.png
+END
+ecg_ready.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/ecg_ready.png
+END
+cam_ready.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/cam_ready.png
+END
+cam_standby.png
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/cam_standby.png
+END
+bp_standby.png
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/bp_standby.png
+END
+bp_ready.png
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/bp_ready.png
+END
+dcm_ready.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/dcm_ready.png
+END
+dcm_standby.png
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/dcm_standby.png
+END
+ecg_fail.png
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/ecg_fail.png
+END
+edf_fail.png
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/edf_fail.png
+END
+cam_fail.png
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/591/lifelink/rxbox/trunk/rxbox-rc1/States/TestState/start_box/cam_fail.png
+END

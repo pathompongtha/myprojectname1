@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/613/lifelink/rxbox/trunk/rxbox-rc1/Modules/IM
+END
+messenger.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/IM/messenger.py
+END
+im_config.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/613/lifelink/rxbox/trunk/rxbox-rc1/Modules/IM/im_config.py
+END
+im_cgui.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/IM/im_cgui.py
+END
+gui_imconfig.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/IM/gui_imconfig.wxg
+END
+im.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/IM/im.cfg
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/587/lifelink/rxbox/trunk/rxbox-rc1/Modules/IM/__init__.py
+END
+im_backup.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/IM/im_backup.cfg
+END
+IMPanel.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/IM/IMPanel.py
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Modules/IM/README
+END

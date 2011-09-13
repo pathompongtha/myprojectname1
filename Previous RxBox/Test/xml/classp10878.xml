@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classp10878" kind="class" prot="public">
+    <compoundname>p10878</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This solves UVa problem 10878 </para>    </detaileddescription>
+    <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p10878.java" line="12" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p10878.java" bodystart="12" bodyend="32"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

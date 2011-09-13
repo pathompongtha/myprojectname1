@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/563/lifelink/rxbox/trunk/rxbox-rc1/Modules/Module
+END
+TemplateDAQSim.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/563/lifelink/rxbox/trunk/rxbox-rc1/Modules/Module/TemplateDAQSim.py
+END
+TemplatePanel.py
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/563/lifelink/rxbox/trunk/rxbox-rc1/Modules/Module/TemplatePanel.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/563/lifelink/rxbox/trunk/rxbox-rc1/Modules/Module/__init__.py
+END
+TemplateDAQLive.py
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/563/lifelink/rxbox/trunk/rxbox-rc1/Modules/Module/TemplateDAQLive.py
+END
+TemplateModule.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/563/lifelink/rxbox/trunk/rxbox-rc1/Modules/Module/TemplateModule.py
+END
