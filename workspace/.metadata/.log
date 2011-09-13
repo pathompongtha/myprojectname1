@@ -7290,29 +7290,207 @@ java.lang.IllegalArgumentException: Path must include project and resource name:
 
 !ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:48:14.601
 !MESSAGE AndroidManifest: Ignoring unknown 'LinearLayo' XML element
-!SESSION 2011-09-13 14:55:27.601 -----------------------------------------------
-eclipse.buildId=M20100909-0800
-java.version=1.6.0_16
+!SESSION 2011-09-08 16:23:04.603 -----------------------------------------------
+eclipse.buildId=M20110210-1200
+java.version=1.6.0_26
 java.vendor=Sun Microsystems Inc.
 BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.java.product
-Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+Framework arguments:  -product org.eclipse.epp.package.rcp.product -product org.eclipse.epp.package.rcp.product -product org.eclipse.epp.package.rcp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.rcp.product -product org.eclipse.epp.package.rcp.product -data D:\School Stuff\2011 - 12 1st Sem\TelemedHg\workspace -product org.eclipse.epp.package.rcp.product
 
-!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-13 14:55:55.159
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.024
+!MESSAGE loadAndParseRClass: failed to find manifest package for project ADC Demo
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.043
+!MESSAGE loadAndParseRClass: failed to find manifest package for project AndroidPhoneDialer
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.050
 !MESSAGE loadAndParseRClass: failed to find manifest package for project ApiDemos
 
-!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-13 14:56:36.324
-!MESSAGE Failed to load properties file for project 'ApiDemos'
-!SESSION 2011-09-13 16:26:28.302 -----------------------------------------------
-eclipse.buildId=M20100909-0800
-java.version=1.6.0_16
-java.vendor=Sun Microsystems Inc.
-BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.java.product
-Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.055
+!MESSAGE loadAndParseRClass: failed to find manifest package for project ApiTest
 
-!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-13 16:26:54.524
-!MESSAGE loadAndParseRClass: failed to find manifest package for project ApiDemos
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.059
+!MESSAGE loadAndParseRClass: failed to find manifest package for project BluetoothChat
 
-!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-13 16:27:16.628
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.063
+!MESSAGE loadAndParseRClass: failed to find manifest package for project DxDroid
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.075
+!MESSAGE loadAndParseRClass: failed to find manifest package for project DxDroidDemo
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.086
+!MESSAGE loadAndParseRClass: failed to find manifest package for project Hello Widget
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.090
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloAndroid
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.095
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloAutoComplete
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.103
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloDatePicker
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.133
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloFormStuff
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.138
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloGallery
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.143
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloGridView
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.150
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloL10N
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.155
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloListView
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.164
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloRelativeLayout
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.168
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloSpinner
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.173
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloTabWidget
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.180
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloTableLayout
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.185
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloTimePicker
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.196
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloViews
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.201
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloWebView
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.205
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloWorld
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.214
+!MESSAGE loadAndParseRClass: failed to find manifest package for project HelloWorldImage
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.218
+!MESSAGE loadAndParseRClass: failed to find manifest package for project LunarLander
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.226
+!MESSAGE loadAndParseRClass: failed to find manifest package for project RxCamera2
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.230
+!MESSAGE loadAndParseRClass: failed to find manifest package for project RxEmail
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.234
+!MESSAGE loadAndParseRClass: failed to find manifest package for project RxEmail2
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.246
+!MESSAGE loadAndParseRClass: failed to find manifest package for project RxImage
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.250
+!MESSAGE loadAndParseRClass: failed to find manifest package for project RxPlotter
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.255
+!MESSAGE loadAndParseRClass: failed to find manifest package for project RxSerial
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.262
+!MESSAGE loadAndParseRClass: failed to find manifest package for project SeeeduinoADKDemo
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.266
+!MESSAGE loadAndParseRClass: failed to find manifest package for project ServoControl
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:23:16.274
+!MESSAGE loadAndParseRClass: failed to find manifest package for project Snake
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.469
+!MESSAGE System property http.proxyHost is not set but should be enggproxy.up.edu.ph.
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.474
+!MESSAGE System property http.proxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.479
+!MESSAGE System property https.proxyHost is not set but should be enggproxy.up.edu.ph.
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.484
+!MESSAGE System property https.proxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.484
+!MESSAGE System property socksProxyHost is not set but should be enggproxy.up.edu.ph.
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.494
+!MESSAGE System property socksProxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.501
+!MESSAGE System property https.proxyHost is not set but should be enggproxy.up.edu.ph.
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.505
+!MESSAGE System property https.proxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.512
+!MESSAGE System property socksProxyHost is not set but should be enggproxy.up.edu.ph.
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.516
+!MESSAGE System property socksProxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.523
+!MESSAGE System property socksProxyHost is not set but should be enggproxy.up.edu.ph.
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-08 16:23:24.526
+!MESSAGE System property socksProxyPort is not set but should be 8080.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:24:31.675
 !MESSAGE Failed to load properties file for project 'ApiDemos'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:24:57.053
+!MESSAGE Failed to load properties file for project 'ApiDemos'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:24:59.176
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadTarget(Sdk.java:422)
+	at com.android.ide.eclipse.adt.AdtPlugin$10.run(AdtPlugin.java:1270)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-08 16:24:59.509
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadTarget(Sdk.java:422)
+	at com.android.ide.eclipse.adt.AdtPlugin$10.run(AdtPlugin.java:1270)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2011-09-08 16:54:15.222
+!MESSAGE Error during shutdown
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: null argument:
+	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:85)
+	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:73)
+	at org.eclipse.core.internal.events.ResourceChangeListenerList.remove(ResourceChangeListenerList.java:146)
+	at org.eclipse.core.internal.events.NotificationManager.removeListener(NotificationManager.java:305)
+	at org.eclipse.core.internal.resources.Workspace.removeResourceChangeListener(Workspace.java:1934)
+	at org.eclipse.wst.server.core.internal.ResourceManager.shutdownImpl(ResourceManager.java:367)
+	at org.eclipse.wst.server.core.internal.ResourceManager.shutdown(ResourceManager.java:313)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.stop(ServerPlugin.java:367)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:843)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:836)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:501)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:550)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1097)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:597)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:266)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:690)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:588)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:415)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:620)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:575)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1408)
