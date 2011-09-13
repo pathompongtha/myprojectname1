@@ -70,16 +70,19 @@ public class RxEmail2Activity extends Activity {
             	Toast.makeText(getApplicationContext(), "Sending ... ", Toast.LENGTH_SHORT).show();
                 try {   
                     GMailSender sender = new GMailSender(senderAddress.getText().toString(), pass.getText().toString());
-//                    sender.sendMail(subject.getText().toString(),
-//                    		body.getText().toString(),
-//                    		senderAddress.getText().toString(),
-//                    		address.getText().toString());
-
-                    sender.sendMail(subject.getText().toString(),
-                    		body.getText().toString(),
-                    		senderAddress.getText().toString(),
-                    		address.getText().toString(),
-                    		attachment);
+                    if(attachment == null) {
+                      sender.sendMail(subject.getText().toString(),
+                		body.getText().toString(),
+                		senderAddress.getText().toString(),
+                		address.getText().toString());
+                    	
+                    } else {
+	                    sender.sendMail(subject.getText().toString(),
+	                    		body.getText().toString(),
+	                    		senderAddress.getText().toString(),
+	                    		address.getText().toString(),
+	                    		attachment);
+                    }
                     Toast.makeText(getApplicationContext(), "Sent",Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {   
                     Log.e("SendMail", e.getMessage(), e);   

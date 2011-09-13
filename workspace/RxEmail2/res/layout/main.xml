@@ -18,6 +18,7 @@
 			android:layout_marginLeft="10dp"></TextView>
 		<EditText
 			android:id="@+id/emailSender"
+			android:text="aysonje@gmail.com"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
@@ -58,6 +59,7 @@
 			android:gravity="center"></TextView>
 		<EditText
 			android:id="@+id/emailaddress"
+			android:text="aysonje@gmail.com, angelaedora@gmail.com, nathaniel.d.cruz@gmail.com"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"

@@ -7290,3 +7290,16 @@ java.lang.IllegalArgumentException: Path must include project and resource name:
 
 !ENTRY com.android.ide.eclipse.adt 2 0 2011-09-07 13:48:14.601
 !MESSAGE AndroidManifest: Ignoring unknown 'LinearLayo' XML element
+!SESSION 2011-09-13 14:55:27.601 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-13 14:55:55.159
+!MESSAGE loadAndParseRClass: failed to find manifest package for project ApiDemos
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-09-13 14:56:36.324
+!MESSAGE Failed to load properties file for project 'ApiDemos'
