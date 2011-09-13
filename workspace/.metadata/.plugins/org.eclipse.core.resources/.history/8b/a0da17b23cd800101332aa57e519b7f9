@@ -1,7 +1,0 @@
-package com.provider;
-
-import java.security.Provider;
-
-public class JSSEProvider extends Provider {
-
-}
