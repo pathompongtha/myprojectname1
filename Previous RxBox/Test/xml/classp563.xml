@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classp563" kind="class" prot="public">
+    <compoundname>p563</compoundname>
+    <innerclass refid="classp563_1_1_edge" prot="package">p563::Edge</innerclass>
+    <innerclass refid="classp563_1_1_l_l" prot="package">p563::LL</innerclass>
+      <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classp563_1a0cc692a892ddcf0725f3f08d27a773e7" prot="package" static="yes" mutable="no">
+        <type>Edge[]</type>
+        <definition>Edge [] p563.edgeTo</definition>
+        <argsstring></argsstring>
+        <name>edgeTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="150" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classp563_1a0f8bbcf33059eee850855a9cf716813a" prot="package" static="yes" mutable="no">
+        <type>boolean[]</type>
+        <definition>boolean [] p563.vis</definition>
+        <argsstring></argsstring>
+        <name>vis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="151" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classp563_1a07f243c43eb4df6806247f1f4af97b5a" prot="package" static="yes" mutable="no">
+        <type>LL[]</type>
+        <definition>LL [] p563.edges</definition>
+        <argsstring></argsstring>
+        <name>edges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="152" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classp563_1a09315047433d5fc950616552b6270341" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void p563.main</definition>
+        <argsstring>(String args[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>String</type>
+          <declname>args</declname>
+          <array>[]</array>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="17" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="17" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-static-func">
+      <memberdef kind="function" id="classp563_1abdfd906ff340324fe3ede3cbe7fa7120" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean p563.augment</definition>
+        <argsstring>(int s, int t)</argsstring>
+        <name>augment</name>
+        <param>
+          <type>int</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="129" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="129" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>UVa problem 563 solution. </para>    </briefdescription>
+    <detaileddescription>
+<para>implementation of an Edge </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>p563</label>
+        <link refid="classp563"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>edges</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>edgeTo</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>p563.LL</label>
+      </node>
+      <node id="9">
+        <label>p563.Edge</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" line="16" bodyfile="C:/Users/emcy/Desktop/je/testrepo/Test/p563.java" bodystart="16" bodyend="183"/>
+    <listofallmembers>
+      <member refid="classp563_1abdfd906ff340324fe3ede3cbe7fa7120" prot="package" virt="non-virtual"><scope>p563</scope><name>augment</name></member>
+      <member refid="classp563_1a07f243c43eb4df6806247f1f4af97b5a" prot="package" virt="non-virtual"><scope>p563</scope><name>edges</name></member>
+      <member refid="classp563_1a0cc692a892ddcf0725f3f08d27a773e7" prot="package" virt="non-virtual"><scope>p563</scope><name>edgeTo</name></member>
+      <member refid="classp563_1a09315047433d5fc950616552b6270341" prot="public" virt="non-virtual"><scope>p563</scope><name>main</name></member>
+      <member refid="classp563_1a0f8bbcf33059eee850855a9cf716813a" prot="package" virt="non-virtual"><scope>p563</scope><name>vis</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

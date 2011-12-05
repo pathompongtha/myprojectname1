@@ -1,0 +1,22 @@
+1318687589000	Extracts string 'null' into R.string.labelAdmissionDate2
+1318687654887	Extracts string 'null' into R.string.labelAdmissionDate1
+1318687685912	Extracts string 'null' into R.string.labelAdmissionTime1
+1318687702687	Extracts string 'null' into R.string.labelAdmissionTime2
+1318687724579	Extracts string 'null' into R.string.labelRupturedMembranes1
+1318687732677	Extracts string 'null' into R.string.labelRupturedMembranes2
+1318687740920	Extracts string 'null' into R.string.labelName
+1318687750471	Extracts string 'null' into R.string.labelGravida
+1318687765406	Extracts string 'null' into R.string.labelPara
+1318688954671	Delete elements
+1318691385691	Extracts string 'null' into R.string.labelFetalHeartRate1
+1318691401871	Extracts string 'null' into R.string.labelFetalHeartRate2
+1318694572904	Extracts string 'null' into R.string.labelUterineContraction1
+1318694582327	Extracts string 'null' into R.string.labelUterineContraction2
+1318696251335	Extracts string 'null' into R.string.labelPulseRate1
+1318696260267	Extracts string 'null' into R.string.labelPulseRate2
+1318696735926	Extracts string 'null' into R.string.labelBloodPressure1
+1318696748331	Extracts string 'null' into R.string.labelBloodPressure2
+1318698199442	Extracts string 'null' into R.string.labelAmnioticFluid1
+1318705116679	Rename field 'amnioticFluidLayout'
+1318709827881	Extracts string 'null' into R.string.labelMolding
+1318712721651	Extracts string 'null' into R.string.labelCervix

@@ -1,0 +1,7 @@
+package com.android.enai;
+
+public class Snippet {
+	
+	<activity android:name=".AndroidExplorer"></activity>
+}
+

@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/613/lifelink/rxbox/trunk/rxbox-rc1/Configuration
+END
+gui_conf.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/580/lifelink/rxbox/trunk/rxbox-rc1/Configuration/gui_conf.py
+END
+gen_conf.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/gen_conf.wxg
+END
+db.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/db.cfg
+END
+db_cgui.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/db_cgui.py
+END
+gen_config.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/613/lifelink/rxbox/trunk/rxbox-rc1/Configuration/gen_config.py
+END
+errorlog.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/errorlog.cfg
+END
+errorlog_cgui.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/errorlog_cgui.py
+END
+index.jpeg
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/index.jpeg
+END
+gui_conf.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/gui_conf.wxg
+END
+Configuration.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/580/lifelink/rxbox/trunk/rxbox-rc1/Configuration/Configuration.py
+END
+db_conf.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/db_conf.wxg
+END
+general_backup.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/general_backup.cfg
+END
+db_config.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/613/lifelink/rxbox/trunk/rxbox-rc1/Configuration/db_config.py
+END
+configgui.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/configgui.py
+END
+errorlog_conf.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/errorlog_conf.wxg
+END
+errorlog_config.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/613/lifelink/rxbox/trunk/rxbox-rc1/Configuration/errorlog_config.py
+END
+gen_cgui.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/613/lifelink/rxbox/trunk/rxbox-rc1/Configuration/gen_cgui.py
+END
+db_backup.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/db_backup.cfg
+END
+general.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/general.cfg
+END
+errorlog_backup.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/Configuration/errorlog_backup.cfg
+END

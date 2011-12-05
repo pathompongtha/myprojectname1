@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ENAIActivity!</string>
+    <string name="app_name">ENAI</string>
+    <string name="labelAdmissionDate2">Admission</string>
+    <string name="labelAdmissionDate1">Date of</string>
+    <string name="labelAdmissionTime1">Time of</string>
+    <string name="labelAdmissionTime2">Admission</string>
+    <string name="labelRupturedMembranes1">Ruptured</string>
+    <string name="labelRupturedMembranes2">Membranes</string>
+    <string name="labelName">Name</string>
+    <string name="labelGravida">Gravida</string>
+    <string name="labelPara">Para</string>
+    <string name="labelFetalHeartRate1">Fetal</string>
+    <string name="labelFetalHeartRate2">Heart Rate</string>
+    <string name="labelUterineContraction1">Uterine</string>
+    <string name="labelUterineContraction2">Contractions</string>
+    <string name="labelPulseRate1">Pulse</string>
+    <string name="labelPulseRate2">Rate</string>
+    <string name="labelBloodPressure1">Blood</string>
+    <string name="labelBloodPressure2">Pressure</string>
+    <string name="labelAmnioticFluid1">Fluid</string>
+    <string name="labelMolding">Molding</string>
+    <string name="labelCervix">Cervix (cm)</string>
+    <string name="labelOxytocin">Oxytocin U/L</string>
+    <string name="labelDropsPerMin">drops/min</string>
+    <string name="labelTemperature">Temperature</string>
+</resources>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/config
+END
+launcherconfig.sh
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/config/launcherconfig.sh
+END
+config_main.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/config/config_main.py
+END
+layout.wxg
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/config/layout.wxg
+END
+config
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/config/config
+END
+layout.xrc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/config/layout.xrc
+END
+config_layout.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/546/lifelink/rxbox/trunk/rxbox-rc1/config/config_layout.py
+END
