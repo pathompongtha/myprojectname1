@@ -4,6 +4,8 @@ import java.io.File;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.AudioRecord;
+import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 
 public class RxEmail2Activity extends Activity {
 	final int INPUT_ATTACH = 0;
+	final int INPUT_RECORD = 1;
 	
 	static EditText senderAddress;
 	static EditText pass;
@@ -22,6 +25,8 @@ public class RxEmail2Activity extends Activity {
 	static EditText body;
 	static TextView filename;
 	static File attachment;
+	
+	private AudioRecord recorder;
 	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data)
@@ -48,6 +53,19 @@ public class RxEmail2Activity extends Activity {
         subject = (EditText)findViewById(R.id.emailsubject);
         body = (EditText)findViewById(R.id.emailtext);
         filename = (TextView)findViewById(R.id.filename);
+        
+        final Button record = (Button) findViewById(R.id.record);
+        record.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				startActivityForResult(
+						new Intent(getApplicationContext(),AudioRecorder.class),
+						INPUT_RECORD);
+			}
+        	
+        });
         
         final Button attach = (Button) findViewById(R.id.attach);
         attach.setOnClickListener(new View.OnClickListener() {

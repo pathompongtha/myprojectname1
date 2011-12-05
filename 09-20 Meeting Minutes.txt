@@ -1,0 +1,103 @@
+Some doctors in NTHC are not convinced in telemetery
+	- what is the value?
+One way to address
+	- demo often and quickly
+	- feedback from last meeting
+		- NTHC is signing deal to deploy CHITS
+		- why not try to connect with that as well
+		- slightly different model
+		- challenge: figure out triage in rxbox to fit with CHITS
+		-
+CHITS
+	- version now is not to be used
+	- deal will start next year
+	
+CHITS Demo
+	- what does it do?
+		- electronic record
+		- replace mano-mano tara system of health centers
+			- logs during delivery of service
+			- then compile in a report
+		- eliminates "pagbibilang ulit"
+	- not fully integrated with DOH
+	- DOH does not endorse, actually they make their own
+	- started in 2004, pasay
+	- 3 out of 14 remaining in pasay
+	- 3 in Tarlac
+	- 50+ all over the country
+	- MOA with QC (72 health centers and super health centers)
+	- PHP, Linux Apache PHP, MySQL
+	- since web based
+	- 1 server, 2 clients
+		- 1 client in records section
+		- 1 client at treatment root, where drugs are disseminated
+		- server at Doctor consultation
+	- Family folder
+		- family : group of patients in a household
+		- add family address
+		- indicate head of family (required by DOH)
+	- Records
+		- patient info
+		- patient group : service to avail
+		- see physician?
+		
+	- Where does telemetry go in?
+		- can be a module
+			- clinical result
+		- vital signs
+		- graphs
+		- labs
+	
+	- no CHITS technical documentation yet
+	
+	- para di na kailangan magmarket, para connected sa system
+	- chits is not telemedicine
+	- Message handler (middleware of triage)
+	- chits is front in health center
+	- then add modules
+	- still use message handler, triage
+	
+	- http sessions
+	- login, then visit modules using URL
+	- review PERL
+	
+	- is it possible to do a mock up to present to Portia?
+	
+	
+	- kaya naging successful ang CHITS, kasi nasama sa workflow yung developer, nagagawa agad ang problems
+	- just to change the look is not enough
+	- designed to be a seemless, painless transition
+	- same as a paper record
+	
+next steps
+	- propose
+		- how to add telemetry to this one
+	
+inside github
+	- in modules/history
+		- MVC is in 1 file (class)
+
+how would you (Randy) consider plugging-in rxbox?
+	- BP ready?
+		- in hardware, send bp
+	- pag naclick ang vital signs, possibly may button
+
+mock up
+	- powerpoint
+	
+are there any revisions?
+	- database
+		- planning to put openmrs as backend
+		
+would there be value, if mobile/tablet?
+	- in pasay, a dentist uses iphone
+	
+connect current(previous) thesis
+	
+add android as db client
+
+
+
+extras
+- ang midwives ay lumalabas sa health center para pumunta sa bahay-bahay
+- madaming stages bago ma-field test ang isang device
