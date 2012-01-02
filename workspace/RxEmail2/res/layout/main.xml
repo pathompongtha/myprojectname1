@@ -18,7 +18,7 @@
 			android:layout_marginLeft="10dp"></TextView>
 		<EditText
 			android:id="@+id/emailSender"
-			android:text="aysonje@gmail.com"
+			android:text="midwife01@gmail.com"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
@@ -39,6 +39,7 @@
 			android:layout_marginLeft="10dp"></TextView>
 		<EditText
 			android:id="@+id/emailPassword"
+			android:text="afjajdfasf"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
@@ -59,7 +60,7 @@
 			android:gravity="center"></TextView>
 		<EditText
 			android:id="@+id/emailaddress"
-			android:text="aysonje@gmail.com"
+			android:text="doctor@pgh.org"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
@@ -80,12 +81,14 @@
 			android:layout_marginRight="15dp"></TextView>
 		<EditText
 			android:id="@+id/emailsubject"
+			android:text="Referral"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:width="170dip"></EditText>
 	</LinearLayout>
 	<EditText
 		android:id="@+id/emailtext"
+		android:text="I would like to refer Mrs. --- due to the following complications"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:lines="5"

@@ -1,7 +1,5 @@
 package com.android.enai;
 
-import java.io.File;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -16,21 +14,20 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 public class ENAIActivity extends Activity {
 	private static final int DIALOG_LIQUOR = 0;
 	private static final int DIALOG_MOLDING = 1;
 	private static final int INPUT_EMAIL = 0;
 	
-	private static final CharSequence[] itemsLiquor = {
+	private static final String[] itemsLiquor = {
 		"I: membranes intact",
 		"R: membranes ruptured",
 		"C: membranes ruptured, clear fluid",
 		"M: meconium-stained fluid",
 		"B: blood-stained fluid"};
 
-	private static final CharSequence[] itemsMolding = {
+	private static final String[] itemsMolding = {
 		"1: sutures apposed",
 		"2: sutures overlapped but reducible",
 		"3: sutures overlapped and not reducible"};
@@ -55,7 +52,7 @@ public class ENAIActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.partograph);
         
         final Button emailButton = (Button)findViewById(R.id.emailButton);
         emailButton.setOnClickListener(new OnClickListener() {
@@ -95,12 +92,12 @@ public class ENAIActivity extends Activity {
         }
         
         // fill in "Molding"
-        for(int i=0;i<30;i++) {
-        	Button btn = new Button(getApplicationContext());
-        	btn.setOnClickListener(new moldingOnClickListener());
-        	btn.setId(moldingLayout.getId()+i);
-        	moldingLayout.addView(btn);
-        }
+//        for(int i=0;i<30;i++) {
+//        	Button btn = new Button(getApplicationContext());
+//        	btn.setOnClickListener(new moldingOnClickListener());
+//        	btn.setId(moldingLayout.getId()+i);
+//        	moldingLayout.addView(btn);
+//        }
 
         // fill in "Oxytocin"
         for(int i=0;i<30;i++) {
