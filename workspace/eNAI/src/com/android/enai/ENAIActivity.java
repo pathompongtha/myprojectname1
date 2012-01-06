@@ -14,6 +14,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class ENAIActivity extends Activity {
 	private static final int DIALOG_LIQUOR = 0;
@@ -31,6 +32,11 @@ public class ENAIActivity extends Activity {
 		"1: sutures apposed",
 		"2: sutures overlapped but reducible",
 		"3: sutures overlapped and not reducible"};
+	
+	private Thread FHRThread = null;
+	private Thread UCThread = null;
+	private Thread BPThread = null;
+	private Thread PRThread = null;
 
 	private LinearLayout liquorLayout;
 	private LinearLayout moldingLayout;
@@ -53,13 +59,27 @@ public class ENAIActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.partograph);
-        
+		
         final Button emailButton = (Button)findViewById(R.id.emailButton);
         emailButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				startActivity(new Intent(getApplicationContext(),EmailActivity.class));
+			}
+		});
+        
+        final Button VoIPButton = (Button)findViewById(R.id.VoIPButton);
+        VoIPButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+		        final Intent intent = new Intent();
+		        intent.setAction(Intent.ACTION_MAIN);
+		        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+		        intent.setClassName("org.linphone","org.linphone.LinphoneActivity");
+		        intent.putExtra("UserName","test");
+		        startActivity(intent);
 			}
 		});
         
@@ -74,10 +94,10 @@ public class ENAIActivity extends Activity {
         pulseRatePlotArea = (LinearLayout)findViewById(R.id.PulseRatePlotArea);
         bloodPressurePlotArea = (LinearLayout)findViewById(R.id.BloodPressurePlotArea);
 
-        fetalHeartPlotArea.addView(new AutoPlotView(getApplicationContext(), 130, 600, R.raw.fhr));
-        uterineContractionPlotArea.addView(new AutoPlotView(getApplicationContext(), 130, 600, R.raw.uc));
-        pulseRatePlotArea.addView(new AutoPlotView(getApplicationContext(), 130, 600, R.raw.uc));
-        bloodPressurePlotArea.addView(new AutoPlotView(getApplicationContext(), 130, 600, R.raw.uc));
+        fetalHeartPlotArea.addView(new FHRAutoPlotView(getApplicationContext(), 130, 600, R.raw.fhr,FHRThread));
+        uterineContractionPlotArea.addView(new UCAutoPlotView(getApplicationContext(), 130, 600, R.raw.uc, UCThread));
+        pulseRatePlotArea.addView(new AutoPlotView(getApplicationContext(), 130, 600, R.raw.uc, PRThread));
+        bloodPressurePlotArea.addView(new AutoPlotView(getApplicationContext(), 130, 600, R.raw.uc, BPThread));
 
         Button approve = (Button)findViewById(R.id.buttonApprove);
         cervixPlotArea = (LinearLayout)findViewById(R.id.CervixPlotArea);
@@ -160,6 +180,7 @@ public class ENAIActivity extends Activity {
     	}
     	return null;
     }
+
     
     public class liquorOnClickListener implements OnClickListener {
 		@Override

@@ -34,7 +34,7 @@ public class HeartRateExtraction {
 			int minT0 = (int) (0.3*Fs);							//minimum = 0.3sec (200bpm)
 			int maxT0 = (int) (0.6*Fs);							//maximum = 0.6sec (100bpm)
 			
-			int stepSizeSample = 2*(int) (stepSize * Fs);		
+			int stepSizeSample = 2*(int) (stepSize * Fs);
 			long nBytes = (long) (ais.getFrameLength() * format.getFrameSize());	//get number of bytes 
 			
 			byte[] inBuffer = new byte[(int)nBytes];
@@ -60,12 +60,13 @@ public class HeartRateExtraction {
 					value1[2*i]=value[(i*10)-1];	//real part		
 					value1[2*i+1]=0;				//imaginary
 				}
-				else
+				else {
 					value1[i]= value[i];
 					value1[2*i+1]=0;
+				}
 			}
 			long end = System.currentTimeMillis();
-			System.out.println((end-start));
+//			System.out.println((end-start));
 			
 				
 			//Shift over time
@@ -89,13 +90,13 @@ public class HeartRateExtraction {
 					int t = MathUtils.findLocalPeakLocation(R, minT0, maxT0);
 					
 					//Solve FHR using the time of occurrence of peak
-					double FHR = (double) ((60 * Fs) / t);
+					double FHR =  ((double)(60 * Fs) / t);
 					//Print
 					System.out.format("%3.3f\n", FHR);
 				
 				}
 				else{
-					System.out.println("end");
+//					System.out.println("end");
 					break;
 				}
 				
@@ -109,4 +110,23 @@ public class HeartRateExtraction {
 		}
 	}
 
+	/**
+     * Added by Nathaniel Cruz
+     * Find the maximum between StartIndex and EndIndex in the array, ignoring elements that are NaN.
+     * @param data
+     * @return the index number of the maximum element
+     */
+    public static int findLocalPeakLocation(double[] data, int StartIndex, int EndIndex)
+    {
+        double max = Double.NaN;
+        int imax = -1;
+        for (int i=StartIndex; i<=EndIndex; i++) {
+            if (Double.isNaN(data[i])) continue;
+            if (Double.isNaN(max)|| data[i] > max) {
+                max = data[i];
+                imax = i;
+            }
+        }
+        return imax;
+    }
 }

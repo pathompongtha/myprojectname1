@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="13" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="75" y="32">
 <fastViewData fastViewLocation="1024"/>
@@ -21,9 +21,9 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.android.ide.eclipse.editors.layout.LayoutEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.layout.LayoutEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -37,20 +37,24 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GMailSender.java" partName="GMailSender.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/RxEmail2/src/com/dxdroid/email/GMailSender.java" title="GMailSender.java" tooltip="RxEmail2/src/com/dxdroid/email/GMailSender.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RxEmail2/src/com/dxdroid/email/GMailSender.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1068" selectionTopPixel="425"/>
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="eNAI Manifest" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAI/AndroidManifest.xml" title="eNAI Manifest" tooltip="eNAI/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/eNAI/AndroidManifest.xml"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JSSEProvider.java" partName="JSSEProvider.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/RxEmail2/src/com/provider/JSSEProvider.java" title="JSSEProvider.java" tooltip="RxEmail2/src/com/provider/JSSEProvider.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RxEmail2/src/com/provider/JSSEProvider.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="813" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ENAIActivity.java" partName="ENAIActivity.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAI/src/com/android/enai/ENAIActivity.java" title="ENAIActivity.java" tooltip="eNAI/src/com/android/enai/ENAIActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/eNAI/src/com/android/enai/ENAIActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2153" selectionTopPixel="876"/>
 </editor>
-<editor activePart="true" focus="true" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" partName="main.xml" path="C:/Users/JE/Desktop/je/Thesis/workspace/RxEmail2/res/layout/main.xml" title="main.xml" tooltip="RxEmail2/res/layout/main.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RxEmail2/res/layout/main.xml"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RxEmail.java" partName="RxEmail.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/RxEmail/src/com/android/Rx/RxEmail.java" title="RxEmail.java" tooltip="RxEmail/src/com/android/Rx/RxEmail.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RxEmail/src/com/android/Rx/RxEmail.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="329" selectionOffset="944" selectionTopPixel="230"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="RxEmail Manifest" path="C:/Users/JE/Desktop/je/Thesis/workspace/RxEmail/AndroidManifest.xml" title="RxEmail Manifest" tooltip="RxEmail/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RxEmail/AndroidManifest.xml"/>
 </editor>
 </editors>
 <views>
@@ -100,7 +104,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="com.android.ide.eclipse.editors.layout.LayoutEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -229,15 +233,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/eNAI/res/layout/main.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/EmailActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/eNAI/res/layout/email.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/GMailSender.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/ENAIActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/RxEmail2/res/layout/main.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/RxEmail2/res/layout/main.xml.orig"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/ENAIActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/GMailSender.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DxDroid/src/com/android/dxdroid/DrawView.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DxDroid/src/com/android/dxdroid/DxDroid.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/DxDroid/res/layout/main.xml"/>
@@ -246,133 +241,142 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RxEmail2/src/com/dxdroid/email/GMailSender.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RxEmail2/src/com/provider/JSSEProvider.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/RxEmail2/res/layout/main.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RxEmail2/src/com/provider/JSSEProvider.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/RxEmail2/res/layout/main.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/eNAI/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/eNAI/hs_err_pid2092.log"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/ENAIActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RxEmail/src/com/android/Rx/RxEmail.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/RxEmail/AndroidManifest.xml"/>
 </editors>
-<item historyLabel="EmailActivity.java" index="1">
-<position info="not_deleted" x="633" y="0"/>
-</item>
-<item historyLabel="main.xml" index="0"/>
-<item historyLabel="EmailActivity.java" index="1">
-<position info="not_deleted" x="3648" y="0"/>
-</item>
-<item historyLabel="email.xml" index="2"/>
-<item historyLabel="EmailActivity.java" index="1">
-<position info="not_deleted" x="3087" y="0"/>
-</item>
-<item historyLabel="GMailSender.java" index="3">
-<position info="not_deleted" x="1967" y="0"/>
-</item>
-<item historyLabel="EmailActivity.java" index="1">
-<position info="not_deleted" x="3087" y="0"/>
-</item>
-<item historyLabel="ENAIActivity.java" index="4">
-<position info="not_deleted" x="1985" y="0"/>
-</item>
-<item historyLabel="main.xml" index="5"/>
-<item historyLabel="main.xml.orig" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.xml" index="5"/>
-<item historyLabel="ENAIActivity.java" index="7">
-<position info="not_deleted" x="3409" y="0"/>
-</item>
-<item historyLabel="main.xml" index="5"/>
-<item historyLabel="ENAIActivity.java" index="7">
-<position info="not_deleted" x="3409" y="0"/>
-</item>
-<item historyLabel="GMailSender.java" index="8">
-<position info="not_deleted" x="2102" y="0"/>
-</item>
-<item historyLabel="ENAIActivity.java" index="7">
-<position info="not_deleted" x="1010" y="0"/>
-</item>
-<item historyLabel="GMailSender.java" index="8">
-<position info="not_deleted" x="2102" y="0"/>
-</item>
-<item historyLabel="DrawView.java" index="9">
-<position info="not_deleted" x="970" y="0"/>
-</item>
-<item historyLabel="DxDroid.java" index="10">
-<position info="not_deleted" x="770" y="0"/>
-</item>
-<item historyLabel="DrawView.java" index="9">
-<position info="not_deleted" x="970" y="0"/>
-</item>
-<item historyLabel="DxDroid.java" index="10">
-<position info="not_deleted" x="4224" y="0"/>
-</item>
-<item historyLabel="DrawView.java" index="9">
-<position info="not_deleted" x="1709" y="0"/>
-</item>
-<item historyLabel="DxDroid.java" index="10">
+<item historyLabel="main.xml" index="2"/>
+<item historyLabel="partograph.xml" index="3"/>
+<item historyLabel="main.xml" index="2"/>
+<item historyLabel="DxDroid.java" index="1">
 <position info="not_deleted" x="4201" y="0"/>
 </item>
-<item historyLabel="DrawView.java" index="9">
-<position info="not_deleted" x="1709" y="0"/>
-</item>
-<item historyLabel="main.xml" index="11"/>
-<item historyLabel="partograph.xml" index="12"/>
-<item historyLabel="main.xml" index="11"/>
-<item historyLabel="DxDroid.java" index="10">
-<position info="not_deleted" x="4201" y="0"/>
-</item>
-<item historyLabel="DrawView.java" index="9">
+<item historyLabel="DrawView.java" index="0">
 <position info="not_deleted" x="943" y="0"/>
 </item>
-<item historyLabel="main.xml" index="11"/>
-<item historyLabel="DxDroid.java" index="10">
+<item historyLabel="main.xml" index="2"/>
+<item historyLabel="DxDroid.java" index="1">
 <position info="not_deleted" x="1704" y="4"/>
 </item>
-<item historyLabel="DrawView.java" index="9">
+<item historyLabel="DrawView.java" index="0">
 <position info="not_deleted" x="2979" y="0"/>
 </item>
-<item historyLabel="row.xml" index="13"/>
-<item historyLabel="DxDroid.java" index="10">
+<item historyLabel="row.xml" index="4"/>
+<item historyLabel="DxDroid.java" index="1">
 <position info="not_deleted" x="1704" y="4"/>
 </item>
-<item historyLabel="DrawView.java" index="9">
+<item historyLabel="DrawView.java" index="0">
 <position info="not_deleted" x="2979" y="0"/>
 </item>
-<item historyLabel="DxDroid.java" index="10">
+<item historyLabel="DxDroid.java" index="1">
 <position info="not_deleted" x="1536" y="0"/>
 </item>
-<item historyLabel="row.xml" index="13"/>
-<item historyLabel="DxDroid.java" index="10">
+<item historyLabel="row.xml" index="4"/>
+<item historyLabel="DxDroid.java" index="1">
 <position info="not_deleted" x="1890" y="0"/>
 </item>
-<item historyLabel="DrawView.java" index="9">
+<item historyLabel="DrawView.java" index="0">
 <position info="not_deleted" x="846" y="0"/>
 </item>
-<item historyLabel="DxDroid.java" index="10">
+<item historyLabel="DxDroid.java" index="1">
 <position info="not_deleted" x="1890" y="0"/>
 </item>
-<item historyLabel="DrawView.java" index="9">
+<item historyLabel="DrawView.java" index="0">
 <position info="not_deleted" x="846" y="0"/>
 </item>
-<item historyLabel="DxDroid.java" index="10">
+<item historyLabel="DxDroid.java" index="1">
 <position info="not_deleted" x="1890" y="0"/>
 </item>
-<item historyLabel="GMailSender.java" index="14">
+<item historyLabel="GMailSender.java" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="JSSEProvider.java" index="15">
+<item historyLabel="JSSEProvider.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GMailSender.java" index="14">
+<item historyLabel="GMailSender.java" index="5">
 <position info="not_deleted" x="288" y="0"/>
 </item>
-<item historyLabel="JSSEProvider.java" index="15">
+<item historyLabel="JSSEProvider.java" index="6">
 <position info="not_deleted" x="1785" y="0"/>
 </item>
-<item historyLabel="GMailSender.java" index="14">
+<item historyLabel="GMailSender.java" index="5">
 <position info="not_deleted" x="288" y="0"/>
 </item>
-<item historyLabel="JSSEProvider.java" index="15">
+<item historyLabel="JSSEProvider.java" index="6">
 <position info="not_deleted" x="813" y="0"/>
 </item>
-<item historyLabel="GMailSender.java" index="14">
+<item historyLabel="GMailSender.java" index="5">
 <position info="not_deleted" x="1068" y="0"/>
 </item>
-<item active="true" historyLabel="main.xml" index="16"/>
+<item historyLabel="main.xml" index="7"/>
+<item historyLabel="JSSEProvider.java" index="8">
+<position info="not_deleted" x="660" y="0"/>
+</item>
+<item historyLabel="main.xml" index="9"/>
+<item historyLabel="eNAI Manifest" index="10"/>
+<item historyLabel="hs_err_pid2092.log" index="11">
+<position info="not_deleted" x="4655" y="0"/>
+</item>
+<item historyLabel="eNAI Manifest" index="10"/>
+<item historyLabel="ENAIActivity.java" index="12">
+<position info="not_deleted" x="1914" y="0"/>
+</item>
+<item historyLabel="RxEmail.java" index="13">
+<position info="not_deleted" x="1377" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="12">
+<position info="not_deleted" x="2024" y="0"/>
+</item>
+<item historyLabel="RxEmail.java" index="13">
+<position info="not_deleted" x="1377" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="12">
+<position info="not_deleted" x="2596" y="0"/>
+</item>
+<item historyLabel="RxEmail.java" index="13">
+<position info="not_deleted" x="1377" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="12">
+<position info="not_deleted" x="2596" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="12">
+<position info="not_deleted" x="2596" y="0"/>
+</item>
+<item historyLabel="RxEmail.java" index="13">
+<position info="not_deleted" x="1377" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="12">
+<position info="not_deleted" x="2596" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="12">
+<position info="not_deleted" x="2237" y="0"/>
+</item>
+<item historyLabel="RxEmail.java" index="13">
+<position info="not_deleted" x="1377" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="12">
+<position info="not_deleted" x="2583" y="0"/>
+</item>
+<item historyLabel="RxEmail.java" index="13">
+<position info="not_deleted" x="1090" y="0"/>
+</item>
+<item historyLabel="RxEmail Manifest" index="14"/>
+<item historyLabel="RxEmail.java" index="13">
+<position info="not_deleted" x="1090" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="12">
+<position info="not_deleted" x="2537" y="0"/>
+</item>
+<item historyLabel="RxEmail.java" index="13">
+<position info="not_deleted" x="944" y="329"/>
+</item>
+<item active="true" historyLabel="ENAIActivity.java" index="12">
+<position info="not_deleted" x="2537" y="0"/>
+</item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -390,6 +394,21 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="RxEmail/AndroidManifest.xml">
+<persistable path="/RxEmail/AndroidManifest.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RxEmail.java" tooltip="RxEmail/src/com/android/Rx/RxEmail.java">
+<persistable path="/RxEmail/src/com/android/Rx/RxEmail.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ENAIActivity.java" tooltip="eNAI/src/com/android/enai/ENAIActivity.java">
+<persistable path="/eNAI/src/com/android/enai/ENAIActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="hs_err_pid2092.log" tooltip="eNAI/hs_err_pid2092.log">
+<persistable path="/eNAI/hs_err_pid2092.log"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="eNAI/AndroidManifest.xml">
+<persistable path="/eNAI/AndroidManifest.xml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" tooltip="RxEmail2/res/layout/main.xml">
 <persistable path="/RxEmail2/res/layout/main.xml"/>
 </file>
@@ -419,21 +438,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GMailSender.java" tooltip="eNAI/src/com/android/enai/GMailSender.java">
 <persistable path="/eNAI/src/com/android/enai/GMailSender.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="email.xml" tooltip="eNAI/res/layout/email.xml">
-<persistable path="/eNAI/res/layout/email.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="RxEmail2/AndroidManifest.xml">
-<persistable path="/RxEmail2/AndroidManifest.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="eNAI/AndroidManifest.xml">
-<persistable path="/eNAI/AndroidManifest.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AndroidExplorer.java" tooltip="eNAI/src/com/android/enai/AndroidExplorer.java">
-<persistable path="/eNAI/src/com/android/enai/AndroidExplorer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmailActivity.java" tooltip="eNAI/src/com/android/enai/EmailActivity.java">
-<persistable path="/eNAI/src/com/android/enai/EmailActivity.java"/>
 </file>
 </mruList>
 </workbench>
