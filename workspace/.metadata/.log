@@ -3085,3 +3085,198 @@ Contains: Could not delete: C:\Users\JE\Desktop\je\Thesis\workspace\eNAI\bin\com
 !MESSAGE Could not delete: C:\Users\JE\Desktop\je\Thesis\workspace\eNAI\bin\com\android.
 !SUBENTRY 5 org.eclipse.core.filesystem 4 273 2012-01-06 21:21:20.590
 !MESSAGE Could not delete: C:\Users\JE\Desktop\je\Thesis\workspace\eNAI\bin\com.
+
+!ENTRY org.eclipse.jdt.ui 2 0 2012-01-07 02:09:29.912
+!MESSAGE The 'org.eclipse.jdt.ui.TemplateProposalComputer' proposal computer from the 'org.eclipse.jdt.ui' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.
+
+!ENTRY org.eclipse.ui 4 4 2012-01-07 03:47:37.338
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-07 03:58:39.884
+!MESSAGE Failed to finish PrecompilerBuilder#startupOnInitialize()
+!STACK 0
+java.lang.IllegalArgumentException: Path must include project and resource name: /ApiDemos
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.Workspace.newResource(Workspace.java:1795)
+	at org.eclipse.core.internal.resources.Container.getFolder(Container.java:221)
+	at com.android.ide.eclipse.adt.internal.build.SourceProcessor.buildSourceFileList(SourceProcessor.java:347)
+	at com.android.ide.eclipse.adt.internal.build.SourceProcessor.<init>(SourceProcessor.java:95)
+	at com.android.ide.eclipse.adt.internal.build.SourceProcessor.<init>(SourceProcessor.java:111)
+	at com.android.ide.eclipse.adt.internal.build.AidlProcessor.<init>(AidlProcessor.java:79)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerBuilder.startupOnInitialize(PreCompilerBuilder.java:564)
+	at org.eclipse.core.internal.events.BuildManager.getBuilder(BuildManager.java:486)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:255)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:258)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:311)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:343)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:344)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog.doClean(CleanDialog.java:306)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog$1.runInWorkspace(CleanDialog.java:154)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 2 2012-01-07 03:58:39.915
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/ApiDemos/gen' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:326)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:200)
+	at org.eclipse.core.internal.resources.Resource.setDerived(Resource.java:1720)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerBuilder.doClean(PreCompilerBuilder.java:531)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerBuilder.clean(PreCompilerBuilder.java:517)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:631)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:172)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:203)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:255)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:258)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:311)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:343)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:344)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog.doClean(CleanDialog.java:306)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog$1.runInWorkspace(CleanDialog.java:154)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-01-07 03:58:39.917
+!MESSAGE Resource '/ApiDemos/gen' does not exist.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-01-07 03:58:39.917
+!MESSAGE Resource '/ApiDemos/gen' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-01-07 03:58:55.759
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.android.ide.eclipse.adt 4 75 2012-01-07 03:58:55.759
+!MESSAGE Errors running builder 'Android Pre Compiler' on project 'ApiDemos'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/ApiDemos/gen' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:326)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:200)
+	at org.eclipse.core.internal.resources.Resource.setDerived(Resource.java:1720)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerBuilder.doClean(PreCompilerBuilder.java:531)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerBuilder.clean(PreCompilerBuilder.java:517)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:631)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:172)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:203)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:255)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:258)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:311)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:343)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:344)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog.doClean(CleanDialog.java:306)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog$1.runInWorkspace(CleanDialog.java:154)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 368 2012-01-07 03:58:55.759
+!MESSAGE Resource '/ApiDemos/gen' does not exist.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-01-07 03:58:55.759
+!MESSAGE Resource '/ApiDemos/gen' does not exist.
+!SESSION 2012-01-07 04:00:26.368 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-07 04:01:41.314
+!MESSAGE loadAndParseRClass: failed to find manifest package for project ApiDemos
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-07 04:02:07.531
+!MESSAGE Failed to load properties file for project 'ApiDemos'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-07 04:06:56.731
+!MESSAGE Failed to load properties file for project 'ApiDemos'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-07 04:06:56.879
+!MESSAGE Failed to finish PrecompilerBuilder#startupOnInitialize()
+!STACK 0
+java.lang.IllegalArgumentException: Path must include project and resource name: /ApiDemos
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.Workspace.newResource(Workspace.java:1795)
+	at org.eclipse.core.internal.resources.Container.getFolder(Container.java:221)
+	at com.android.ide.eclipse.adt.internal.build.SourceProcessor.buildSourceFileList(SourceProcessor.java:347)
+	at com.android.ide.eclipse.adt.internal.build.SourceProcessor.<init>(SourceProcessor.java:95)
+	at com.android.ide.eclipse.adt.internal.build.SourceProcessor.<init>(SourceProcessor.java:111)
+	at com.android.ide.eclipse.adt.internal.build.AidlProcessor.<init>(AidlProcessor.java:79)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerBuilder.startupOnInitialize(PreCompilerBuilder.java:564)
+	at org.eclipse.core.internal.events.BuildManager.getBuilder(BuildManager.java:486)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:255)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:258)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:311)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:343)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:344)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:179)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-07 04:06:56.887
+!MESSAGE Failed to load properties file for project 'ApiDemos'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-07 04:06:57.060
+!MESSAGE Failed to load properties file for project 'ApiDemos'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-07 04:07:47.943
+!MESSAGE loadAndParseRClass failed to find class com.android.Rx.R
+!STACK 0
+java.lang.NoClassDefFoundError: com/android/Rx/R$drawable
+	at java.lang.Class.getDeclaredClasses0(Native Method)
+	at java.lang.Class.getDeclaredClasses(Class.java:1699)
+	at com.android.ide.eclipse.adt.internal.resources.manager.CompiledResourcesMonitor.parseClass(CompiledResourcesMonitor.java:191)
+	at com.android.ide.eclipse.adt.internal.resources.manager.CompiledResourcesMonitor.loadAndParseRClass(CompiledResourcesMonitor.java:161)
+	at com.android.ide.eclipse.adt.internal.resources.manager.CompiledResourcesMonitor.fileChanged(CompiledResourcesMonitor.java:82)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor.visit(GlobalProjectMonitor.java:196)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:434)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:327)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1181)
+	at org.eclipse.core.internal.resources.File.create(File.java:183)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFileContents(AbstractImageBuilder.java:844)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFile(AbstractImageBuilder.java:823)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.acceptResult(AbstractImageBuilder.java:187)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:504)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:364)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:301)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:629)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:172)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:203)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:255)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:258)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:311)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:343)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:344)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:179)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.ClassNotFoundException: com.android.Rx.R$drawable
+	at com.android.ide.eclipse.adt.internal.resources.manager.ProjectClassLoader.findClass(ProjectClassLoader.java:94)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:252)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:320)
+	... 44 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-07 04:09:49.817
+!MESSAGE Failed to load properties file for project 'ApiDemos'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-07 04:09:49.820
+!MESSAGE Failed to load properties file for project 'ApiDemos'

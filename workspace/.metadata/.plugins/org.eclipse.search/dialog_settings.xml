@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="DialogBounds_SearchDialog">
+		<item value="506" key="DIALOG_WIDTH"/>
+		<item value="108" key="DIALOG_Y_ORIGIN"/>
+		<item value="450" key="DIALOG_HEIGHT"/>
+		<item value="364" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
 	<section name="Search">
 		<list key="Search.processedPageIds">
 			<item value="org.eclipse.search.internal.ui.text.TextSearchPage"/>
@@ -11,5 +18,8 @@
 			<item value="org.eclipse.mylyn.tasks.ui.search.page"/>
 			<item value="org.eclipse.jdt.ui.JavaSearchPage"/>
 		</list>
+	</section>
+	<section name="SearchDialog.ScopePart">
+		<item value="0" key="scope"/>
 	</section>
 </section>
