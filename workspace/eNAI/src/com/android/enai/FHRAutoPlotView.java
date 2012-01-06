@@ -51,7 +51,7 @@ public class FHRAutoPlotView extends View {
 	private int Fs = 22050; // get Sampling frequency, hardcoded above
 	private int ds = 10;								// downsample e.g. 22050 to 2205
 	private int minT0 = (int) (0.3*Fs/ds);							//minimum = 0.3sec (200bpm)
-	private int maxT0 = (int) (0.6*Fs/ds);							//maximum = 0.6sec (100bpm)
+	private int maxT0 = (int) (0.9*Fs/ds);							//maximum = 0.6sec (100bpm)
 	private int samples, stepSizeSample;
 	private FIR filt = new FIR();
 	
@@ -94,7 +94,6 @@ public class FHRAutoPlotView extends View {
 //		bufferSize = AudioRecord.getMinBufferSize(RECORDER_SAMPLERATE,
 //				RECORDER_CHANNELS, RECORDER_AUDIO_ENCODING);
 		startRecording();
-		final int count = 0;
 		fftThread = new Thread(new Runnable(){
 
 			@Override
@@ -115,10 +114,6 @@ public class FHRAutoPlotView extends View {
 //							Toast.makeText(getContext(),System.currentTimeMillis()-time+"",Toast.LENGTH_SHORT).show();
 						}
 					});
-					count++;
-					if(count == 4) {
-						
-					}
 				} catch (InterruptedException ie) {
 				}
 				}
@@ -129,7 +124,7 @@ public class FHRAutoPlotView extends View {
 	}
 
 	public void getData(String s) {
-		points.add(conv((parseFloat(s)-100.0) / 100.0));
+		points.add(conv((parseFloat(s)-0) / 200.0));
 		invalidate();
 		if (ctr == width)
 			while (width - points.size() < 10)
@@ -152,7 +147,7 @@ public class FHRAutoPlotView extends View {
 	}
 
 	public Point conv(double c) {
-		return new Point((ctr+=5) % width + off / 2, (float)(height / 2 - 30 * c));
+		return new Point((ctr++) % width + off / 2, (float)(height / 2 - 30 * c));
 	}
 
 	private String getFilename() {
@@ -246,13 +241,15 @@ public class FHRAutoPlotView extends View {
 				read = recorder.read(data, 0, bufferSize);
 				if (AudioRecord.ERROR_INVALID_OPERATION != read) {
 					try {
-						os.write(data);		
-//						mHandler.post(new Runnable() {
-//							public void run() {
-////								getData(f+"");
+//						os.write(data);
+						mHandler.post(new Runnable() {
+							public void run() {
+//								getData(f+"");
+								for(int i=0;i<data.length;i+=1000)
+									getData(data[i]+"");
 //								getData(data[0]+"");
-//							}
-//						});
+							}
+						});
 //						sb.append(Arrays.toString(data));
 					} catch (Exception e) {
 						e.printStackTrace();
