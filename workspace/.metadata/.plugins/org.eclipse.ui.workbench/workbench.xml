@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="13" version="2.0">
+<workbench progressCount="14" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="75" y="32">
 <fastViewData fastViewLocation="1024"/>
@@ -17,7 +17,7 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="130" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -37,31 +37,21 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ENAIActivity.java" partName="ENAIActivity.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAI/src/com/android/enai/ENAIActivity.java" title="ENAIActivity.java" tooltip="eNAI/src/com/android/enai/ENAIActivity.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/eNAI/src/com/android/enai/ENAIActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2322" selectionTopPixel="1233"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2105" selectionTopPixel="697"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HeartRateExtraction.java" partName="HeartRateExtraction.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAI/src/com/android/enai/HeartRateExtraction.java" title="HeartRateExtraction.java" tooltip="eNAI/src/com/android/enai/HeartRateExtraction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/eNAI/src/com/android/enai/HeartRateExtraction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2649" selectionTopPixel="1020"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FHRAutoPlotView.java" partName="FHRAutoPlotView.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAI/src/com/android/enai/FHRAutoPlotView.java" title="FHRAutoPlotView.java" tooltip="eNAI/src/com/android/enai/FHRAutoPlotView.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FHRAutoPlotView.java" partName="FHRAutoPlotView.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAI/src/com/android/enai/FHRAutoPlotView.java" title="FHRAutoPlotView.java" tooltip="eNAI/src/com/android/enai/FHRAutoPlotView.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/eNAI/src/com/android/enai/FHRAutoPlotView.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13258" selectionTopPixel="7608"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7590" selectionTopPixel="3587"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UCAutoPlotView.java" partName="UCAutoPlotView.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAI/src/com/android/enai/UCAutoPlotView.java" title="UCAutoPlotView.java" tooltip="eNAI/src/com/android/enai/UCAutoPlotView.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/eNAI/src/com/android/enai/UCAutoPlotView.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="114" selectionOffset="2569" selectionTopPixel="689"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FFT.java" partName="FFT.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAI/src/fhrtools/FFT.java" title="FFT.java" tooltip="eNAI/src/fhrtools/FFT.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/eNAI/src/fhrtools/FFT.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="38001" selectionTopPixel="14051"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HeartRateExtraction.java" partName="HeartRateExtraction.java" path="C:/Users/JE/Desktop/je/Thesis/workspace/FHR Extraction/src/HeartRateExtraction.java" title="HeartRateExtraction.java" tooltip="FHR Extraction/src/HeartRateExtraction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FHR Extraction/src/HeartRateExtraction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="201"/>
 </editor>
 </editors>
 <views>
@@ -73,8 +63,7 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
+<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
 <category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
@@ -116,7 +105,9 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints"/>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
 <view id="org.eclipse.debug.ui.VariableView" partName="Variables">
 <viewState/>
 </view>
@@ -127,7 +118,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -371,160 +362,168 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/HeartRateExtraction.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/FHRAutoPlotView.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/fhrtools/FIR.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/fhrtools/FFT.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/ENAIActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/AndroidExplorer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/FHRAutoPlotView.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/AndroidExplorer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/com/android/enai/HeartRateExtraction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/fhrtools/FFT.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/fhrtools/MathUtils.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/eNAI/src/fhrtools/FFT.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/FHR Extraction/src/HeartRateExtraction.java"/>
 </editors>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="12853" y="0"/>
-</item>
-<item historyLabel="HeartRateExtraction.java" index="0">
-<position info="not_deleted" x="2649" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="12853" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="12662" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="12679" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="12709" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="12786" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="12803" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="12816" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="12851" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="2231" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="3081" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="3309" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="3835" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="7209" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="2268" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="4540" y="19"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
-<position info="not_deleted" x="13076" y="0"/>
-</item>
-<item historyLabel="HeartRateExtraction.java" index="0">
-<position info="not_deleted" x="2649" y="0"/>
-</item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position info="not_deleted" x="2158" y="0"/>
 </item>
-<item historyLabel="FIR.java" index="2">
+<item historyLabel="FIR.java" index="1">
 <position info="not_deleted" x="51651" y="0"/>
 </item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position info="not_deleted" x="2158" y="0"/>
 </item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position info="not_deleted" x="3445" y="0"/>
 </item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position info="not_deleted" x="3407" y="0"/>
 </item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position/>
 </item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position/>
 </item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position/>
 </item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position/>
 </item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position/>
 </item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position/>
 </item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position info="not_deleted" x="13060" y="0"/>
 </item>
-<item historyLabel="FHRAutoPlotView.java" index="1">
+<item historyLabel="FHRAutoPlotView.java" index="0">
 <position info="not_deleted" x="13258" y="0"/>
 </item>
-<item active="true" historyLabel="FFT.java" index="3">
+<item historyLabel="FFT.java" index="2">
+<position info="not_deleted" x="38259" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="3">
+<position info="not_deleted" x="1806" y="0"/>
+</item>
+<item historyLabel="AndroidExplorer.java" index="4">
+<position info="not_deleted" x="626" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="3">
+<position info="not_deleted" x="1895" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AndroidExplorer.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HeartRateExtraction.java" index="7">
+<position info="not_deleted" x="578" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="6530" y="0"/>
+</item>
+<item historyLabel="FFT.java" index="8">
+<position info="not_deleted" x="37023" y="0"/>
+</item>
+<item historyLabel="MathUtils.java" index="9">
+<position info="not_deleted" x="3720" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="6530" y="0"/>
+</item>
+<item historyLabel="HeartRateExtraction.java" index="7">
+<position info="not_deleted" x="578" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="10920" y="0"/>
+</item>
+<item historyLabel="FFT.java" index="8">
+<position info="not_deleted" x="37023" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="3">
+<position info="not_deleted" x="966" y="0"/>
+</item>
+<item historyLabel="HeartRateExtraction.java" index="7">
+<position info="not_deleted" x="578" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="3">
+<position info="not_deleted" x="1837" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="10920" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="3499" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="3811" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="3838" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="3783" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="3">
+<position info="not_deleted" x="1837" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="3783" y="0"/>
+</item>
+<item historyLabel="FFT.java" index="10">
 <position info="not_deleted" x="5" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="11573" y="0"/>
+</item>
+<item historyLabel="ENAIActivity.java" index="3">
+<position info="not_deleted" x="2105" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="11573" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="7507" y="0"/>
+</item>
+<item historyLabel="HeartRateExtraction.java" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="7567" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="7413" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="7411" y="0"/>
+</item>
+<item historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="7381" y="0"/>
+</item>
+<item active="true" historyLabel="FHRAutoPlotView.java" index="5">
+<position info="not_deleted" x="7407" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -532,9 +531,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -542,22 +538,36 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HeartRateExtraction.java" tooltip="FHR Extraction/src/HeartRateExtraction.java">
+<persistable path="/FHR Extraction/src/HeartRateExtraction.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FFT.java" tooltip="eNAI/src/fhrtools/FFT.java">
 <persistable path="/eNAI/src/fhrtools/FFT.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MathUtils.java" tooltip="eNAI/src/fhrtools/MathUtils.java">
+<persistable path="/eNAI/src/fhrtools/MathUtils.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HeartRateExtraction.java" tooltip="eNAI/src/com/android/enai/HeartRateExtraction.java">
+<persistable path="/eNAI/src/com/android/enai/HeartRateExtraction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FHRAutoPlotView.java" tooltip="eNAI/src/com/android/enai/FHRAutoPlotView.java">
+<persistable path="/eNAI/src/com/android/enai/FHRAutoPlotView.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ENAIActivity.java" tooltip="eNAI/src/com/android/enai/ENAIActivity.java">
+<persistable path="/eNAI/src/com/android/enai/ENAIActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AndroidExplorer.java" tooltip="eNAI/src/com/android/enai/AndroidExplorer.java">
+<persistable path="/eNAI/src/com/android/enai/AndroidExplorer.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FIR.java" tooltip="eNAI/src/fhrtools/FIR.java">
 <persistable path="/eNAI/src/fhrtools/FIR.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UCAutoPlotView.java" tooltip="eNAI/src/com/android/enai/UCAutoPlotView.java">
 <persistable path="/eNAI/src/com/android/enai/UCAutoPlotView.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FHRAutoPlotView.java" tooltip="eNAI/src/com/android/enai/FHRAutoPlotView.java">
-<persistable path="/eNAI/src/com/android/enai/FHRAutoPlotView.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AudioRecorder.java" tooltip="eNAI/src/com/android/enai/AudioRecorder.java">
 <persistable path="/eNAI/src/com/android/enai/AudioRecorder.java"/>
@@ -571,26 +581,11 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AutoPlotView.java" tooltip="eNAI/src/com/android/enai/AutoPlotView.java">
 <persistable path="/eNAI/src/com/android/enai/AutoPlotView.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HeartRateExtraction.java" tooltip="eNAI/src/com/android/enai/HeartRateExtraction.java">
-<persistable path="/eNAI/src/com/android/enai/HeartRateExtraction.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="RxEmail/AndroidManifest.xml">
 <persistable path="/RxEmail/AndroidManifest.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RxEmail.java" tooltip="RxEmail/src/com/android/Rx/RxEmail.java">
 <persistable path="/RxEmail/src/com/android/Rx/RxEmail.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ENAIActivity.java" tooltip="eNAI/src/com/android/enai/ENAIActivity.java">
-<persistable path="/eNAI/src/com/android/enai/ENAIActivity.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="hs_err_pid2092.log" tooltip="eNAI/hs_err_pid2092.log">
-<persistable path="/eNAI/hs_err_pid2092.log"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="eNAI/AndroidManifest.xml">
-<persistable path="/eNAI/AndroidManifest.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" tooltip="RxEmail2/res/layout/main.xml">
-<persistable path="/RxEmail2/res/layout/main.xml"/>
 </file>
 </mruList>
 </workbench>
