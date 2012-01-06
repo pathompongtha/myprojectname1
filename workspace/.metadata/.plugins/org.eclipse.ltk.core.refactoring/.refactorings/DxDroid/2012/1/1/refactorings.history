@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;org.microbridge.server&apos; to &apos;eNAI/src/com.provider&apos;&#x0D;&#x0A;- Original project: &apos;DxDroid&apos;&#x0D;&#x0A;- Destination element: &apos;eNAI/src/com.provider&apos;&#x0D;&#x0A;- Original element: &apos;DxDroid/src/org.microbridge.server&apos;" description="Copy package" destination="=eNAI/src&lt;com.provider" element1="/src&lt;org.microbridge.server" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1325856378404" version="1.0"/>
+</session>

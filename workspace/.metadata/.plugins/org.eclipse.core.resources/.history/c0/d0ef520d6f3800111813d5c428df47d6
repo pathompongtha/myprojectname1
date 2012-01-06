@@ -1,0 +1,83 @@
+package com.android.enai;
+
+import java.io.IOException;
+
+import org.microbridge.server.AbstractServerListener;
+import org.microbridge.server.Server;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Handler;
+import android.util.Log;
+
+public class UCAutoPlotView extends AutoPlotView {
+	static int ctr = 0;
+	private int adcSensorValue = 10;
+	private Handler mHandler;
+	private int tocoDuration = 0;
+	
+	// Create TCP server (based on MicroBridge LightWeight Server).
+	// Note: This Server runs in a separate thread.
+	Server server = null;
+
+	public UCAutoPlotView(Activity act, Context context, int h, int w, int resource, Thread thread) {
+		super(context, h, w, resource, thread);
+		// Create TCP server (based on MicroBridge LightWeight Server)
+		try {
+			server = new Server(4568); // Use the same port number used in
+										// ADK Main Board firmware
+			server.start();
+		} catch (IOException e) {
+			Log.e("Seeeduino ADK", "Unable to start TCP server", e);
+			System.exit(-1);
+		}
+		mHandler = new Handler();
+		thread = new Thread(new Runnable() {
+			public void run() {
+				try {
+					while (true) {
+						final String s = br.readLine();
+						if (s == null)
+							break;
+						if (s.equals(""))
+							continue;
+						mHandler.post(new Runnable() {
+							public void run() {
+								getData(s);
+							}
+						});
+						Thread.sleep(100);
+					}
+				} catch (Exception e) {
+				}
+			}
+		});
+		thread.start();
+		server.addListener(new AbstractServerListener() {
+
+            @Override
+            public void onReceive(org.microbridge.server.Client client,
+                    byte[] data) {
+
+                
+                if (data.length < 2)
+                    return;
+                int startFlag = (data[0] & 0xff) | ((data[1] & 0xff) << 8);
+                if(startFlag==0xfb){                    
+                    int dataId = (data[2] & 0xff) | ((data[3] & 0xff) << 8);
+                    if(dataId==0xa1){                        
+                        adcSensorValue = (data[4] & 0xff) | ((data[5] & 0xff) << 8);
+                        tocoDuration = (data[6] & 0xff) | ((data[7] & 0xff) << 8);
+                        if (tocoDuration!=0){
+                            adcSensorValue = tocoDuration;
+                        }
+                    }                                
+                }  );
+
+			}
+
+		});
+
+	}
+
+}

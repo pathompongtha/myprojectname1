@@ -43,7 +43,6 @@ public class RxEmail extends Activity {
 
 				RxEmail.this.startActivity(Intent.createChooser(emailIntent,
 						"Send mail..."));
-
 			}
 		});
 	}

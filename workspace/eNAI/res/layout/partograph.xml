@@ -389,6 +389,14 @@
 				android:width="100dip"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:id="@+id/VoIPButton"
+				android:text="VoIP"
+				android:layout_gravity="right"
+				android:layout_marginRight="50dp"></Button>
+			<Button
+				android:width="100dip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
 				android:id="@+id/emailButton"
 				android:text="Email"
 				android:layout_gravity="right"
