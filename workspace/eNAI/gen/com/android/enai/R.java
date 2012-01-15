@@ -16,36 +16,37 @@ public final class R {
         public static final int icon=0x7f020002;
     }
     public static final class id {
-        public static final int AmnioticFluid=0x7f06001d;
-        public static final int AmnioticFluidLayout=0x7f06001e;
-        public static final int BloodPressure=0x7f060026;
-        public static final int BloodPressurePlotArea=0x7f060027;
-        public static final int Cervix=0x7f060021;
-        public static final int CervixPlotArea=0x7f060023;
-        public static final int DropsPerMinLayout=0x7f06002b;
+        public static final int AmnioticFluid=0x7f06001f;
+        public static final int AmnioticFluidLayout=0x7f060020;
+        public static final int BloodPressure=0x7f060028;
+        public static final int BloodPressurePlotArea=0x7f060029;
+        public static final int Cervix=0x7f060023;
+        public static final int CervixPlotArea=0x7f060025;
+        public static final int DropsPerMinLayout=0x7f06002d;
         public static final int FetalHeartPlotArea=0x7f06001a;
         public static final int FetalHeartRate=0x7f060019;
         public static final int LinearLayout01=0x7f060000;
         public static final int LinearLayout02=0x7f060007;
         public static final int LinearLayout03=0x7f060009;
-        public static final int Molding=0x7f06001f;
-        public static final int MoldingLayout=0x7f060020;
-        public static final int Oxytocin=0x7f060028;
-        public static final int OxytocinLayout=0x7f060029;
-        public static final int PulseRate=0x7f060024;
-        public static final int PulseRatePlotArea=0x7f060025;
-        public static final int TemperatureLayout=0x7f06002d;
-        public static final int UterineContractionPlotArea=0x7f06001c;
+        public static final int Molding=0x7f060021;
+        public static final int MoldingLayout=0x7f060022;
+        public static final int Oxytocin=0x7f06002a;
+        public static final int OxytocinLayout=0x7f06002b;
+        public static final int PulseRate=0x7f060026;
+        public static final int PulseRatePlotArea=0x7f060027;
+        public static final int TemperatureLayout=0x7f06002f;
+        public static final int UterineContractionPlotArea=0x7f06001d;
         public static final int UterineContractions=0x7f06001b;
-        public static final int VoIPButton=0x7f06002f;
+        public static final int VoIPButton=0x7f060031;
         public static final int attach=0x7f06000c;
-        public static final int btnSave=0x7f060033;
-        public static final int btnStart=0x7f060031;
-        public static final int btnStop=0x7f060032;
-        public static final int buttonApprove=0x7f060022;
-        public static final int dropsPerMin=0x7f06002a;
-        public static final int email=0x7f06002e;
-        public static final int emailButton=0x7f060030;
+        public static final int btnSave=0x7f060035;
+        public static final int btnStart=0x7f060033;
+        public static final int btnStop=0x7f060034;
+        public static final int buttonApprove=0x7f060024;
+        public static final int dropsPerMin=0x7f06002c;
+        public static final int durationLabel=0x7f060039;
+        public static final int email=0x7f060030;
+        public static final int emailButton=0x7f060032;
         public static final int emailPassword=0x7f060006;
         public static final int emailSender=0x7f060003;
         public static final int emailaddress=0x7f060008;
@@ -64,11 +65,15 @@ public final class R {
         public static final int patientRupturedMembranes=0x7f060018;
         public static final int patientTimeOfAdmission=0x7f060017;
         public static final int record=0x7f06000e;
-        public static final int rowtext=0x7f060034;
+        public static final int rowtext=0x7f060036;
         public static final int send=0x7f06000f;
-        public static final int temperature=0x7f06002c;
+        public static final int temperature=0x7f06002e;
         public static final int textView1=0x7f060002;
         public static final int textView2=0x7f060005;
+        public static final int timeLabel=0x7f060038;
+        public static final int tocoTableLayout=0x7f060037;
+        public static final int tocoZero=0x7f06001c;
+        public static final int viewTocoTable=0x7f06001e;
     }
     public static final class layout {
         public static final int email=0x7f030000;
@@ -76,6 +81,8 @@ public final class R {
         public static final int partograph=0x7f030002;
         public static final int recorder=0x7f030003;
         public static final int row=0x7f030004;
+        public static final int tocotable=0x7f030005;
+        public static final int tocotablecell=0x7f030006;
     }
     public static final class raw {
         public static final int bp=0x7f040000;

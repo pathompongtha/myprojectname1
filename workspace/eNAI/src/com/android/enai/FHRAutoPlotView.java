@@ -242,14 +242,14 @@ public class FHRAutoPlotView extends View {
 				if (AudioRecord.ERROR_INVALID_OPERATION != read) {
 					try {
 //						os.write(data);
-						mHandler.post(new Runnable() {
-							public void run() {
-//								getData(f+"");
-								for(int i=0;i<data.length;i+=1000)
-									getData(data[i]+"");
-//								getData(data[0]+"");
-							}
-						});
+//						mHandler.post(new Runnable() {
+//							public void run() {
+////								getData(f+"");
+////								for(int i=0;i<data.length;i+=1000)
+////									getData(data[i]+"");
+////								getData(data[0]+"");
+//							}
+//						});
 //						sb.append(Arrays.toString(data));
 					} catch (Exception e) {
 						e.printStackTrace();
@@ -265,7 +265,7 @@ public class FHRAutoPlotView extends View {
 		}
 	}
 
-	private void stopRecording() {
+	public void stopRecording() {
 		if (null != recorder) {
 			isRecording = false;
 

@@ -50,6 +50,8 @@ public class ENAIActivity extends Activity {
 	private LinearLayout pulseRatePlotArea;
 	private LinearLayout bloodPressurePlotArea;
 	
+	private FHRAutoPlotView fhrView;
+	
 	private static int btnID;
 	
 	private static ViewGroup.LayoutParams vl = 
@@ -79,9 +81,21 @@ public class ENAIActivity extends Activity {
 		        intent.addCategory(Intent.CATEGORY_LAUNCHER);
 		        intent.setClassName("org.linphone","org.linphone.LinphoneActivity");
 		        intent.putExtra("UserName","test");
+		        fhrView.stopRecording();
 		        startActivity(intent);
 			}
 		});
+        
+        final Button viewTocoTableButton = (Button)findViewById(R.id.viewTocoTable);
+        viewTocoTableButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(getApplicationContext(),TocoTableActivity.class));
+			}
+		});
+        
+        final Button tocoZeroButton = (Button)findViewById(R.id.tocoZero);
         
         liquorLayout = (LinearLayout)findViewById(R.id.AmnioticFluidLayout);
         moldingLayout = (LinearLayout)findViewById(R.id.MoldingLayout);
@@ -94,8 +108,9 @@ public class ENAIActivity extends Activity {
         pulseRatePlotArea = (LinearLayout)findViewById(R.id.PulseRatePlotArea);
         bloodPressurePlotArea = (LinearLayout)findViewById(R.id.BloodPressurePlotArea);
 
-        fetalHeartPlotArea.addView(new FHRAutoPlotView(getApplicationContext(), 130, 600, R.raw.fhr,FHRThread));
-        uterineContractionPlotArea.addView(new UCAutoPlotView(getApplicationContext(), 130, 600, R.raw.uc, UCThread));
+        fhrView = new FHRAutoPlotView(getApplicationContext(), 130, 600, R.raw.fhr,FHRThread);
+        fetalHeartPlotArea.addView(fhrView);
+        uterineContractionPlotArea.addView(new UCAutoPlotView(getApplicationContext(), 130, 600, R.raw.uc, UCThread, tocoZeroButton));
         pulseRatePlotArea.addView(new AutoPlotView(getApplicationContext(), 130, 600, R.raw.uc, PRThread));
         bloodPressurePlotArea.addView(new AutoPlotView(getApplicationContext(), 130, 600, R.raw.uc, BPThread));
 

@@ -3,6 +3,8 @@ package com.android.enai;
 import static java.lang.Float.parseFloat;
 
 import java.io.IOException;
+import java.sql.Time;
+import java.util.Date;
 import java.util.LinkedList;
 
 import org.microbridge.server.AbstractServerListener;
@@ -16,6 +18,7 @@ import android.graphics.Paint;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class UCAutoPlotView extends View {
@@ -26,13 +29,20 @@ public class UCAutoPlotView extends View {
 	private int ctr = 0;
 	private int adcSensorValue = 10;
 	private int tocoDuration = 0;
+	private TocoTableActivity tocoTableActivity;
+	private Date time = new Date();
 	
 	// Create TCP server (based on MicroBridge LightWeight Server).
 	// Note: This Server runs in a separate thread.
 	Server server = null;
 
-	public UCAutoPlotView(Context context, int h, int w, int resource, Thread thread) {
+	public UCAutoPlotView(Context context, int h, int w, int resource, Thread thread, Button tocoZeroButton) {
 		super(context);
+		
+		tocoTableActivity = new TocoTableActivity();
+		tocoTableActivity.init();
+//		tocoTableActivity.add("a","b");
+		
 		points = new LinkedList<Point>();
 		off = 20;
 		height = h;
@@ -55,6 +65,18 @@ public class UCAutoPlotView extends View {
 			Log.e("Seeeduino ADK", "Unable to start TCP server", e);
 			System.exit(-1);
 		}
+		
+		tocoZeroButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				try {
+					server.send(new byte[]{1});
+				} catch(Exception e){}
+			}
+		});
+		
 		mHandler = new Handler();
 		server.addListener(new AbstractServerListener() {
 
@@ -70,7 +92,9 @@ public class UCAutoPlotView extends View {
                         adcSensorValue = (data[4] & 0xff) | ((data[5] & 0xff) << 8);
                         tocoDuration = (data[6] & 0xff) | ((data[7] & 0xff) << 8);
                         if (tocoDuration!=0){
-                            adcSensorValue = tocoDuration;
+//                            adcSensorValue = tocoDuration;
+                            Time timestamp = new Time(time.getTime());//-tocoDuration*1000);
+                            tocoTableActivity.add(timestamp+"", tocoDuration+"");
                         }
                     }                                
                 }
