@@ -1,5 +1,0 @@
-package com.android.enai;
-
-public class UCAutoPlotView extends AutoPlotView {
-
-}

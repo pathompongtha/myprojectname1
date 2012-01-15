@@ -186,14 +186,32 @@
 					android:layout_width="wrap_content"
 					android:textAppearance="?android:attr/textAppearanceLarge"
 					android:text="@string/labelUterineContraction2"></TextView>
+				<Button
+					android:text="Toco Zero"
+					android:id="@+id/tocoZero"
+					android:layout_width="wrap_content"
+					android:layout_margin="10dp"
+					android:layout_height="wrap_content"></Button>
 			</LinearLayout>
 			<LinearLayout
-				android:id="@+id/UterineContractionPlotArea"
 				android:layout_width="match_parent"
-				android:layout_height="130dip"
+				android:layout_height="wrap_content"
 				android:orientation="vertical"
-				android:gravity="center"
-				android:background="@drawable/grid2">
+				android:gravity="center">
+				<LinearLayout
+					android:id="@+id/UterineContractionPlotArea"
+					android:layout_width="match_parent"
+					android:layout_height="130dip"
+					android:orientation="vertical"
+					android:gravity="center"
+					android:background="@drawable/grid2">
+				</LinearLayout>
+				<Button
+					android:text="View Table"
+					android:id="@+id/viewTocoTable"
+					android:layout_width="wrap_content"
+					android:layout_margin="5dp"
+					android:layout_height="wrap_content"></Button>
 			</LinearLayout>
 		</LinearLayout>
 		<LinearLayout

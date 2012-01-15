@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+         android:id = "@+id/RHE"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="0"
+         android:stretchColumns="0,1,2"
+         android:padding="5dp">
+
+     <TableRow android:layout_height="wrap_content">
+         <TextView
+             android:id="@+id/runLabel"
+             android:text="R"
+             android:layout_height="wrap_content"
+             />
+         <TextView
+             android:id="@+id/hitLabel"
+             android:text="H"
+             android:layout_height="wrap_content"
+             />
+         <TextView
+             android:id="@+id/errorLabel"
+             android:text="E"
+             android:layout_height="wrap_content"
+             />
+     </TableRow>
+
+     <TableRow android:layout_height="wrap_content">
+         <TextView
+             android:id="@+id/visitorRuns"
+             android:text="0"
+             android:layout_height="wrap_content"
+             />
+         <TextView
+             android:id="@+id/visitorHits"
+             android:text="0"
+             android:layout_height="wrap_content"
+             />
+         <TextView
+             android:id="@+id/visitorErrors"
+             android:text="0"
+             android:layout_height="wrap_content"
+             />
+     </TableRow>
+
+     <TableRow android:layout_height="wrap_content">
+         <TextView
+             android:id="@+id/homeRuns"
+             android:text="0"
+             android:layout_height="wrap_content"
+             />
+         <TextView
+             android:id="@+id/homeHits"
+             android:text="0"
+             android:layout_height="wrap_content"
+             />
+         <TextView
+             android:id="@+id/homeErrors"
+             android:text="0"
+             android:layout_height="wrap_content"
+             />
+     </TableRow>
+</TableLayout>
