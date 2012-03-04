@@ -21,8 +21,6 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-import android.widget.Toast;
-
 public class GMailSender extends javax.mail.Authenticator {
     private String mailhost = "smtp.gmail.com";   
     private String user;   

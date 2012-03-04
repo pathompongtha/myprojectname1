@@ -1,7 +1,6 @@
 package com.android.enai;
 
 import android.os.AsyncTask;
-import android.view.View;
 
 public // UpdateData Asynchronously sends the value received from ADK Main Board.
 // This is triggered by onReceive()

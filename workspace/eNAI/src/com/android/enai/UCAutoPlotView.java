@@ -4,13 +4,13 @@ import static java.lang.Float.parseFloat;
 
 import java.io.IOException;
 import java.sql.Time;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.LinkedList;
 
 import org.microbridge.server.AbstractServerListener;
 import org.microbridge.server.Server;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -61,6 +61,8 @@ public class UCAutoPlotView extends View {
 			server = new Server(4568); // Use the same port number used in
 										// ADK Main Board firmware
 			server.start();
+//			Log.d("UC Data", "Server OK");
+			Toast.makeText(getContext(), "Server OK", Toast.LENGTH_LONG).show();
 		} catch (IOException e) {
 			Log.e("Seeeduino ADK", "Unable to start TCP server", e);
 			System.exit(-1);
@@ -83,6 +85,7 @@ public class UCAutoPlotView extends View {
             @Override
             public void onReceive(org.microbridge.server.Client client,
                     byte[] data) {
+            	Log.d("UC Data", data.length+" "+Arrays.toString(data));
                 if (data.length < 2)
                     return;
                 int startFlag = (data[0] & 0xff) | ((data[1] & 0xff) << 8);
@@ -110,7 +113,7 @@ public class UCAutoPlotView extends View {
 	}
 
 	public void getData(String s) {
-		points.add(conv((parseFloat(s) - 780.0) / 240.0));
+		points.add(conv((parseFloat(s) - 630) / 100.0));
 		invalidate();
 		if (ctr == width)
 			while (width - points.size() < 10)
@@ -133,6 +136,6 @@ public class UCAutoPlotView extends View {
 	}
 
 	public Point conv(double c) {
-		return new Point((ctr+=5) % width + off / 2, (float)(height / 2 - 30 * c));
+		return new Point((ctr+=3) % width + off / 2, (float)(height *(1-c)));
 	}
 }
