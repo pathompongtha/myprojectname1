@@ -19,11 +19,6 @@
  */
 package fhrtools;
 
-import java.io.File;
-import java.util.Arrays;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-
 
 /**
  * @author Marc Schr&ouml;der

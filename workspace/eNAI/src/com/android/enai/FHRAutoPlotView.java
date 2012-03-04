@@ -28,7 +28,6 @@ import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 public class FHRAutoPlotView extends View {
@@ -40,29 +39,32 @@ public class FHRAutoPlotView extends View {
 	private static final int RECORDER_CHANNELS = AudioFormat.CHANNEL_IN_MONO;//AudioFormat.CHANNEL_IN_STEREO;
 	private static final int RECORDER_AUDIO_ENCODING = AudioFormat.ENCODING_PCM_16BIT;
 
-	private AudioRecord recorder = null;
-	private int bufferSize = 40960;
-	private Thread recordingThread = null;
-	private boolean isRecording = false;
+	private static AudioRecord recorder = null;
+	private static Thread recordingThread = null;
+	private static boolean isRecording = false;
 
-	private double windowSize = 1.85759;	//1.85759-second window
-	private int calculations = 6;
-	private double stepSize = (windowSize / calculations);
-	private int Fs = 22050; // get Sampling frequency, hardcoded above
-	private int ds = 10;								// downsample e.g. 22050 to 2205
-	private int minT0 = (int) (0.3*Fs/ds);							//minimum = 0.3sec (200bpm)
-	private int maxT0 = (int) (0.9*Fs/ds);							//maximum = 0.6sec (100bpm)
-	private int samples, stepSizeSample;
-	private FIR filt = new FIR();
+//	private static double windowSize = 1.3932; // rounded off
+//	private static int calculations = 4; // arbitrary
+//	private static double stepSize = (windowSize / calculations);
+	private static int Fs = 22050; // get Sampling frequency, hardcoded above
+	private static int N = 30;
+	private static double ds = (double)Fs/N;								// downsample e.g. 22050 to 2205
+	private static int minT0 = (int) (0.3*ds);							//minimum = 0.3sec (200bpm)
+	private static int maxT0 = (int) (0.6*ds);							//maximum = 0.6sec (100bpm)
+	private static int samples = 30720; // number of samples per window
+	private static int stepSizeSample = 2*7680; // number of samples per step size
+	private static FIR filt = new FIR();
+	private static int bufferSize = 2*samples;
 	
-	private Handler mHandler;
-	private LinkedList<Point> points;
-	private Paint paint;
-	private int height, width, off;
-	private int ctr = 0;
-	private byte[] toBeProcessed = new byte[bufferSize];
-	private Thread fftThread = null;
-	private byte data[] = new byte[bufferSize];
+	private static Handler mHandler;
+	private static LinkedList<Point> points;
+	private static Paint paint;
+	private static int height, width, off;
+	private static int ctr = 0;
+	private static byte[] toBeProcessed = new byte[bufferSize];
+	private static byte data[] = new byte[stepSizeSample];
+	public static Thread fftThread = null;
+	public static boolean isDisplayOn = false;
 	
 	// Create TCP server (based on MicroBridge LightWeight Server).
 	// Note: This Server runs in a separate thread.
@@ -83,48 +85,18 @@ public class FHRAutoPlotView extends View {
 		paint.setAntiAlias(true);
 		paint.setStyle(Paint.Style.FILL_AND_STROKE);
 		
-
-		Fs=Fs/ds;
-		samples = 2*4096;	//set number of samples, samples = windowSize*Fs
-		stepSizeSample = 2*(int) (stepSize * Fs);
-//		toBeProcessed = new byte[samples];
-		
 		mHandler = new Handler();
-        
-//		bufferSize = AudioRecord.getMinBufferSize(RECORDER_SAMPLERATE,
-//				RECORDER_CHANNELS, RECORDER_AUDIO_ENCODING);
+        isDisplayOn = true;
 		startRecording();
-		fftThread = new Thread(new Runnable(){
-
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				while(true) {
-				try {
-					Thread.sleep(4000);
-					final long time = System.currentTimeMillis();
-					process(toBeProcessed, data);
-					final double[] ans = process(toBeProcessed);
-					 final double f = fft(ans);
-//					final double f = 1000;
-					mHandler.post(new Runnable() {
-						public void run() {
-							getData(f + "");
-							// getData(data[0]+"");
-//							Toast.makeText(getContext(),System.currentTimeMillis()-time+"",Toast.LENGTH_SHORT).show();
-						}
-					});
-				} catch (InterruptedException ie) {
-				}
-				}
-			}
-
-		});
-		fftThread.start();
 	}
+	
+	public static void requestStop() {
+		isDisplayOn = false;
+	}
+	
 
 	public void getData(String s) {
-		points.add(conv((parseFloat(s)-0) / 200.0));
+		points.add(conv((parseFloat(s)-100) / 100));
 		invalidate();
 		if (ctr == width)
 			while (width - points.size() < 10)
@@ -147,7 +119,7 @@ public class FHRAutoPlotView extends View {
 	}
 
 	public Point conv(double c) {
-		return new Point((ctr++) % width + off / 2, (float)(height / 2 - 30 * c));
+		return new Point((ctr+=5) % width + off / 2, (float)(height *(1-c)));
 	}
 
 	private String getFilename() {
@@ -202,11 +174,11 @@ public class FHRAutoPlotView extends View {
 		return (file.getAbsolutePath() + "/" + AUDIO_RECORDER_TEMP_FILE);
 	}
 
-	private void startRecording() {
-		recorder = new AudioRecord(MediaRecorder.AudioSource.MIC,
+	public void startRecording() {
+		recorder = new AudioRecord(MediaRecorder.AudioSource.DEFAULT,
 				RECORDER_SAMPLERATE, RECORDER_CHANNELS,
-				RECORDER_AUDIO_ENCODING, bufferSize);
-
+				RECORDER_AUDIO_ENCODING, bufferSize);//bufferSize);
+		
 		recorder.startRecording();
 
 		isRecording = true;
@@ -218,9 +190,46 @@ public class FHRAutoPlotView extends View {
 				writeAudioDataToFile();
 			}
 		}, "AudioRecorder Thread");
+		
+		fftThread = new Thread(new Runnable(){
 
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				int count = 0;
+				while(isDisplayOn) {
+					if (isRecording) {
+						try {
+							Thread.sleep(300);
+							final long time = System.currentTimeMillis();
+							toBeProcessed = process(toBeProcessed, data);
+							final double[] ans = process(toBeProcessed);
+							final double f = autocorrelate(ans);
+//							final double f = 1000;
+							count++;
+							count %= 5;
+							mHandler.post(new Runnable() {
+								public void run() {
+									getData(f+"");
+								}
+							});
+							if(count==0)
+								mHandler.post(new Runnable() {
+									public void run() {
+										Toast.makeText(getContext(), System.currentTimeMillis()-time+" "+f, Toast.LENGTH_SHORT).show();
+									}
+								});
+						} catch (InterruptedException ie) {
+						}
+					}
+				}
+			}
+
+		});
 		recordingThread.start();
+		fftThread.start();
 	}
+	
 	
 	private void writeAudioDataToFile() {
 		String filename = getTempFilename();
@@ -238,16 +247,16 @@ public class FHRAutoPlotView extends View {
 
 		if (null != os) {
 			while (isRecording) {
-				read = recorder.read(data, 0, bufferSize);
+				read = recorder.read(data, 0, stepSizeSample);//bufferSize);
 				if (AudioRecord.ERROR_INVALID_OPERATION != read) {
 					try {
-//						os.write(data);
+						os.write(data);
 //						mHandler.post(new Runnable() {
 //							public void run() {
 ////								getData(f+"");
 ////								for(int i=0;i<data.length;i+=1000)
 ////									getData(data[i]+"");
-////								getData(data[0]+"");
+//								getData(data[0]+"");
 //							}
 //						});
 //						sb.append(Arrays.toString(data));
@@ -274,10 +283,12 @@ public class FHRAutoPlotView extends View {
 
 			recorder = null;
 			recordingThread = null;
+			fftThread = null;
 		}
 
-//		copyWaveFile(getTempFilename(), getFilename());
-//		deleteTempFile();
+		copyWaveFile(getTempFilename(), getFilename());
+		deleteTempFile();
+		Toast.makeText(getContext(),getFilename(),Toast.LENGTH_SHORT).show();
 	}
 	
 	private void saveRecording() {
@@ -300,7 +311,7 @@ public class FHRAutoPlotView extends View {
 		int channels = 1;//2;
 		long byteRate = RECORDER_BPP * RECORDER_SAMPLERATE * channels / 8;
 
-		byte[] data = new byte[bufferSize];
+		byte[] data = new byte[bufferSize];//bufferSize];
 
 		try {
 			in = new FileInputStream(inFilename);
@@ -381,53 +392,53 @@ public class FHRAutoPlotView extends View {
 	}
 	
 	public double[] process(byte[] data) {
-		double[] filtered = new double[data.length/2];
+		double[] value = new double[data.length/2];
 		for (int i = 0; i < data.length; i = i + 2) {
-			filtered[i/2] = 0.000030525*(((int)data[i] & 0xff) | ((int) data[i + 1] << 8));
-			filtered[i/2] = filt.process(filtered[i/2]); // filter
+			value[i/2] = 0.000030525*(((int)data[i] & 0xff) | ((int) data[i + 1] << 8));
+			value[i/2] = filt.process(value[i/2]); // filter
 		}
-		double[] postDownSample = new double[2*filtered.length/ds];
-		//Downsample the reading and put it in real and imaginary array.
-		//Real in even elements and Imaginary in odd elements
-		for (int i=0; i<postDownSample.length/2; i++){
-			if(i!=0){
-				postDownSample[2*i] = filtered[(i*10)-1];	//real part		
-				postDownSample[2*i+1]=0;				//imaginary
+
+		double[] beatpeak = new double[value.length / N];
+		int base = 0;
+		int k = 0;
+		for (int a = 0; a < samples; a += N) {
+			double peak = 0;
+			for (int b = 0; b < N; b++) {
+				if (base + N < samples) {
+					if (Math.abs(value[base + b]) > peak) {
+						beatpeak[k] = Math.abs(value[base + b]);
+						peak = beatpeak[k];
+					}
+				}
 			}
-			else {
-				postDownSample[i]= filtered[i];
-				postDownSample[2*i+1]=0;
-			}
+			base = a + N;
+			k++;
 		}
-		return postDownSample;
+		return beatpeak;
 	}
 	
-	public void process(byte[] oldData, byte[] newData) {
+	public byte[] process(byte[] oldData, byte[] newData) {
 		for(int i=0;i<oldData.length-newData.length;i++) {
 			oldData[i] = oldData[i+newData.length];
 		}
 		for(int i=oldData.length-newData.length,j=0;i<oldData.length;i++,j++) {
 			oldData[i] = newData[j];
 		}
-//		return process(oldData);
+		return oldData;
 	}
 	
-	public double fft(double[] data) {
+	public double autocorrelate(double[] data) {
 		
-		//Get envelope
-		double[] envelope = new double[data.length/2];
-		envelope = FFT.envelope(data);
-		//Autocorrelation
-		double[] R = new double[envelope.length];
-		R = FFT.autoCorrelate(envelope);
+		double[] R = new double[data.length];
+		R = FFT.autoCorrelate(data);
 		
 		//Get the time of occurrence of peak
 		int t = MathUtils.findLocalPeakLocation(R, minT0, maxT0);
 		
+		//System.out.println(time[t]);
 		//Solve FHR using the time of occurrence of peak
-		double FHR = (double) (60 * Fs) / t;
-		//Print
-//		System.out.printf("%3.3f\n", FHR);
+		double FHR =  60.0*ds/t;// time[t];
+		
 		return FHR;
 	}
 }

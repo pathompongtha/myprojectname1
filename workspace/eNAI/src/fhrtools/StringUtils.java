@@ -21,14 +21,10 @@ package fhrtools;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ListIterator;
 import java.util.StringTokenizer;
 import java.util.Vector;
 import java.util.regex.Matcher;
