@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:id="@+id/videocall_menu_toggle_camera" android:title="@string/menu_videocall_toggle_camera_title"></item>
+<item android:id="@+id/videocall_menu_terminate_call" android:title="@string/menu_videocall_terminate_call_title"></item>
+<item android:id="@+id/videocall_menu_change_resolution" android:title="@string/menu_videocall_change_resolution_title"></item>
+<item android:id="@+id/videocall_menu_back_to_dialer" android:title="@string/menu_videocall_back_to_dialer_title"></item>
+<item android:title="@string/menu_videocall_switch_camera_title" android:id="@+id/videocall_menu_switch_camera"></item>
+<item android:title="Change camera" android:id="@+id/videocall_menu_change_camera"></item>
+
+<item android:title="Change codec">
+<menu>
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/videocall_menu_codec_vp8"
+              android:title="VP8" />
+        <item android:id="@+id/videocall_menu_codec_mpeg4"
+              android:title="MPEG4" />
+    </group>
+    </menu>
+</item>
+<item android:title="Change bitrate">
+<menu>
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/videocall_menu_bitrate_64_kbps"
+              android:title="64 kb/s" />
+        <item android:id="@+id/videocall_menu_bitrate_128_kbps"
+              android:title="128 kb/s" />
+        <item android:id="@+id/videocall_menu_bitrate_256_kbps"
+              android:title="256 kb/s" />
+        <item android:id="@+id/videocall_menu_bitrate_512_kbps"
+              android:title="512 kb/s" />
+        <item android:id="@+id/videocall_menu_bitrate_1024_kbps"
+              android:title="1024 kb/s" />
+    </group>
+    </menu>
+</item>
+<item android:title="Exit" android:id="@+id/videocall_menu_exit"></item>
+
+</menu>

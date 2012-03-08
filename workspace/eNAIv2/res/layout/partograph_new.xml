@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/labelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textAppearance="?android:attr/textAppearanceLarge" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/patientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <requestFocus>
+                </requestFocus>
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/labelAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textAppearance="?android:attr/textAppearanceLarge" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/patientAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/labelBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Birthday"
+                android:textAppearance="?android:attr/textAppearanceLarge" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/patientBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/labelPatientId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient ID"
+                android:textAppearance="?android:attr/textAppearanceLarge" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/patientId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gravida"
+                android:textAppearance="?android:attr/textAppearanceLarge" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/patientGravida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.35"
+                android:inputType="number" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="Para"
+                android:textAppearance="?android:attr/textAppearanceLarge" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/patientPara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:inputType="number" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="Hospital No."
+                android:textAppearance="?android:attr/textAppearanceLarge" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/patientHospitalNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelAdmissionDate1"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelAdmissionDate2"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+                </TextView>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/patientDateOfAdmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="date" >
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelAdmissionTime1"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelAdmissionTime2"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+                </TextView>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/patientTimeOfAdmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="time" >
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelRupturedMembranes1"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelRupturedMembranes2"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+                </TextView>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/patientRupturedMembranes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number" >
+            </EditText>
+        </LinearLayout>
+
+        <ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/RowNamesTable_simple"
+                    android:layout_width="150dp"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="4in"
+                        android:text="" >
+                    </TextView>
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scrollbars="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/CervixPlotArea_simple"
+                            android:layout_width="wrap_content"
+                            android:layout_height="4in"
+                            android:background="@drawable/img_cervix_plot_simple"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp" >
+                        </LinearLayout>
+
+                        <TableLayout
+                            android:id="@+id/PartographTable_simple"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/FetalHeartRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip" >
+
+                    <LinearLayout
+                        android:layout_width="130dip"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/labelFetalHeartRate1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/labelFetalHeartRate2"
+                            android:textAppearance="?android:attr/textAppearanceLarge" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/FetalHeartPlotArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dip"
+                        android:background="@drawable/grid2"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/UterineContractions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip" >
+
+                    <LinearLayout
+                        android:layout_width="130dip"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/labelUterineContraction1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/labelUterineContraction2"
+                            android:textAppearance="?android:attr/textAppearanceLarge" >
+                        </TextView>
+
+                        <Button
+                            android:id="@+id/tocoZero"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Toco Zero" >
+                        </Button>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/UterineContractionPlotArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dip"
+                            android:background="@drawable/grid2"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/viewTocoTable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="View Table" >
+                        </Button>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/AmnioticFluid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip" >
+
+                    <TextView
+                        android:layout_width="130dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/labelAmnioticFluid1"
+                        android:textAppearance="?android:attr/textAppearanceLarge" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/AmnioticFluidLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Molding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip" >
+
+                    <TextView
+                        android:layout_width="130dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/labelMolding"
+                        android:textAppearance="?android:attr/textAppearanceLarge" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/MoldingLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Cervix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip" >
+
+                    <LinearLayout
+                        android:layout_width="130dip"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/labelCervix"
+                            android:textAppearance="?android:attr/textAppearanceLarge" >
+                        </TextView>
+
+                        <Button
+                            android:id="@+id/buttonApprove"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="ok" >
+                        </Button>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/CervixPlotArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dip"
+                        android:background="@drawable/grid2"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/PulseRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip" >
+
+                    <LinearLayout
+                        android:layout_width="130dip"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/labelPulseRate1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/labelPulseRate2"
+                            android:textAppearance="?android:attr/textAppearanceLarge" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/PulseRatePlotArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dip"
+                        android:background="@drawable/grid2"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/BloodPressure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip" >
+
+                    <LinearLayout
+                        android:layout_width="130dip"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/labelBloodPressure1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/labelBloodPressure2"
+                            android:textAppearance="?android:attr/textAppearanceLarge" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/BloodPressurePlotArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dip"
+                        android:background="@drawable/grid2"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Oxytocin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip" >
+
+                    <TextView
+                        android:layout_width="130dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/labelOxytocin"
+                        android:textAppearance="?android:attr/textAppearanceLarge" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/OxytocinLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dropsPerMin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip" >
+
+                    <TextView
+                        android:layout_width="130dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/labelDropsPerMin"
+                        android:textAppearance="?android:attr/textAppearanceLarge" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/DropsPerMinLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip" >
+
+                    <TextView
+                        android:layout_width="130dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/labelTemperature"
+                        android:textAppearance="?android:attr/textAppearanceLarge" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/TemperatureLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ViewFlipper>
+
+        <LinearLayout
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="right" >
+
+            <Button
+                android:id="@+id/VoIPButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="50dp"
+                android:text="VoIP"
+                android:width="100dip" >
+            </Button>
+
+            <Button
+                android:id="@+id/emailButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="50dp"
+                android:text="Email"
+                android:width="100dip" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
