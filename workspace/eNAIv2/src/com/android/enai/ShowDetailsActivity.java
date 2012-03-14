@@ -1,12 +1,22 @@
 package com.android.enai;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import javax.swing.text.html.parser.Element;
 
 import org.w3c.dom.html.HTMLElement;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ListActivity;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -18,18 +28,28 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ShowDetailsActivity extends Activity {
+public class ShowDetailsActivity extends ListActivity {
 
+	private static final int DIALOG_FETCHING_DATA = 0;
+	private static final int DIALOG_NO_INTERNET = 2;
 	private Handler handler;
 	private WebView webview;
-	private TextView tv;
+//	private TextView mainTextView;
+	private TextView visitDetailsView;
 	private int idx = 0;
 	private int jdx = 0;
 	private int jdxn = -1;
 	private String[] visitLinks;
+	PatientDetailsListAdapter patientDetails;
+	VisitDetailsListAdapter visitDetails;
+	private List<String> patientDetailsList;
+	private List<VisitDetails> visitDetailsList;
+	private ProgressDialog fetchingDataProgressDialog;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,17 +57,39 @@ public class ShowDetailsActivity extends Activity {
 		
 		handler = new Handler();
 
-		setContentView(R.layout.chits_view);
+		setContentView(R.layout.records_view);
+		
+		showDialog(DIALOG_FETCHING_DATA);
+		
+		if(patientDetailsList == null) {
+			patientDetailsList = new LinkedList<String>();
+		}
+		
+		if(visitDetailsList == null) {
+			visitDetailsList = new LinkedList<VisitDetails>();
+		}
 
-		tv = (TextView) findViewById(R.id.details_text);
+//		mainTextView = (TextView) findViewById(R.id.visit_details_text);
+		visitDetailsView = (TextView) findViewById(R.id.visit_details_text);
 
 		Button okButton = (Button) findViewById(R.id.details_ok_button);
 		okButton.setOnClickListener(new OnClickListener() {
-			@Override
 			public void onClick(View arg0) {
 				Intent intent = new Intent(getApplicationContext(),
 						PartographActivity.class);
+				intent.putExtra("name", patientDetailsList.get(0).split(": ")[1]);
+				intent.putExtra("age", patientDetailsList.get(1).split(": ")[1]);
+				intent.putExtra("birthday", patientDetailsList.get(3).split(": ")[1]);
+				intent.putExtra("patientId", patientDetailsList.get(4).split(": ")[1]);
+				
 				startActivity(intent);
+			}
+		});
+		
+		Button cancelButton = (Button) findViewById(R.id.details_cancel_button);
+		cancelButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				onBackPressed();
 			}
 		});
 
@@ -63,7 +105,7 @@ public class ShowDetailsActivity extends Activity {
 			@Override
 			public void onPageFinished(WebView view, String url) {
 				super.onPageFinished(view, url);
-				Log.i("DEBUG", "page finished: " + url);
+				Log.i("DEBUG", "page finished: " + url +" idx = "+ idx);
 				if(idx == 0) view.loadUrl(urls[idx]);
 				if(idx == 5) view.loadUrl(urls[idx]);
 				if(idx == 7) {
@@ -80,16 +122,20 @@ public class ShowDetailsActivity extends Activity {
 			public boolean onJsAlert(WebView view, String url, final String message,
 					JsResult result) {
 				result.confirm();
-				final int i = idx;
-				handler.post(new Runnable() {
-					public void run() {
-						tv.append(keys[i]+" = "+message+ "\n");
-					}
-				});
+//				final int i = idx;
+//				handler.post(new Runnable() {
+//					public void run() {
+//						mainTextView.append(keys[i]+" = "+message+ "\n");
+//					}
+//				});
 				
-				if(idx == 4 && !message.equals("no")) {
-					++idx;
-					webview.loadUrl(message);
+				if(idx == 4) {
+					if(!message.equals("none")) {
+						++idx;
+						webview.loadUrl(message);
+					} else {
+						updateView();
+					}
 				} else if(idx == 5) {
 					jdxn = Integer.parseInt(message);
 					++idx;
@@ -102,25 +148,83 @@ public class ShowDetailsActivity extends Activity {
 					if(jdx == jdxn) {
 						++idx;
 						jdx = 0;
-						handler.post(new Runnable() {
-							public void run() {
-								tv.append("\n\n");
-							}
-						});
+//						handler.post(new Runnable() {
+//							public void run() {
+//								mainTextView.append("\n\n");
+//							}
+//						});
 						webview.loadUrl(visitLinks[jdx]);
 					}
 				} else if(idx == 7) {
+					visitDetailsList.add(new VisitDetails(message));
 					++jdx;
 					if(jdx < jdxn) {
 						webview.loadUrl(visitLinks[jdx]);
+					} else {
+						updateView();
 					}
 				}
 				return true;
 			}
 		});
 
-		webview.loadUrl(fromIntent.getStringExtra("url"));
+		if(isOnline()) {
+			webview.loadUrl(fromIntent.getStringExtra("url"));
+		} else {
+			showDialog(DIALOG_NO_INTERNET);
+		}
 
+		
+	}
+	
+	@Override
+	protected Dialog onCreateDialog(int id) {
+		switch(id) {
+		case DIALOG_FETCHING_DATA: {
+			fetchingDataProgressDialog = new ProgressDialog(this);
+			// uploadProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+			fetchingDataProgressDialog.setMessage("Fetching Data... Please wait.");
+			fetchingDataProgressDialog.setCancelable(false);
+
+			return fetchingDataProgressDialog;
+		}
+		case DIALOG_NO_INTERNET: { 
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setTitle("No Internet Connection");
+			builder.setMessage("This app needs internet to fetch data");
+			return builder.create();
+		}	
+		}
+		return null;
+	}
+	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		super.onListItemClick(l, v, position, id);
+		visitDetailsView.setText(visitDetailsList.get(position-7).fullData);
+		int childCount = l.getChildCount();
+		for(int i=0;i<childCount;i++) {
+			View subView = l.getChildAt(i);
+			if(subView.findViewById(R.id.icon) != null) {
+				ImageView rightArrow = ((ImageView)subView.findViewById(R.id.icon));
+				rightArrow.setImageResource(R.drawable.right_arrow);
+			}
+		}
+		ImageView rightArrow = ((ImageView)v.findViewById(R.id.icon));
+		rightArrow.setImageResource(R.drawable.right_arrow_click);
+	}
+	
+	private void updateView() {
+		VisitDetailsSectionListAdapter sectionList = new VisitDetailsSectionListAdapter(getApplicationContext());
+
+		patientDetails = new PatientDetailsListAdapter(this, patientDetailsList);
+		sectionList.addSection("Patient Details", patientDetails);
+
+		visitDetails = new VisitDetailsListAdapter(this, visitDetailsList);
+		sectionList.addSection("Visit Details", visitDetails);
+
+		setListAdapter(sectionList);
+		removeDialog(DIALOG_FETCHING_DATA);
 	}
 
 	private static final String[] urls = {
@@ -135,10 +239,10 @@ public class ShowDetailsActivity extends Activity {
 		};
 	
 	private static final String[] keys = {
-		"name", 
-		"age/sex",
-		"birthday",
-		"patient ID",
+		"Name", 
+		"Age/Sex",
+		"Birthday",
+		"Patient ID",
 		"has maternal care",
 		"number of maternal care visits",
 		"visit #",
@@ -158,7 +262,13 @@ public class ShowDetailsActivity extends Activity {
 				public void run() {
 					switch(i) {
 					default:
-						tv.append(keys[i]+" = "+result+"\n");
+//						mainTextView.append(keys[i]+" = "+result+"\n");
+						if(i != 1) patientDetailsList.add(keys[i]+": "+result);
+						else {
+							final String[] arr = result.split("/");
+							patientDetailsList.add("Age: "+arr[0]);
+							patientDetailsList.add("Sex: "+arr[1]);
+						}
 					}
 				}
 			});
@@ -177,4 +287,13 @@ public class ShowDetailsActivity extends Activity {
 		super.onActivityResult(requestCode, resultCode, data);
 		finish();
 	}
+	
+	public boolean isOnline() {
+		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo netInfo = cm.getActiveNetworkInfo();
+		if (netInfo != null && netInfo.isConnected())
+			return true;
+		return false;
+	}
+
 }

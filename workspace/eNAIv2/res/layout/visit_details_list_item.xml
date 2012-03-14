@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical" 
+   	android:gravity="center_vertical"
+   	android:paddingTop="5dp"
+   	android:paddingBottom="5dp">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="37dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/right_arrow"
+            android:layout_centerVertical="true">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/icon"
+            android:text="@+id/label"
+            android:textColor="#000000"
+            android:textColorHighlight="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/label_subname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@+id/label"
+            android:textSize="10dp"
+            android:layout_below="@id/label"
+            android:layout_alignLeft="@id/label"/>
+    </RelativeLayout>
+</LinearLayout>
