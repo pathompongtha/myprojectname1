@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="src" path="submodules/linphone/mediastreamer2/java/src"/>
+	<classpathentry kind="src" path="submodules/linphone/java/j2se"/>
+	<classpathentry kind="src" path="submodules/linphone/java/common"/>
+	<classpathentry kind="src" path="submodules/linphone/coreapi/help/java"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="lib" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAI/assets/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAI/assets/additionnal.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAI/assets/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/JE/Desktop/je/Thesis/workspace/eNAIv2/assets/bugsense-trace-1-1-2.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

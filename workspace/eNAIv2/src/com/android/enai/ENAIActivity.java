@@ -1,8 +1,14 @@
 package com.android.enai;
 
+import com.bugsense.trace.BugSenseHandler;
+
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
@@ -16,6 +22,8 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 public class ENAIActivity extends Activity {
+
+	private static final int DIALOG_NO_INTERNET = 0;
 
 	private String[] urls = {
 		"https://demo2010.chits.ph/info/index.php",
@@ -32,6 +40,8 @@ public class ENAIActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.chits_view);
+
+		BugSenseHandler.setup(this, "fbd29224");
 		
 		intent = new Intent(this, PartographActivity.class);
 
@@ -85,7 +95,24 @@ public class ENAIActivity extends Activity {
 			}
 		});
 
-		webview.loadUrl(urls[0]);
+		if(isOnline()) {
+			webview.loadUrl(urls[0]);
+		} else {
+			showDialog(DIALOG_NO_INTERNET);
+		}
+	}
+	
+	@Override
+	protected Dialog onCreateDialog(int id) {
+		switch (id) {
+		case DIALOG_NO_INTERNET: {
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setTitle("No Internet Connection");
+			builder.setMessage("This app needs internet to fetch data");
+			return builder.create();
+		}
+		}
+		return null;
 	}
 	
 	@Override
@@ -124,4 +151,13 @@ public class ENAIActivity extends Activity {
 		// TODO Auto-generated method stub
 //		super.onBackPressed();
 	}
+	
+	public boolean isOnline() {
+		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo netInfo = cm.getActiveNetworkInfo();
+		if (netInfo != null && netInfo.isConnected())
+			return true;
+		return false;
+	}
+
 }

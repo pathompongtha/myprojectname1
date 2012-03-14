@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#777777"
+        android:minHeight="200dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/details_ok_button"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="OK" />
+
+        <Button
+            android:id="@+id/details_cancel_button"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/details_ok_button"
+            android:text="Cancel" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/details_ok_button"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="400dp"
+                android:layout_height="match_parent" 
+                android:background="#FFFFFF"
+                android:layout_margin="10dp">
+
+<!--                 <TextView -->
+<!--                     android:id="@+id/details_text" -->
+<!--                     android:layout_width="fill_parent" -->
+<!--                     android:layout_height="wrap_content" /> -->
+            </ListView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/visit_details_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"/>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

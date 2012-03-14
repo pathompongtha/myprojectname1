@@ -31,6 +31,11 @@ public class UCAutoPlotView extends View {
 	private int tocoDuration = 0;
 	private TocoTableActivity tocoTableActivity;
 	private Date time = new Date();
+	private static boolean isReceiving;
+	
+	static {
+		isReceiving = false;
+	}
 	
 	// Create TCP server (based on MicroBridge LightWeight Server).
 	// Note: This Server runs in a separate thread.
@@ -61,10 +66,13 @@ public class UCAutoPlotView extends View {
 			server = new Server(4568); // Use the same port number used in
 										// ADK Main Board firmware
 			server.start();
-//			Log.d("UC Data", "Server OK");
+			
+			server.send(new byte[]{1});
+			
 			Toast.makeText(getContext(), "Server OK", Toast.LENGTH_LONG).show();
 		} catch (IOException e) {
 			Log.e("Seeeduino ADK", "Unable to start TCP server", e);
+			e.printStackTrace();
 			System.exit(-1);
 		}
 		
@@ -88,21 +96,22 @@ public class UCAutoPlotView extends View {
             	Log.d("UC Data", data.length+" "+Arrays.toString(data));
                 if (data.length < 2)
                     return;
-                int startFlag = (data[0] & 0xff) | ((data[1] & 0xff) << 8);
-                if(startFlag==0xfb){                    
-                    int dataId = (data[2] & 0xff) | ((data[3] & 0xff) << 8);
-                    if(dataId==0xa1){                        
-                        adcSensorValue = (data[4] & 0xff) | ((data[5] & 0xff) << 8);
-                        tocoDuration = (data[6] & 0xff) | ((data[7] & 0xff) << 8);
-                        if (tocoDuration!=0){
-//                            adcSensorValue = tocoDuration;
-                            Time timestamp = new Time(time.getTime());//-tocoDuration*1000);
-                            tocoTableActivity.add(timestamp+"", tocoDuration+"");
-                        }
-                    }                                
-                }
+                final int adcSensorValue = (data[0] & 0xff) | ((data[1] & 0xff) << 8);
+//                if(startFlag==0xfb){                    
+//                    int dataId = (data[2] & 0xff) | ((data[3] & 0xff) << 8);
+//                    if(dataId==0xa1){                        
+//                        adcSensorValue = (data[4] & 0xff) | ((data[5] & 0xff) << 8);
+//                        tocoDuration = (data[6] & 0xff) | ((data[7] & 0xff) << 8);
+//                        if (tocoDuration!=0){
+////                            adcSensorValue = tocoDuration;
+//                            Time timestamp = new Time(time.getTime());//-tocoDuration*1000);
+//                            tocoTableActivity.add(timestamp+"", tocoDuration+"");
+//                        }
+//                    }                                
+//                }
 				mHandler.post(new Runnable() {
 					public void run() {
+						Toast.makeText(getContext(), "Yes "+adcSensorValue, Toast.LENGTH_SHORT).show();
 						getData(adcSensorValue+"");
 					}
 				});
@@ -113,7 +122,7 @@ public class UCAutoPlotView extends View {
 	}
 
 	public void getData(String s) {
-		points.add(conv((parseFloat(s) - 630) / 100.0));
+		points.add(conv((parseFloat(s) - 600) / 100.0));
 		invalidate();
 		if (ctr == width)
 			while (width - points.size() < 10)

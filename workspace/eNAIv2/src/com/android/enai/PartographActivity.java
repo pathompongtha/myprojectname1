@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -181,9 +182,9 @@ public class PartographActivity extends Activity {
 		pulseRatePlotArea = (LinearLayout) findViewById(R.id.PulseRatePlotArea);
 		bloodPressurePlotArea = (LinearLayout) findViewById(R.id.BloodPressurePlotArea);
 
-		fhrView = new FHRAutoPlotView(getApplicationContext(), 130, 600,
-				R.raw.fhr, FHRThread);
-		fetalHeartPlotArea.addView(fhrView);
+//		fhrView = new FHRAutoPlotView(getApplicationContext(), 130, 600,
+//				R.raw.fhr, FHRThread);
+//		fetalHeartPlotArea.addView(fhrView);
 		uterineContractionPlotArea.addView(new UCAutoPlotView(
 				getApplicationContext(), 130, 600, R.raw.uc, UCThread,
 				tocoZeroButton));
@@ -259,9 +260,11 @@ public class PartographActivity extends Activity {
 			dialog.setContentView(R.layout.dialog_bp);
 
 			dialog.setTitle("BP Settings");
-
-			Spinner spin = (Spinner) dialog
-					.findViewById(R.id.dialog_bp_spinner);
+			
+			ProgressBar bpPressureBar = (ProgressBar) dialog.findViewById(R.id.progressBar1); 
+			bpModule.setProgressBar(bpPressureBar);
+			
+			Spinner spin = (Spinner) dialog.findViewById(R.id.dialog_bp_spinner);
 
 			spin.setOnItemSelectedListener(new OnItemSelectedListener() {
 

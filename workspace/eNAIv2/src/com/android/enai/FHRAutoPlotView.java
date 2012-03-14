@@ -213,12 +213,16 @@ public class FHRAutoPlotView extends View {
 									getData(f+"");
 								}
 							});
-							if(count==0)
-								mHandler.post(new Runnable() {
-									public void run() {
-										Toast.makeText(getContext(), System.currentTimeMillis()-time+" "+f, Toast.LENGTH_SHORT).show();
-									}
-								});
+//							if (count == 0)
+//								mHandler.post(new Runnable() {
+//									public void run() {
+//										Toast.makeText(
+//												getContext(),
+//												System.currentTimeMillis()
+//														- time + " " + f,
+//												Toast.LENGTH_SHORT).show();
+//									}
+//								});
 						} catch (InterruptedException ie) {
 						}
 					}
