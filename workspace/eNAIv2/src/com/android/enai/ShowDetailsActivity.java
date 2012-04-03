@@ -34,6 +34,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ShowDetailsActivity extends ListActivity {
+	/***
+		This activity is called on the patient details page
+		It navigates from url to url to fetch general and maternal data
+	***/
 
 	private static final int DIALOG_FETCHING_DATA = 0;
 	private static final int DIALOG_NO_INTERNET = 2;
@@ -59,8 +63,6 @@ public class ShowDetailsActivity extends ListActivity {
 
 		setContentView(R.layout.records_view);
 		
-		showDialog(DIALOG_FETCHING_DATA);
-		
 		if(patientDetailsList == null) {
 			patientDetailsList = new LinkedList<String>();
 		}
@@ -75,13 +77,13 @@ public class ShowDetailsActivity extends ListActivity {
 		Button okButton = (Button) findViewById(R.id.details_ok_button);
 		okButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
-				Intent intent = new Intent(getApplicationContext(),
-						PartographActivity.class);
-				intent.putExtra("name", patientDetailsList.get(0).split(": ")[1]);
-				intent.putExtra("age", patientDetailsList.get(1).split(": ")[1]);
-				intent.putExtra("birthday", patientDetailsList.get(3).split(": ")[1]);
-				intent.putExtra("patientId", patientDetailsList.get(4).split(": ")[1]);
-				
+				Intent intent = new Intent(getApplicationContext(),PartographActivity.class);
+				if(!patientDetailsList.isEmpty()) {
+					intent.putExtra("name", patientDetailsList.get(0).split(": ")[1]);
+					intent.putExtra("age", patientDetailsList.get(1).split(": ")[1]);
+					intent.putExtra("birthday", patientDetailsList.get(3).split(": ")[1]);
+					intent.putExtra("patientId", patientDetailsList.get(4).split(": ")[1]);
+				}
 				startActivity(intent);
 			}
 		});
@@ -105,14 +107,9 @@ public class ShowDetailsActivity extends ListActivity {
 			@Override
 			public void onPageFinished(WebView view, String url) {
 				super.onPageFinished(view, url);
-				Log.i("DEBUG", "page finished: " + url +" idx = "+ idx);
 				if(idx == 0) view.loadUrl(urls[idx]);
 				if(idx == 5) view.loadUrl(urls[idx]);
-				if(idx == 7) {
-//					webview.setVisibility(View.VISIBLE);
-					view.loadUrl(urls[idx]);
-				}
-			
+				if(idx == 7) view.loadUrl(urls[idx]);
 			}
 		});
 		
@@ -169,9 +166,12 @@ public class ShowDetailsActivity extends ListActivity {
 		});
 
 		if(isOnline()) {
+			showDialog(DIALOG_FETCHING_DATA);
 			webview.loadUrl(fromIntent.getStringExtra("url"));
 		} else {
-			showDialog(DIALOG_NO_INTERNET);
+			Intent intent = new Intent(getApplicationContext(),PartographActivity.class);
+			startActivity(intent);
+//			showDialog(DIALOG_NO_INTERNET);
 		}
 
 		

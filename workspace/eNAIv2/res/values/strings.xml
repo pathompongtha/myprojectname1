@@ -233,9 +233,18 @@
     <string name="pref_sipaccounts">SIP Accounts</string>
 
     <string-array name="bp_dialog_spinner_items">
+        <item>240mmHg</item>
+        <item>220mmHg</item>
+        <item>200mmHg</item>
         <item>180mmHg</item>
         <item>160mmHg</item>
         <item>140mmHg</item>
-        <item>120mmHg</item>
+    </string-array>
+    
+    <string-array name="fhr_dialog_spinner_items">
+        <item>LLQ</item>
+        <item>LUQ</item>
+        <item>RLQ</item>
+        <item>RUQ</item>
     </string-array>
 </resources>

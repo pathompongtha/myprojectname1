@@ -3,6 +3,7 @@ package com.android.enai;
 import static java.lang.Float.parseFloat;
 
 import java.io.IOException;
+import java.net.BindException;
 import java.sql.Time;
 import java.util.Arrays;
 import java.util.Date;
@@ -23,7 +24,7 @@ import android.widget.Toast;
 
 public class UCAutoPlotView extends View {
 	private Handler mHandler;
-	private LinkedList<Point> points;
+	private static LinkedList<Point> points;
 	private Paint paint;
 	private int height, width, off;
 	private int ctr = 0;
@@ -32,9 +33,11 @@ public class UCAutoPlotView extends View {
 	private TocoTableActivity tocoTableActivity;
 	private Date time = new Date();
 	private static boolean isReceiving;
+	private int numberOfContractions = 0;
 	
 	static {
 		isReceiving = false;
+		points = new LinkedList<Point>();
 	}
 	
 	// Create TCP server (based on MicroBridge LightWeight Server).
@@ -48,7 +51,6 @@ public class UCAutoPlotView extends View {
 		tocoTableActivity.init();
 //		tocoTableActivity.add("a","b");
 		
-		points = new LinkedList<Point>();
 		off = 20;
 		height = h;
 		width = w - off;
@@ -56,7 +58,7 @@ public class UCAutoPlotView extends View {
 		setFocusable(true);
 		setFocusableInTouchMode(true);
 		paint = new Paint();
-		paint.setColor(Color.BLACK);
+		paint.setColor(Color.BLUE);
 		paint.setStrokeWidth(5);
 		paint.setAntiAlias(true);
 		paint.setStyle(Paint.Style.FILL_AND_STROKE);
@@ -69,11 +71,14 @@ public class UCAutoPlotView extends View {
 			
 			server.send(new byte[]{1});
 			
-			Toast.makeText(getContext(), "Server OK", Toast.LENGTH_LONG).show();
+			Toast.makeText(getContext(), "UC Server OK", Toast.LENGTH_SHORT).show();
+		} catch(BindException e) {
+			Toast.makeText(getContext(), "BP Server already started", Toast.LENGTH_SHORT).show();
 		} catch (IOException e) {
+			Toast.makeText(getContext(), "Error during startup of UC Server", Toast.LENGTH_LONG).show();
 			Log.e("Seeeduino ADK", "Unable to start TCP server", e);
 			e.printStackTrace();
-			System.exit(-1);
+//			System.exit(-1);
 		}
 		
 		tocoZeroButton.setOnClickListener(new OnClickListener() {
@@ -97,21 +102,11 @@ public class UCAutoPlotView extends View {
                 if (data.length < 2)
                     return;
                 final int adcSensorValue = (data[0] & 0xff) | ((data[1] & 0xff) << 8);
-//                if(startFlag==0xfb){                    
-//                    int dataId = (data[2] & 0xff) | ((data[3] & 0xff) << 8);
-//                    if(dataId==0xa1){                        
-//                        adcSensorValue = (data[4] & 0xff) | ((data[5] & 0xff) << 8);
-//                        tocoDuration = (data[6] & 0xff) | ((data[7] & 0xff) << 8);
-//                        if (tocoDuration!=0){
-////                            adcSensorValue = tocoDuration;
-//                            Time timestamp = new Time(time.getTime());//-tocoDuration*1000);
-//                            tocoTableActivity.add(timestamp+"", tocoDuration+"");
-//                        }
-//                    }                                
-//                }
+                final int contractionLength = (data[2] & 0xff) | ((data[3] & 0xff) << 8);
+                if(data.length > 4) numberOfContractions = (data[4] & 0xff) | ((data[5] & 0xff) << 8);
 				mHandler.post(new Runnable() {
 					public void run() {
-						Toast.makeText(getContext(), "Yes "+adcSensorValue, Toast.LENGTH_SHORT).show();
+//						Toast.makeText(getContext(), "Yes "+adcSensorValue, Toast.LENGTH_SHORT).show();
 						getData(adcSensorValue+"");
 					}
 				});
@@ -124,10 +119,10 @@ public class UCAutoPlotView extends View {
 	public void getData(String s) {
 		points.add(conv((parseFloat(s) - 600) / 100.0));
 		invalidate();
-		if (ctr == width)
-			while (width - points.size() < 10)
+		if (ctr == 600 - 20)
+			while (600 - 20 - points.size() < 10)
 				points.removeFirst();
-		else if (ctr > width)
+		else if (ctr > 600 - 20)
 			points.removeFirst();
 	}
 	
@@ -145,6 +140,11 @@ public class UCAutoPlotView extends View {
 	}
 
 	public Point conv(double c) {
-		return new Point((ctr+=3) % width + off / 2, (float)(height *(1-c)));
+		++ctr;
+		return new Point(1.24f*(ctr%600), (float)(height *(1-c)));
+	}
+
+	public String getCurrentCount() {
+		return numberOfContractions+"";
 	}
 }

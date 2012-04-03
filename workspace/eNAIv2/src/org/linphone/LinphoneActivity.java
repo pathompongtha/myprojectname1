@@ -268,13 +268,6 @@ public class LinphoneActivity extends TabActivity implements ContactPicked
 		intent.setClass(this, LinphonePreferencesActivity.class);
 		startActivity(intent);
 	}
-	
-	void e_startprefActivity() {
-		Intent intent = new Intent(ACTION_MAIN);
-		intent.setClass(this, LinphonePreferencesActivity.class);
-		intent.putExtra("e", true);
-		startActivity(intent);
-	}
 
 
 	void showPreferenceErrorDialog(String message) {
@@ -320,25 +313,27 @@ public class LinphoneActivity extends TabActivity implements ContactPicked
 	}
 
 	private void onFirstLaunch() {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		TextView lDialogTextView = new TextView(this);
-		lDialogTextView.setAutoLinkMask(0x0f/*all*/);
-		lDialogTextView.setPadding(10, 10, 10, 10);
-
-		lDialogTextView.setText(Html.fromHtml(getString(R.string.first_launch_message)));
-
-		builder.setCustomTitle(lDialogTextView)
-		.setCancelable(false)
-		.setPositiveButton(getString(R.string.cont), new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int id) {
-				LinphoneManager.getInstance().initializePayloads();
-//				e_startprefActivity();
-				startprefActivity();
-				checkAccount = false;
-			}
-		});
-
-		builder.create().show();
+		LinphoneManager.getInstance().initializePayloads();
+		startprefActivity();
+		checkAccount = false;
+//		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//		TextView lDialogTextView = new TextView(this);
+//		lDialogTextView.setAutoLinkMask(0x0f/*all*/);
+//		lDialogTextView.setPadding(10, 10, 10, 10);
+//
+//		lDialogTextView.setText(Html.fromHtml(getString(R.string.first_launch_message)));
+//
+//		builder.setCustomTitle(lDialogTextView)
+//		.setCancelable(false)
+//		.setPositiveButton(getString(R.string.cont), new DialogInterface.OnClickListener() {
+//			public void onClick(DialogInterface dialog, int id) {
+//				LinphoneManager.getInstance().initializePayloads();
+//				startprefActivity();
+//				checkAccount = false;
+//			}
+//		});
+//
+//		builder.create().show();
 	}
 
 	private void onBadSettings(final SharedPreferences pref) {

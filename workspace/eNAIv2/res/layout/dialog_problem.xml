@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="370dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/dialog_problem_input"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:hint="Tap to type the problem description"/>
+    
+    <Button 
+        android:id="@+id/dialog_problem_ok"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="OK"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+</LinearLayout>
