@@ -22,6 +22,15 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 public class ENAIActivity extends Activity {
+	/***
+		This is the first activity to be called by the app
+		This loads the CHITS homepage (demo2010.chits.ph)
+		This also attempts automatic login (user/user)
+		At the patient details page, after pressing 'menu' and 'eNAI', the activity will call ShowDetailsActitivy
+		
+		When the device has no internet connection, it also prompts the user of the state.
+		After pressing 'menu' and 'eNAI', the view will be redirected to the partograph view
+	***/
 
 	private static final int DIALOG_NO_INTERNET = 0;
 
@@ -58,7 +67,6 @@ public class ENAIActivity extends Activity {
 				// The progress meter will automatically disappear when we reach
 				// 100%
 				activity.setProgress(progress * 1000);
-				Log.d("DEBUG", "progress = " + progress);
 			}
 		});
 		
@@ -132,10 +140,6 @@ public class ENAIActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case 0: {
-			Log.d("DEBUG", "clicked me");
-			Log.d("DEBUG", webview.getTitle());
-			Log.d("DEBUG", webview.getUrl());
-			Log.d("DEBUG", webview.getOriginalUrl());
 
 			intent = new Intent(getApplicationContext(), ShowDetailsActivity.class);
 			intent.putExtra("url", webview.getOriginalUrl());

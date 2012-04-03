@@ -41,7 +41,9 @@ public class FHRAutoPlotView extends View {
 
 	private static AudioRecord recorder = null;
 	private static Thread recordingThread = null;
+	private static Thread savingThread = null;
 	private static boolean isRecording = false;
+	private static boolean isSaving = false;
 
 //	private static double windowSize = 1.3932; // rounded off
 //	private static int calculations = 4; // arbitrary
@@ -56,6 +58,9 @@ public class FHRAutoPlotView extends View {
 	private static FIR filt = new FIR();
 	private static int bufferSize = 2*samples;
 	
+	private static int numberOfParts = 0;
+	private static long lastSaved;
+	
 	private static Handler mHandler;
 	private static LinkedList<Point> points;
 	private static Paint paint;
@@ -66,28 +71,58 @@ public class FHRAutoPlotView extends View {
 	public static Thread fftThread = null;
 	public static boolean isDisplayOn = false;
 	
+	private static int currentReading = -1;
+	
+	static {
+		points = new LinkedList<Point>();
+	}
+	
 	// Create TCP server (based on MicroBridge LightWeight Server).
 	// Note: This Server runs in a separate thread.
 	Server server = null;
 
 	public FHRAutoPlotView(Context context, int h, int w, int resource, Thread thread) {
 		super(context);
-		points = new LinkedList<Point>();
 		off = 20;
 		height = h;
 		width = w - off;
+		numberOfParts = 0;
 
 		setFocusable(true);
 		setFocusableInTouchMode(true);
 		paint = new Paint();
-		paint.setColor(Color.BLACK);
-		paint.setStrokeWidth(5);
+		paint.setColor(Color.BLUE);
+		paint.setStrokeWidth(3);
 		paint.setAntiAlias(true);
 		paint.setStyle(Paint.Style.FILL_AND_STROKE);
 		
 		mHandler = new Handler();
         isDisplayOn = true;
+        
+        lastSaved = System.currentTimeMillis();
 		startRecording();
+		
+		isSaving = true;
+		savingThread = new Thread(new Runnable() {
+			public void run() {
+				while (isSaving) {
+					try {
+						Thread.sleep(60000);
+						stopRecording();
+						Thread.sleep(1000);
+						startRecording();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		});
+		
+		savingThread.start();
+	}
+	
+	public void stopSaving() {
+		isSaving = false;
 	}
 	
 	public static void requestStop() {
@@ -98,11 +133,15 @@ public class FHRAutoPlotView extends View {
 	public void getData(String s) {
 		points.add(conv((parseFloat(s)-100) / 100));
 		invalidate();
-		if (ctr == width)
-			while (width - points.size() < 10)
+		if (ctr == 600 - 20)
+			while (600 - 20 - points.size() < 10)
 				points.removeFirst();
-		else if (ctr > width)
+		else if (ctr > 600 - 20)
 			points.removeFirst();
+	}
+	
+	public int getCurrentReading() {
+		return currentReading;
 	}
 	
 	@Override
@@ -119,7 +158,8 @@ public class FHRAutoPlotView extends View {
 	}
 
 	public Point conv(double c) {
-		return new Point((ctr+=5) % width + off / 2, (float)(height *(1-c)));
+		++ctr;
+		return new Point(1.24f*(ctr%600), (float)(height *(1-c)));
 	}
 
 	private String getFilename() {
@@ -137,23 +177,13 @@ public class FHRAutoPlotView extends View {
 		int hour = cal.get(Calendar.HOUR_OF_DAY);
 		int min = cal.get(Calendar.MINUTE);
 		int sec = cal.get(Calendar.SECOND);
-		
-		String fileName = (month+1)+"."+date+"."+year+"-"+hour+"."+min+"."+sec;
+		String fileName = String.format("%02d.%02d.%04d-%02d.%02d.%02d.part%03d", month+1, date, year, hour, min, sec, numberOfParts);
+//		String fileName = (month+1)+"."+date+"."+year+"-"+hour+"."+min+"."+sec+"part"+numberOfParts;
 		Intent data = new Intent();
 		
 		String fullPath = (file.getAbsolutePath() + "/" + fileName + AUDIO_RECORDER_FILE_EXT_WAV);
 	    data.putExtra("toAttach",fullPath);
 	    data.putExtra("fileName",fileName);
-//	    setResult(Activity.RESULT_OK,data);
-	    
-//	    BufferedWriter br = null;
-//		try {
-//			br = new BufferedWriter(new FileWriter(new File(file.getAbsolutePath()+"/"+fileName+".txt")));
-//			br.write(sb.toString());
-//			Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT ).show();
-//		} catch(IOException e) {}
-		
-//	    finish();
 		
 		return fullPath;
 	}
@@ -168,8 +198,9 @@ public class FHRAutoPlotView extends View {
 
 		File tempFile = new File(filepath, AUDIO_RECORDER_TEMP_FILE);
 
-		if (tempFile.exists())
+		if (tempFile.exists()) {
 			tempFile.delete();
+		}
 
 		return (file.getAbsolutePath() + "/" + AUDIO_RECORDER_TEMP_FILE);
 	}
@@ -200,14 +231,13 @@ public class FHRAutoPlotView extends View {
 				while(isDisplayOn) {
 					if (isRecording) {
 						try {
-							Thread.sleep(300);
+							Thread.sleep(1000);
 							final long time = System.currentTimeMillis();
-							toBeProcessed = process(toBeProcessed, data);
 							final double[] ans = process(toBeProcessed);
 							final double f = autocorrelate(ans);
-//							final double f = 1000;
+							currentReading = (int)(f+0.5);
 							count++;
-							count %= 5;
+//							count %= 10;
 							mHandler.post(new Runnable() {
 								public void run() {
 									getData(f+"");
@@ -216,11 +246,7 @@ public class FHRAutoPlotView extends View {
 //							if (count == 0)
 //								mHandler.post(new Runnable() {
 //									public void run() {
-//										Toast.makeText(
-//												getContext(),
-//												System.currentTimeMillis()
-//														- time + " " + f,
-//												Toast.LENGTH_SHORT).show();
+//										Toast.makeText(getContext(),System.currentTimeMillis()- time + " " + f,Toast.LENGTH_SHORT).show();
 //									}
 //								});
 						} catch (InterruptedException ie) {
@@ -243,7 +269,7 @@ public class FHRAutoPlotView extends View {
 		try {
 			os = new FileOutputStream(filename);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			Log.d("DEBUG", "here");
 			e.printStackTrace();
 		}
 
@@ -252,18 +278,10 @@ public class FHRAutoPlotView extends View {
 		if (null != os) {
 			while (isRecording) {
 				read = recorder.read(data, 0, stepSizeSample);//bufferSize);
+				toBeProcessed = process(toBeProcessed, data);
 				if (AudioRecord.ERROR_INVALID_OPERATION != read) {
 					try {
 						os.write(data);
-//						mHandler.post(new Runnable() {
-//							public void run() {
-////								getData(f+"");
-////								for(int i=0;i<data.length;i+=1000)
-////									getData(data[i]+"");
-//								getData(data[0]+"");
-//							}
-//						});
-//						sb.append(Arrays.toString(data));
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -275,6 +293,8 @@ public class FHRAutoPlotView extends View {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+		} else {
+			Log.d("DEBUG","no temp file");
 		}
 	}
 
@@ -289,15 +309,25 @@ public class FHRAutoPlotView extends View {
 			recordingThread = null;
 			fftThread = null;
 		}
-
-		copyWaveFile(getTempFilename(), getFilename());
-		deleteTempFile();
-		Toast.makeText(getContext(),getFilename(),Toast.LENGTH_SHORT).show();
+		
+		saveRecording();
 	}
 	
-	private void saveRecording() {
-		copyWaveFile(getTempFilename(), getFilename());
-		deleteTempFile();
+	public void saveRecording() {
+		mHandler.post(new Runnable() {
+			public void run() {
+				File tempFile = new File(getTempFilename());
+				++numberOfParts;
+				copyWaveFile(getTempFilename(), getFilename());
+				deleteTempFile();
+				try {
+					tempFile.createNewFile();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				Toast.makeText(getContext(),getFilename(),Toast.LENGTH_SHORT).show();
+			}
+		});
 	}
 
 	private void deleteTempFile() {
@@ -335,6 +365,7 @@ public class FHRAutoPlotView extends View {
 			in.close();
 			out.close();
 		} catch (FileNotFoundException e) {
+			Log.d("DEBUG", "there");
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();

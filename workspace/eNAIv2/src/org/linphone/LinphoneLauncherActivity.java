@@ -48,7 +48,7 @@ public class LinphoneLauncherActivity extends Activity {
 		if (LinphoneService.isReady()) {
 			onServiceReady();
 		} else {
-			// start linphone as background  
+			// start linphone as background
 			startService(new Intent(ACTION_MAIN).setClass(this, LinphoneService.class));
 			mThread = new ServiceWaitThread();
 			mThread.start();

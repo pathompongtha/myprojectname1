@@ -110,18 +110,53 @@ public class LinphonePreferencesActivity extends PreferenceActivity implements E
 	        	return true;
 	        }
         });
-		Toast.makeText(getApplicationContext(), ""+nbAccounts, Toast.LENGTH_SHORT).show();
+		createTelemedDefaultAccount(accounts);
+		
 		// Get already configured extra accounts
 		SharedPreferences prefs = getPreferenceManager().getSharedPreferences();
 		nbAccounts = prefs.getInt(getString(R.string.pref_extra_accounts), 1);
-		for (int i = 0; i < nbAccounts; i++) {
+		for (int i = 1; i < nbAccounts; i++) {
 			// For each, add menus to configure it
 			addExtraAccountPreferencesButton(accounts, i, false);
+		}
+		
+		if(!TELEMED_ACCOUNT) {
+			TELEMED_ACCOUNT = true;
+			finish();
 		}
 	}
 	
 	public int getNbAccountsExtra() {
 		return nbAccounts;
+	}
+	
+	private void createTelemedDefaultAccount(PreferenceCategory parent) {
+		SharedPreferences prefs = getPreferenceManager().getSharedPreferences();
+
+		Preference me = new Preference(LinphonePreferencesActivity.this);
+		String keyUsername = getString(R.string.pref_username_key);
+		String keyDomain = getString(R.string.pref_domain_key);
+		
+		SharedPreferences.Editor editor = prefs.edit();
+//		editor.putString(keyUsername, "1001");
+//		editor.putString(keyDomain, "one.telehealth.ph");
+		editor.putString(keyUsername, "toto");
+		editor.putString(keyDomain, "10.158.4.99");
+		editor.commit();
+
+		me.setTitle(prefs.getString(keyUsername, "") + "@" + prefs.getString(keyDomain, ""));
+		me.setOnPreferenceClickListener(new OnPreferenceClickListener() 
+		{
+			public boolean onPreferenceClick(Preference preference) {
+				Intent i = new Intent();
+				i.putExtra("Account", 0);
+				i.setClass(LinphonePreferencesActivity.this, LinphonePreferencesSIPAccountActivity.class);
+				startActivityForResult(i, ADD_SIP_ACCOUNT);
+				return false;
+			}
+		});
+		parent.addPreference(me);
+		
 	}
 	
 	private void addExtraAccountPreferencesButton(PreferenceCategory parent, final int n, boolean isNewAccount) {
@@ -172,24 +207,6 @@ public class LinphonePreferencesActivity extends PreferenceActivity implements E
 		addPreferencesFromResource(R.xml.preferences);
 		
 		createDynamicAccountsPreferences();
-		
-		// TODO: put comments
-		Intent intent = getIntent();
-		if(!intent.getBooleanExtra("e", false)) {
-			Toast.makeText(getApplicationContext(), "with e", Toast.LENGTH_SHORT).show();
-			PreferenceScreen root = getPreferenceScreen();
-			final PreferenceCategory accounts = (PreferenceCategory) root.getPreference(0);
-			
-        	addExtraAccountPreferencesButton(accounts, nbAccounts, true);
-			Intent i = new Intent();
-			i.putExtra("Account", nbAccounts);
-			nbAccounts++;
-        	i.setClass(LinphonePreferencesActivity.this, LinphonePreferencesSIPAccountActivity.class);
-        	i.putExtra("e", true);
-			startActivityForResult(i, ADD_SIP_ACCOUNT);
-		} else {
-			Toast.makeText(getApplicationContext(), "no e", Toast.LENGTH_SHORT).show();
-		}
 
 		addTransportChecboxesListener();
 		
